@@ -24,10 +24,11 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Video Background with darker overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
       <video 
         ref={videoRef}
-        className="video-background"
+        className="absolute inset-0 w-full h-full object-cover z-[-1]"
         autoPlay 
         loop 
         muted 
@@ -36,28 +37,29 @@ const HeroSection: React.FC = () => {
         <source src="https://race-attack.ch/wp-content/uploads/2022/05/Race-Attack-Video-Compressed.mp4" type="video/mp4" />
       </video>
       
-      {/* Gold decorative element */}
-      <div className="gold-decoration w-[600px] h-[600px] -right-[200px] -bottom-[200px] opacity-30"></div>
-      <div className="gold-decoration w-[400px] h-[400px] -left-[100px] top-[20%] opacity-20"></div>
+      {/* Gold decorative elements */}
+      <div className="gold-decoration w-[600px] h-[600px] -right-[200px] -bottom-[200px] opacity-30 z-0"></div>
+      <div className="gold-decoration w-[400px] h-[400px] -left-[100px] top-[20%] opacity-20 z-0"></div>
       
       {/* Content */}
       <div className="container max-w-7xl mx-auto px-4 z-10 text-center">
         <div className="animate-fade-in">
-          <h1 className="heading-xl uppercase mb-6">
-            <span className="block">Nightliner</span>
-            <span className="gold-gradient-text">Luxury Transport</span>
+          {/* Race-Attack Logo large */}
+          <h1 className="heading-xl uppercase mb-10 font-bold tracking-wider">
+            <span className="block text-white">RACE-</span>
+            <span className="block text-white mt-[-20px]">ATTACK</span>
           </h1>
           
           <p className="body-lg max-w-2xl mx-auto mb-10 text-gray-300">
             Premium Nightliner und Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
             <Link to="/nightliner" className="gold-button w-full sm:w-auto">
               Nightliner entdecken
             </Link>
             <Link to="/kontakt" className="gold-outline-button w-full sm:w-auto">
-              Anfrage stellen
+              Kontakt
             </Link>
           </div>
         </div>

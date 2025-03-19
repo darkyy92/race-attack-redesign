@@ -76,7 +76,7 @@
   }
   
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
   }
   
   .heading-lg {
@@ -141,7 +141,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.4);
+  filter: brightness(0.3); /* Darker overlay for better contrast with white text */
 }
 
 /* Gold gradient text */
@@ -160,3 +160,4 @@
   z-index: -1;
   filter: blur(30px);
 }
+
