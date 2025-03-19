@@ -24,17 +24,42 @@ const References: React.FC = () => {
     };
   }, []);
   
-  const references = [
-    "Beatsteaks", "Dropkick Murphys", "Jan Delay", "Jupiter Jones", 
+  const artistsAndBands = [
+    "Eluveitie", "Gotthard", "Lordi", "Mercyful Fate", "Crystal Ball", 
+    "Triumph of Death", "RAF Camora", "Bonez MC", "Bring Me The Horizon", 
+    "Bigflo et Oli", "Massilia Sound System", "Groundation", "Capital Bra", 
+    "Sido", "Beatsteaks", "Dropkick Murphys", "Jan Delay", "Jupiter Jones", 
     "Kraftklub", "Marteria", "Mia", "Peter Fox", "Seeed", "Shawn Mendes", 
-    "The Prodigy", "Xavier Naidoo", "Hollywood Undead", "RAF Camora", 
-    "Capital Bra", "Sido", "Bonez MC", "Kollegah"
+    "The Prodigy", "Xavier Naidoo", "Hollywood Undead", "Kollegah"
   ];
   
   const partners = [
-    "act entertainment AG", "Gadget abc Entertainment Group AG", "Live Nation", 
-    "OpenAir St.Gallen", "Frauenfeld", "Swiss Music Promoters Association", 
-    "Yourope", "DeConcert"
+    { name: "act entertainment AG", url: "#" },
+    { name: "Gadget abc Entertainment Group AG", url: "#" },
+    { name: "Live Nation", url: "#" },
+    { name: "OpenAir St.Gallen", url: "#" },
+    { name: "Frauenfeld", url: "#" },
+    { name: "Swiss Music Promoters Association", url: "#" },
+    { name: "Yourope", url: "#" },
+    { name: "DeConcert", url: "#" },
+    { name: "Eventum GmbH", url: "http://www.eventum-gmbh.ch/" },
+    { name: "Helialpin", url: "http://www.helialpin.ch" },
+    { name: "Impeco", url: "https://www.impeco.nl/nl" },
+    { name: "Show Tech", url: "http://showtech.ch/" },
+    { name: "Live Sound", url: "http://www.livesound.ch/" },
+    { name: "MS Backline", url: "http://www.msbackline.pl/index_en.html" },
+    { name: "Nice-Time Production", url: "https://www.nicetime.ch/" },
+    { name: "Bleu Citron", url: "https://www.bleucitron.net/" },
+    { name: "Solver Productions", url: "https://www.solver-productions.com/" },
+    { name: "Big Ant Productions", url: "https://bigantproductions.com/" },
+    { name: "Bottom Row", url: "https://www.bottomrow.com/" },
+    { name: "Moonstruck Artist Service", url: "https://moonstruckservices.ch/" },
+    { name: "ITM Agency", url: "https://www.itm-agency.com/home.html" },
+    { name: "IBB Booking Berlin", url: "https://www.ibb-booking.com/" },
+    { name: "Avernus Entertainment", url: "http://avernusentertainment.com/" },
+    { name: "Nine Lives Entertainment", url: "https://www.nine-lives-entertainment.com/home" },
+    { name: "Boldt Konzertagentur", url: "https://www.boldtberlin.de/" },
+    { name: "Kingstar GmbH", url: "https://www.kingstar-music.com/" }
   ];
 
   return (
@@ -58,7 +83,7 @@ const References: React.FC = () => {
           <div className="glass-card rounded-lg p-8 animate-on-scroll">
             <h3 className="heading-sm mb-6 text-center gold-text">Künstler & Bands</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {references.map((reference, index) => (
+              {artistsAndBands.map((reference, index) => (
                 <span 
                   key={index} 
                   className="inline-block px-4 py-2 rounded-full bg-black-light border border-gold/30 text-white text-sm"
@@ -74,12 +99,15 @@ const References: React.FC = () => {
             <h3 className="heading-sm mb-6 text-center gold-text">Partner & Veranstalter</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {partners.map((partner, index) => (
-                <span 
-                  key={index} 
-                  className="inline-block px-4 py-2 rounded-full bg-black-light border border-gold/30 text-white text-sm"
+                <a 
+                  key={index}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 rounded-full bg-black-light border border-gold/30 text-white text-sm hover:bg-gold/10 hover:border-gold/50 transition-colors"
                 >
-                  {partner}
-                </span>
+                  {partner.name}
+                </a>
               ))}
             </div>
           </div>

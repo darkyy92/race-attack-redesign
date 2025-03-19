@@ -32,10 +32,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <HeroSection />
-      <Services />
-      <References />
-      <ContactForm />
+      <main>
+        <HeroSection />
+        <Services />
+        <References />
+        <ContactForm />
+      </main>
       <Footer />
     </div>
   );

@@ -37,38 +37,38 @@ const Services: React.FC = () => {
   const services: Service[] = [
     {
       title: "Nightliner",
-      description: "Luxuriöse Reisebusse mit 12 Schlafplätzen und erstklassiger Ausstattung für Künstler und Bands auf Tour.",
+      description: "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen und erstklassiger Ausstattung für Künstler und Bands auf Tour.",
       features: [
-        "12 komfortable Schlafplätzen",
+        "Komfortable Schlafplätze",
         "Voll ausgestatteter Wohnbereich",
         "Hochwertige Soundsysteme",
         "Satellitenfernsehen & WLAN"
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2019/05/Nightliner-CH-exterior-scaled.jpg",
+      image: "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg",
       link: "/nightliner"
     },
     {
       title: "Tour Crew",
       description: "Professionelles Team mit umfassender Erfahrung in der Tourplanung und -durchführung.",
       features: [
+        "Tourmanager & Guitar-Techs",
+        "Sound & Light Engineers",
         "Erfahrene Busfahrer",
-        "Technisches Personal",
-        "Licht- und Tontechniker",
-        "Produktionsleitung"
+        "Komplettes Tour-Package"
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2019/05/IMG-20200812-WA0002-scaled.jpg",
+      image: "https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg",
       link: "/tour-crew"
     },
     {
       title: "Truck",
-      description: "Spezialisierte Transportlösungen für Equipment und Bühnentechnik.",
+      description: "Renault Magnum mit Achleitner Auflieger für Equipment und Fahrzeugtransporte.",
       features: [
-        "Umfangreiche Ladekapazität",
-        "Sicherer Transport",
-        "Erfahrene Fahrer",
-        "Zuverlässige Logistik"
+        "Bis zu 70m³ Ladevolumen",
+        "2,5 Tonnen Hebebühne",
+        "Lounge mit 2 Betten",
+        "Für Racing und Events"
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2019/05/EICHER-scaled.jpg",
+      image: "https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner04.jpg",
       link: "/truck"
     }
   ];
