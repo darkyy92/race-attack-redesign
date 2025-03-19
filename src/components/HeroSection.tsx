@@ -9,6 +9,20 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.7; // Slightly slower playback for more dramatic effect
+      
+      // Versuche, das Video zu spielen
+      const playVideo = async () => {
+        try {
+          if (videoRef.current) {
+            await videoRef.current.play();
+            console.log('Video started playing successfully');
+          }
+        } catch (error) {
+          console.error('Error playing video:', error);
+        }
+      };
+      
+      playVideo();
     }
   }, []);
 
@@ -33,8 +47,15 @@ const HeroSection: React.FC = () => {
         loop 
         muted 
         playsInline
+        preload="auto"
       >
-        <source src="https://race-attack.ch/wp-content/uploads/2022/05/Race-Attack-Video-Compressed.mp4" type="video/mp4" />
+        <source src="/race-attack-video.mp4" type="video/mp4" />
+        {/* Fallback für Browser, die das Video nicht unterstützen */}
+        <img 
+          src="/race-attack-poster.jpg" 
+          alt="Race Attack Tourbus" 
+          className="absolute inset-0 w-full h-full object-cover" 
+        />
       </video>
       
       {/* Gold decorative elements */}

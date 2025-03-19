@@ -28,6 +28,39 @@ const Index = () => {
       animatedElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+  
+  // Setze Titel und Meta-Tags für SEO-Optimierung
+  useEffect(() => {
+    document.title = "Race-Attack | Premium Nightliner & Tour Crew | Schweiz";
+    
+    // Meta-Description Tag
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Premium Nightliner und professionelle Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa. Höchste Qualität für Ihre Tournee.');
+    
+    // Weitere Meta-Tags für SEO-Optimierung
+    const metaTags = [
+      { name: 'keywords', content: 'Nightliner, Tourbus mieten, Nightliner Schweiz, Nightliner Europa, Tour Crew buchen, Schweiz, Europa' },
+      { property: 'og:title', content: 'Race-Attack | Premium Nightliner & Tour Crew' },
+      { property: 'og:description', content: 'Premium Nightliner und professionelle Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://race-attack.ch' }
+    ];
+    
+    metaTags.forEach(tag => {
+      let metaTag = document.querySelector(`meta[${tag.property ? 'property' : 'name'}="${tag.property || tag.name}"]`);
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute(tag.property ? 'property' : 'name', tag.property || tag.name);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute('content', tag.content);
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white">
