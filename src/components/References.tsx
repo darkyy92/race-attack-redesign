@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const References: React.FC = () => {
@@ -25,12 +24,34 @@ const References: React.FC = () => {
   }, []);
   
   const artistsAndBands = [
-    "Eluveitie", "Gotthard", "Lordi", "Mercyful Fate", "Crystal Ball", 
-    "Triumph of Death", "RAF Camora", "Bonez MC", "Bring Me The Horizon", 
-    "Bigflo et Oli", "Massilia Sound System", "Groundation", "Capital Bra", 
-    "Sido", "Beatsteaks", "Dropkick Murphys", "Jan Delay", "Jupiter Jones", 
-    "Kraftklub", "Marteria", "Mia", "Peter Fox", "Seeed", "Shawn Mendes", 
-    "The Prodigy", "Xavier Naidoo", "Hollywood Undead", "Kollegah"
+    { name: "Eluveitie", url: "http://eluveitie.ch/" },
+    { name: "Gotthard", url: "https://www.gotthard.com/news/" },
+    { name: "Lordi", url: "https://www.lordi.fi/" },
+    { name: "Mercyful Fate", url: "https://mercyfulfatecoven.com/" },
+    { name: "Crystal Ball", url: "http://crystal-ball.ch/de/" },
+    { name: "Triumph of Death", url: "http://triumphofdeath.com/" },
+    { name: "RAF Camora", url: "https://de-de.facebook.com/RAFCamora.official" },
+    { name: "Bonez MC", url: "#" },
+    { name: "Bring Me The Horizon", url: "https://www.bmthofficial.com/" },
+    { name: "Bigflo et Oli", url: "http://bigfloetoli.com/" },
+    { name: "Massilia Sound System", url: "http://www.massilia-soundsystem.com/" },
+    { name: "Groundation", url: "https://groundation.com/" },
+    { name: "Capital Bra", url: "#" },
+    { name: "Sido", url: "#" },
+    { name: "Beatsteaks", url: "#" },
+    { name: "Dropkick Murphys", url: "#" },
+    { name: "Jan Delay", url: "#" },
+    { name: "Jupiter Jones", url: "#" },
+    { name: "Kraftklub", url: "#" },
+    { name: "Marteria", url: "#" },
+    { name: "Mia", url: "#" },
+    { name: "Peter Fox", url: "#" },
+    { name: "Seeed", url: "#" },
+    { name: "Shawn Mendes", url: "#" },
+    { name: "The Prodigy", url: "#" },
+    { name: "Xavier Naidoo", url: "#" },
+    { name: "Hollywood Undead", url: "#" },
+    { name: "Kollegah", url: "#" }
   ];
   
   const partners = [
@@ -46,7 +67,7 @@ const References: React.FC = () => {
     { name: "Helialpin", url: "http://www.helialpin.ch" },
     { name: "Impeco", url: "https://www.impeco.nl/nl" },
     { name: "Show Tech", url: "http://showtech.ch/" },
-    { name: "Live Sound", url: "http://www.livesound.ch/" },
+    { name: "Live Sound", url: "http://livesound.ch/" },
     { name: "MS Backline", url: "http://www.msbackline.pl/index_en.html" },
     { name: "Nice-Time Production", url: "https://www.nicetime.ch/" },
     { name: "Bleu Citron", url: "https://www.bleucitron.net/" },
@@ -59,7 +80,18 @@ const References: React.FC = () => {
     { name: "Avernus Entertainment", url: "http://avernusentertainment.com/" },
     { name: "Nine Lives Entertainment", url: "https://www.nine-lives-entertainment.com/home" },
     { name: "Boldt Konzertagentur", url: "https://www.boldtberlin.de/" },
-    { name: "Kingstar GmbH", url: "https://www.kingstar-music.com/" }
+    { name: "Kingstar GmbH", url: "https://www.kingstar-music.com/" },
+    { name: "HAMC OVERLAND", url: "http://hellsangels-overland.ch/" },
+    { name: "Stargarage", url: "http://stargarage.ch/" },
+    { name: "Zemp-Racing", url: "https://zemp-racing.ch/" },
+    { name: "Hugis Fahrschule", url: "https://hugis-fahrschule.ch/" },
+    { name: "Aldi Suisse", url: "https://www.aldi-suisse.ch/" },
+    { name: "Richnerstutz AG", url: "https://richnerstutz.ch/" },
+    { name: "Infinity Staging Solution GmbH Berlin", url: "#" },
+    { name: "VW-Audi Cruisers", url: "https://www.facebook.com/vwaudicruisers" },
+    { name: "Musicaction", url: "http://musicaction.ca/" },
+    { name: "Meisel Motorsport", url: "http://www.meisel-motorsport.ch/" },
+    { name: "Amweg Motorsport", url: "https://www.amweg-motorsport.ch/" }
   ];
 
   return (
@@ -84,12 +116,15 @@ const References: React.FC = () => {
             <h3 className="heading-sm mb-6 text-center gold-text">Künstler & Bands</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {artistsAndBands.map((reference, index) => (
-                <span 
+                <a 
                   key={index} 
-                  className="inline-block px-4 py-2 rounded-full bg-black-light border border-gold/30 text-white text-sm"
+                  href={reference.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 rounded-full bg-black-light border border-gold/30 text-white text-sm hover:bg-gold/10 hover:border-gold/50 transition-colors"
                 >
-                  {reference}
-                </span>
+                  {reference.name}
+                </a>
               ))}
             </div>
           </div>
