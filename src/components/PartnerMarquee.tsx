@@ -38,7 +38,7 @@ const partners = [
 
 const PartnerMarquee = () => {
   return (
-    <section className="section-padding bg-black relative overflow-hidden">
+    <section className="section-padding bg-black relative overflow-hidden border-t border-b border-gold/20">
       {/* Gold decorative element */}
       <div className="gold-decoration w-[300px] h-[300px] left-[5%] top-[20%] opacity-20"></div>
       
@@ -51,12 +51,12 @@ const PartnerMarquee = () => {
         </div>
       </div>
 
-      <div className="bg-black/60 py-12 backdrop-blur-sm">
+      <div className="bg-black/80 py-12 backdrop-blur-sm">
         <Marquee pauseOnHover speed={40} className="py-8">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="relative h-20 w-fit mx-16 flex items-center justify-start"
+              className="relative h-24 w-fit mx-16 flex items-center justify-start"
             >
               <a 
                 href={partner.url}

@@ -7,6 +7,7 @@ import References from '@/components/References';
 import PartnerMarquee from '@/components/PartnerMarquee';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import { MarqueeDemo } from '@/components/MarqueeDemo';
 
 const Index = () => {
   useEffect(() => {
@@ -70,6 +71,7 @@ const Index = () => {
         <HeroSection />
         <Services />
         <References />
+        <MarqueeDemo />
         <PartnerMarquee />
         <ContactForm />
       </main>
