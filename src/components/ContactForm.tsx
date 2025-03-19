@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
                   <Phone size={24} className="text-gold mt-1" />
                   <div>
                     <h4 className="font-semibold text-white mb-1">Telefon</h4>
-                    <p className="text-gray-300">+41 78 813 31 83</p>
+                    <p className="text-gray-300">+41 78 606 10 32</p>
                   </div>
                 </div>
                 
@@ -175,7 +175,7 @@ const ContactForm: React.FC = () => {
                   <Mail size={24} className="text-gold mt-1" />
                   <div>
                     <h4 className="font-semibold text-white mb-1">E-Mail</h4>
-                    <p className="text-gray-300">andi@race-attack.ch</p>
+                    <p className="text-gray-300">info@race-attack.ch</p>
                   </div>
                 </div>
                 
@@ -185,8 +185,8 @@ const ContactForm: React.FC = () => {
                     <h4 className="font-semibold text-white mb-1">Adresse</h4>
                     <p className="text-gray-300">
                       Race Attack GmbH<br />
-                      Wissenstrasse 5<br />
-                      9325 Roggwil<br />
+                      Kappel 1<br />
+                      CH-8523 Hagenbuch<br />
                       Schweiz
                     </p>
                   </div>
@@ -198,7 +198,7 @@ const ContactForm: React.FC = () => {
                 <p className="text-gray-300 mb-6">
                   Kontaktieren Sie uns direkt per Telefon oder E-Mail für eine schnelle Verfügbarkeitsprüfung.
                 </p>
-                <a href="tel:+41788133183" className="gold-outline-button inline-flex items-center justify-center gap-2">
+                <a href="tel:+41786061032" className="gold-outline-button inline-flex items-center justify-center gap-2">
                   <Phone size={18} />
                   <span>Jetzt anrufen</span>
                 </a>

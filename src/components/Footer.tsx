@@ -78,21 +78,21 @@ const Footer: React.FC = () => {
                 <MapPin size={20} className="text-gold mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
                   Race Attack GmbH<br />
-                  Wissenstrasse 5<br />
-                  9325 Roggwil<br />
+                  Kappel 1<br />
+                  CH-8523 Hagenbuch<br />
                   Schweiz
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="text-gold mr-3 flex-shrink-0" />
-                <a href="tel:+41788133183" className="text-gray-400 hover:text-gold transition-colors">
-                  +41 78 813 31 83
+                <a href="tel:+41786061032" className="text-gray-400 hover:text-gold transition-colors">
+                  +41 78 606 10 32
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-gold mr-3 flex-shrink-0" />
-                <a href="mailto:andi@race-attack.ch" className="text-gray-400 hover:text-gold transition-colors">
-                  andi@race-attack.ch
+                <a href="mailto:info@race-attack.ch" className="text-gray-400 hover:text-gold transition-colors">
+                  info@race-attack.ch
                 </a>
               </li>
             </ul>
