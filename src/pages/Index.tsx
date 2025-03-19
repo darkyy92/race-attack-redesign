@@ -1,13 +1,11 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import Services from '@/components/Services';
 import References from '@/components/References';
-import PartnerMarquee from '@/components/PartnerMarquee';
+import { MarqueeDemo } from '@/components/MarqueeDemo';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
-import { MarqueeDemo } from '@/components/MarqueeDemo';
 
 const Index = () => {
   useEffect(() => {
@@ -72,7 +70,6 @@ const Index = () => {
         <Services />
         <References />
         <MarqueeDemo />
-        <PartnerMarquee />
         <ContactForm />
       </main>
       <Footer />
