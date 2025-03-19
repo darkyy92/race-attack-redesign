@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 const References: React.FC = () => {
@@ -63,12 +64,6 @@ const References: React.FC = () => {
     { name: "Swiss Music Promoters Association", url: "#" },
     { name: "Yourope", url: "#" },
     { name: "DeConcert", url: "#" },
-    { name: "Eventum GmbH", url: "http://www.eventum-gmbh.ch/" },
-    { name: "Helialpin", url: "http://www.helialpin.ch" },
-    { name: "Impeco", url: "https://www.impeco.nl/nl" },
-    { name: "Show Tech", url: "http://showtech.ch/" },
-    { name: "Live Sound", url: "http://livesound.ch/" },
-    { name: "MS Backline", url: "http://www.msbackline.pl/index_en.html" },
     { name: "Nice-Time Production", url: "https://www.nicetime.ch/" },
     { name: "Bleu Citron", url: "https://www.bleucitron.net/" },
     { name: "Solver Productions", url: "https://www.solver-productions.com/" },
@@ -93,6 +88,12 @@ const References: React.FC = () => {
     { name: "Meisel Motorsport", url: "http://www.meisel-motorsport.ch/" },
     { name: "Amweg Motorsport", url: "https://www.amweg-motorsport.ch/" }
   ];
+
+  // Filtere die Partner, um die Marquee-Partner zu entfernen
+  const filteredPartners = partners.filter(partner => 
+    !["Eventum GmbH", "Helialpin", "Impeco", "Show Tech", "Live Sound", "MS Backline"]
+    .includes(partner.name)
+  );
 
   return (
     <section ref={sectionRef} className="section-padding bg-black relative">
@@ -133,7 +134,7 @@ const References: React.FC = () => {
           <div className="glass-card rounded-lg p-8 animate-on-scroll" style={{ animationDelay: '0.2s' }}>
             <h3 className="heading-sm mb-6 text-center gold-text">Partner & Veranstalter</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {partners.map((partner, index) => (
+              {filteredPartners.map((partner, index) => (
                 <a 
                   key={index}
                   href={partner.url}
