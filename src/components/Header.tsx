@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -8,6 +8,7 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,11 @@ const Header: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
+
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setMobileMenuOpen(false);
+  }, [location]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -62,7 +68,9 @@ const Header: React.FC = () => {
               <Link
                 key={index}
                 to={link.path}
-                className="text-white hover:text-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
+                className={`text-white hover:text-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium ${
+                  location.pathname === link.path ? 'text-gold' : ''
+                }`}
               >
                 {link.title}
               </Link>
@@ -98,7 +106,9 @@ const Header: React.FC = () => {
               <Link
                 key={index}
                 to={link.path}
-                className="text-white hover:text-gold transition-colors duration-300 text-lg uppercase tracking-wider font-medium"
+                className={`text-white hover:text-gold transition-colors duration-300 text-lg uppercase tracking-wider font-medium ${
+                  location.pathname === link.path ? 'text-gold' : ''
+                }`}
                 onClick={closeMobileMenu}
               >
                 {link.title}
