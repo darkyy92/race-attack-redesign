@@ -51,28 +51,30 @@ const PartnerMarquee = () => {
         </div>
       </div>
 
-      <Marquee pauseOnHover speed={40}>
-        {partners.map((partner, index) => (
-          <div
-            key={index}
-            className="relative h-16 w-fit mx-16 flex items-center justify-start"
-          >
-            <a 
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-              aria-label={partner.name}
+      <div className="bg-black/60 py-12 backdrop-blur-sm">
+        <Marquee pauseOnHover speed={40} className="py-8">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="relative h-20 w-fit mx-16 flex items-center justify-start"
             >
-              <img 
-                src={partner.logo} 
-                alt={partner.name} 
-                className="h-full max-h-16 object-contain" 
-              />
-            </a>
-          </div>
-        ))}
-      </Marquee>
+              <a 
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label={partner.name}
+              >
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name} 
+                  className="h-full max-h-20 w-auto object-contain" 
+                />
+              </a>
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </section>
   );
 };
