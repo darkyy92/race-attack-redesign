@@ -49,7 +49,7 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
 const TourCrew: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Tour Crew | Race-Attack";
+    document.title = "Tour Crew | Professionelle Tourbegleitung | Race-Attack";
   }, []);
 
   return (
@@ -67,10 +67,10 @@ const TourCrew: React.FC = () => {
             
             <div className="glass-card p-8 md:p-12 rounded-lg mb-16 animate-fade-in">
               <p className="text-xl md:text-2xl text-white mb-6">
-                We can offer you some of the best Guys for your absolutly stressless Tour!
+                Wir bieten Ihnen einige der besten Profis für Ihre absolut stressfreie Tournee mit unserem Nightliner!
               </p>
               <p className="text-lg md:text-xl text-white/90 mb-8">
-                You need a Guitar-Tech? Sound Engineer? We have them all, we are capable to bring a complete Tour-Package!
+                Sie benötigen einen Gitarren-Techniker oder Tontechniker? Bei uns finden Sie alles unter einem Dach. Wir können Ihnen ein komplettes Tour-Paket zusammen mit unserem erstklassigen Nightliner Tourbus anbieten!
               </p>
               <div className="flex justify-center">
                 <Separator className="w-32 h-0.5 bg-gold/70" />
@@ -85,14 +85,14 @@ const TourCrew: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <CrewMember 
             name="Rafael Salzmann" 
-            position="Tourmanager / Guitar-Tech" 
+            position="Tourmanager / Gitarren-Techniker" 
             bands="Eluveitie"
             image="https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg"
           />
           
           <CrewMember 
             name="Cal South" 
-            position="Drum-Tech / Backliner" 
+            position="Schlagzeug-Techniker / Backliner" 
             bands="Eluveitie, Gregory Porter, Aloe Blacc, Eric Harland, Patricia Kass, Mummy"
             image="https://race-attack.ch/wp-content/uploads/2018/10/Cal-South-768x426.jpg"
             reverse={true}
@@ -100,13 +100,13 @@ const TourCrew: React.FC = () => {
           
           <CrewMember 
             name="Tom Wenger" 
-            position="Guitar-Tech / Backliner"
+            position="Gitarren-Techniker / Backliner"
             image="https://race-attack.ch/wp-content/uploads/2018/10/tom1-768x426.jpg"
           />
           
           <CrewMember 
             name="Szymon Mierzejewski" 
-            position="Guitar-Tech / Backliner" 
+            position="Gitarren-Techniker / Backliner" 
             bands="Eluveitie, Exodus, Moonspell, Death Angel, Behemoth, Korpiklaani, Cannibal Corpse, Unleashed, Immortal"
             image="https://race-attack.ch/wp-content/uploads/2018/10/Shymon-768x426.jpg"
             reverse={true}
@@ -114,20 +114,20 @@ const TourCrew: React.FC = () => {
           
           <CrewMember 
             name="Sven Gerber" 
-            position="Sound Engineer"
+            position="Tontechniker"
             image="https://race-attack.ch/wp-content/uploads/2018/10/sven-768x426.jpg"
           />
           
           <CrewMember 
             name="Daniel Michel" 
-            position="Light Engineer"
+            position="Lichttechniker"
             image="https://race-attack.ch/wp-content/uploads/2018/10/daniel-768x426.jpg"
             reverse={true}
           />
           
           <CrewMember 
             name="Chad Gunter" 
-            position="Merchandiser"
+            position="Merchandise-Verantwortlicher"
             image="https://race-attack.ch/wp-content/uploads/2018/10/chad-768x426.jpg"
           />
         </div>
@@ -138,13 +138,13 @@ const TourCrew: React.FC = () => {
         <div className="container mx-auto max-w-4xl">
           <Card className="glass-card border-gold/20 p-8 md:p-12">
             <CardContent className="p-0 text-center">
-              <h2 className="heading-lg text-white mb-6">Ready to hire our Tour Crew?</h2>
+              <h2 className="heading-lg text-white mb-6">Bereit, unsere Tour-Crew zu buchen?</h2>
               <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-                Contact us today to book our experienced tour crew for your next event or tour. We provide complete tour packages tailored to your specific needs.
+                Kontaktieren Sie uns noch heute, um unsere erfahrene Tour-Crew für Ihre nächste Veranstaltung oder Tournee mit unserem Nightliner zu buchen. Wir bieten massgeschneiderte Komplettlösungen für Ihren individuellen Bedarf.
               </p>
               <Link to="/kontakt">
                 <Button className="gold-button">
-                  Request Quote
+                  Angebot anfragen
                 </Button>
               </Link>
             </CardContent>
