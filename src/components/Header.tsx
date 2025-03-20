@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-  const isMobile = useIsMobile();
   const location = useLocation();
 
   useEffect(() => {
@@ -64,7 +62,7 @@ const Header: React.FC = () => {
         }`}
       />
       
-      <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-6 relative z-10">
         <div className="flex items-center justify-between">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -79,7 +77,7 @@ const Header: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link, index) => {
               const isActive = location.pathname === link.path;
               const isHovered = hoveredLink === link.path;
@@ -144,15 +142,13 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <motion.button 
-            className="md:hidden text-white hover:text-gold transition-colors"
+          <button 
+            className="lg:hidden text-white hover:text-gold transition-colors"
             onClick={toggleMobileMenu}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          </button>
         </div>
       </div>
 
@@ -160,13 +156,33 @@ const Header: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
-            className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg z-40"
+            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
-            <div className="flex flex-col h-full pt-20 px-6">
+            <div className="flex flex-col h-full pt-20 px-6 relative">
+              {/* Close button */}
+              <button 
+                onClick={closeMobileMenu}
+                className="absolute top-6 right-6 text-white hover:text-gold transition-colors"
+                aria-label="Close menu"
+              >
+                <X size={28} />
+              </button>
+              
+              {/* Logo in mobile menu */}
+              <Link 
+                to="/" 
+                className="flex items-center mb-10" 
+                onClick={closeMobileMenu}
+              >
+                <span className="text-2xl font-heading font-bold text-white">
+                  Race<span className="text-gold">Attack</span>
+                </span>
+              </Link>
+              
               <nav className="flex flex-col space-y-6">
                 {navLinks.map((link, index) => {
                   const isActive = location.pathname === link.path;
@@ -200,14 +216,13 @@ const Header: React.FC = () => {
                 })}
                 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.1 }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   <Link
                     to="/kontakt"
-                    className="gold-button mt-4 text-center text-lg uppercase tracking-wider font-medium block"
+                    className="gold-button py-3 px-6 text-base uppercase tracking-wider font-medium inline-block mt-4"
                     onClick={closeMobileMenu}
                   >
                     Anfrage

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Kontakt: React.FC = () => {
   useEffect(() => {
@@ -111,21 +111,6 @@ const Kontakt: React.FC = () => {
                       <a href="mailto:info@race-attack.ch" className="text-gray-400 hover:text-gold transition-colors">
                         info@race-attack.ch
                       </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-4">
-                      <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
-                        <Clock className="text-gold" size={24} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Geschäftszeiten</h3>
-                      <p className="text-gray-400">
-                        Montag - Freitag: 08:00 - 18:00 Uhr<br />
-                        Wochenende: Nach Vereinbarung
-                      </p>
                     </div>
                   </div>
                 </div>
