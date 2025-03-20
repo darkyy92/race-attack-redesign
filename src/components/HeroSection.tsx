@@ -1,31 +1,8 @@
-
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7; // Slightly slower playback for more dramatic effect
-      
-      // Versuche, das Video zu spielen
-      const playVideo = async () => {
-        try {
-          if (videoRef.current) {
-            await videoRef.current.play();
-            console.log('Video started playing successfully');
-          }
-        } catch (error) {
-          console.error('Error playing video:', error);
-        }
-      };
-      
-      playVideo();
-    }
-  }, []);
-
   const scrollToNextSection = () => {
     const nextSection = document.getElementById('services');
     if (nextSection) {
@@ -38,32 +15,26 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background with darker overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0"></div>
-      <video 
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover z-[-1]"
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        preload="auto"
-      >
-        <source src="/race-attack-video.mp4" type="video/mp4" />
-        {/* Fallback für Browser, die das Video nicht unterstützen */}
-        <img 
-          src="/race-attack-poster.jpg" 
-          alt="Race Attack Tourbus" 
-          className="absolute inset-0 w-full h-full object-cover" 
-        />
-      </video>
+      {/* YouTube Video Background with darker overlay */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+        <iframe 
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] min-w-[100vw] min-h-[56.25vw]"
+          src="https://www.youtube.com/embed/8B6nH6BS5dw?autoplay=1&controls=0&loop=1&mute=1&playlist=8B6nH6BS5dw&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1"
+          title="Race Attack Background Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
       
       {/* Gold decorative elements */}
       <div className="gold-decoration w-[600px] h-[600px] -right-[200px] -bottom-[200px] opacity-30 z-0"></div>
       <div className="gold-decoration w-[400px] h-[400px] -left-[100px] top-[20%] opacity-20 z-0"></div>
       
       {/* Content */}
-      <div className="container max-w-7xl mx-auto px-4 z-10 text-center">
+      <div className="container max-w-7xl mx-auto px-4 z-20 text-center">
         <div className="animate-fade-in">
           {/* Race-Attack Logo large */}
           <h1 className="heading-xl uppercase mb-10 font-bold tracking-wider">

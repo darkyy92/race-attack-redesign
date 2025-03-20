@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { ImageGallery, GalleryImage } from '@/components/ui/image-gallery';
 
 // Generate array of image paths from 01 to 27
-const galleryImages = Array.from({ length: 27 }, (_, i) => ({
+const galleryImages: GalleryImage[] = Array.from({ length: 27 }, (_, i) => ({
   id: i + 1,
-  path: `/gallery-images/image-${String(i + 1).padStart(2, '0')}.jpg`,
+  src: `/gallery-images/image-${String(i + 1).padStart(2, '0')}.jpg`,
   alt: `Race Attack Galerie - Tourbus, Nightliner und Tour Crew in der Schweiz - Bild ${i + 1}`
 }));
 
 const Gallery: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
   useEffect(() => {
     // Initialize animation observer for elements with .animate-on-scroll class
     const observer = new IntersectionObserver(
@@ -46,16 +44,6 @@ const Gallery: React.FC = () => {
     }
   }, []);
 
-  const openLightbox = (imagePath: string) => {
-    setSelectedImage(imagePath);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeLightbox = () => {
-    setSelectedImage(null);
-    document.body.style.overflow = 'auto';
-  };
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -81,52 +69,17 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <section className="bg-black-light">
           <div className="container max-w-7xl mx-auto px-4 md:px-6 py-16">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {galleryImages.map((image) => (
-                <div 
-                  key={image.id}
-                  className="aspect-square overflow-hidden rounded-md group cursor-pointer hover:shadow-lg hover:shadow-gold/20 transition-all duration-300"
-                  onClick={() => openLightbox(image.path)}
-                >
-                  <img 
-                    src={image.path} 
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    onError={(e) => {
-                      console.error(`Failed to load image: ${image.path}`);
-                      e.currentTarget.src = '/placeholder.jpg'; // Fallback image
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Lightbox */}
-        {selectedImage && (
-          <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
-            onClick={closeLightbox}
-          >
-            <button 
-              className="absolute top-4 right-4 text-white hover:text-gold transition-colors"
-              onClick={closeLightbox}
-            >
-              <X size={32} />
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Vergrössertes Galeriebild - Race Attack Tourbus und Nightliner" 
-              className="max-w-full max-h-[90vh] object-contain"
-              onClick={(e) => e.stopPropagation()}
-              onError={(e) => {
-                console.error(`Failed to load lightbox image: ${selectedImage}`);
-                e.currentTarget.src = '/placeholder.jpg'; // Fallback image
-              }}
+            <ImageGallery 
+              images={galleryImages} 
+              layout="grid" 
+              gap="md"
+              aspectRatio="square" 
+              lightbox={true}
+              showCaptions={false}
+              className="animate-on-scroll"
             />
           </div>
-        )}
+        </section>
       </main>
       <Footer />
     </div>

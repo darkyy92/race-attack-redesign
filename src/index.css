@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -103,6 +102,10 @@
   
   .body-sm {
     @apply text-sm leading-relaxed;
+  }
+  
+  .bg-black-light {
+    @apply bg-zinc-900;
   }
 }
 
