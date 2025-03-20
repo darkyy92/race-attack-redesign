@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
@@ -102,7 +101,7 @@ const ContactForm: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-black border border-gold/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50 text-white placeholder-gray-500"
-                      placeholder="Ihre Telefonnummer"
+                      placeholder="Telefonnummer"
                     />
                   </div>
                 </div>
