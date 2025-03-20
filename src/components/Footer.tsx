@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  
   return <footer className="bg-black text-white pt-16 pb-8">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -100,17 +103,20 @@ const Footer: React.FC = () => {
           <p className="text-gray-500 text-sm">
             &copy; {currentYear} Race Attack GmbH. Alle Rechte vorbehalten.
           </p>
-          <div className="mt-4 md:mt-0 space-x-4 text-sm text-gray-500">
+          <div className="mt-4 md:mt-0 space-x-6 text-sm text-gray-500">
             <Link to="/impressum" className="hover:text-gold transition-colors">
               Impressum
             </Link>
             <Link to="/datenschutz" className="hover:text-gold transition-colors">
               Datenschutz
             </Link>
-            
+            <Link to="/agb" className="hover:text-gold transition-colors">
+              AGB
+            </Link>
           </div>
         </div>
       </div>
     </footer>;
 };
+
 export default Footer;
