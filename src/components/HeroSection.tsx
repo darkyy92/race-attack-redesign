@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 
 const HeroSection: React.FC = () => {
   const scrollToNextSection = () => {
@@ -46,9 +48,9 @@ const HeroSection: React.FC = () => {
             Premium Nightliner und Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
-            <Link to="/nightliner" className="gold-button w-full sm:w-auto">
-              Nightliner entdecken
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
+            <Link to="/nightliner" className="w-full sm:w-auto">
+              <InteractiveHoverButton text="Nightliner entdecken" />
             </Link>
             <Link to="/kontakt" className="gold-outline-button w-full sm:w-auto">
               Kontakt
