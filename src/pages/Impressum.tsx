@@ -18,7 +18,7 @@ const Impressum: React.FC = () => {
             </h1>
             
             <div className="prose prose-lg prose-invert max-w-none">
-              <h2>Angaben gemäß § 5 TMG</h2>
+              
               <p>
                 Race Attack GmbH<br />
                 Kappel 1<br />
