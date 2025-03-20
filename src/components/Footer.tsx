@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-black text-white pt-16 pb-8">
+  return <footer className="bg-black text-white pt-16 pb-8">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo and Description */}
@@ -110,14 +107,10 @@ const Footer: React.FC = () => {
             <Link to="/datenschutz" className="hover:text-gold transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-gold transition-colors">
-              AGB
-            </Link>
+            
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
