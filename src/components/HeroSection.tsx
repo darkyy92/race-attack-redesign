@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
           {/* Race-Attack Logo large */}
           <h1 className="heading-xl uppercase mb-10 font-bold tracking-wider">
             <span className="block text-white">RACE-</span>
-            <span className="block text-white mt-[-20px]">ATTACK</span>
+            <span className="block text-white mt-[10px]">ATTACK</span>
           </h1>
           
           <p className="body-lg max-w-2xl mx-auto mb-10 text-gray-300">
