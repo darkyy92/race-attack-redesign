@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const References: React.FC = () => {
@@ -66,7 +65,6 @@ const References: React.FC = () => {
     { name: "Kingstar GmbH Hamburg", url: "https://www.kingstar-music.com/" }
    ];
 
-  // Filtere die Partner, um die Marquee-Partner zu entfernen
   const filteredPartners = partners.filter(partner => 
     !["Eventum GmbH", "Helialpin", "Impeco", "Show Tech", "Live Sound", "MS Backline"]
     .includes(partner.name)
@@ -88,7 +86,7 @@ const References: React.FC = () => {
           <div className="gold-line mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="flex flex-col gap-12">
           {/* Artists */}
           <div className="glass-card rounded-lg p-8 animate-on-scroll">
             <h3 className="heading-sm mb-6 text-center gold-text">Künstler & Bands</h3>
