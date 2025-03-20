@@ -18,7 +18,7 @@ const Datenschutz: React.FC = () => {
         <section className="bg-black text-white">
           <div className="container max-w-3xl mx-auto px-4 md:px-6 py-16 md:py-24">
             <h1 className="heading-xl text-center uppercase mb-10">
-              <span className="gold-text">DATENSCHUTZ</span>ERKLÄRUNG
+              <span className="gold-text">DATENSCHUTZ</span>
             </h1>
             
             <div className="prose prose-lg prose-invert max-w-none">
