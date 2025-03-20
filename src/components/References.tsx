@@ -26,68 +26,45 @@ const References: React.FC = () => {
   
   const artistsAndBands = [
     { name: "Eluveitie", url: "http://eluveitie.ch/" },
+    { name: "Groundation", url: "https://groundation.com/" },
     { name: "Gotthard", url: "https://www.gotthard.com/news/" },
+    { name: "Bring me the Horizon", url: "https://www.bmthofficial.com/" },
+    { name: "Massilia sound system", url: "http://www.massilia-soundsystem.com/" },
+    { name: "Bigflo et Oli", url: "http://bigfloetoli.com/" },
     { name: "Lordi", url: "https://www.lordi.fi/" },
-    { name: "Mercyful Fate", url: "https://mercyfulfatecoven.com/" },
+    { name: "Mercyful-Fate", url: "https://mercyfulfatecoven.com/" },
     { name: "Crystal Ball", url: "http://crystal-ball.ch/de/" },
     { name: "Triumph of Death", url: "http://triumphofdeath.com/" },
     { name: "RAF Camora", url: "https://de-de.facebook.com/RAFCamora.official" },
-    { name: "Bonez MC", url: "#" },
-    { name: "Bring Me The Horizon", url: "https://www.bmthofficial.com/" },
-    { name: "Bigflo et Oli", url: "http://bigfloetoli.com/" },
-    { name: "Massilia Sound System", url: "http://www.massilia-soundsystem.com/" },
-    { name: "Groundation", url: "https://groundation.com/" },
-    { name: "Capital Bra", url: "#" },
-    { name: "Sido", url: "#" },
-    { name: "Beatsteaks", url: "#" },
-    { name: "Dropkick Murphys", url: "#" },
-    { name: "Jan Delay", url: "#" },
-    { name: "Jupiter Jones", url: "#" },
-    { name: "Kraftklub", url: "#" },
-    { name: "Marteria", url: "#" },
-    { name: "Mia", url: "#" },
-    { name: "Peter Fox", url: "#" },
-    { name: "Seeed", url: "#" },
-    { name: "Shawn Mendes", url: "#" },
-    { name: "The Prodigy", url: "#" },
-    { name: "Xavier Naidoo", url: "#" },
-    { name: "Hollywood Undead", url: "#" },
-    { name: "Kollegah", url: "#" }
-  ];
-  
-  const partners = [
-    { name: "act entertainment AG", url: "#" },
-    { name: "Gadget abc Entertainment Group AG", url: "#" },
-    { name: "Live Nation", url: "#" },
-    { name: "OpenAir St.Gallen", url: "#" },
-    { name: "Frauenfeld", url: "#" },
-    { name: "Swiss Music Promoters Association", url: "#" },
-    { name: "Yourope", url: "#" },
-    { name: "DeConcert", url: "#" },
+    { name: "Bonez MC", url: "#" }
+   ];
+   
+   const partners = [
+    { name: "HAMC OVERLAND", url: "http://hellsangels-overland.ch/" },
+    { name: "Stargarage", url: "http://stargarage.ch/" },
     { name: "Nice-Time Production", url: "https://www.nicetime.ch/" },
     { name: "Bleu Citron", url: "https://www.bleucitron.net/" },
     { name: "Solver Productions", url: "https://www.solver-productions.com/" },
-    { name: "Big Ant Productions", url: "https://bigantproductions.com/" },
-    { name: "Bottom Row", url: "https://www.bottomrow.com/" },
-    { name: "Moonstruck Artist Service", url: "https://moonstruckservices.ch/" },
-    { name: "ITM Agency", url: "https://www.itm-agency.com/home.html" },
-    { name: "IBB Booking Berlin", url: "https://www.ibb-booking.com/" },
-    { name: "Avernus Entertainment", url: "http://avernusentertainment.com/" },
-    { name: "Nine Lives Entertainment", url: "https://www.nine-lives-entertainment.com/home" },
-    { name: "Boldt Konzertagentur", url: "https://www.boldtberlin.de/" },
-    { name: "Kingstar GmbH", url: "https://www.kingstar-music.com/" },
-    { name: "HAMC OVERLAND", url: "http://hellsangels-overland.ch/" },
-    { name: "Stargarage", url: "http://stargarage.ch/" },
     { name: "Zemp-Racing", url: "https://zemp-racing.ch/" },
+    { name: "Bottom Row Karlsruhe", url: "https://www.bottomrow.com/" },
+    { name: "Big Ant Productions", url: "https://bigantproductions.com/" },
+    { name: "Livesound", url: "http://livesound.ch/" },
     { name: "Hugis Fahrschule", url: "https://hugis-fahrschule.ch/" },
     { name: "Aldi Suisse", url: "https://www.aldi-suisse.ch/" },
     { name: "Richnerstutz AG", url: "https://richnerstutz.ch/" },
+    { name: "Moonstruck Artist Service", url: "https://moonstruckservices.ch/" },
+    { name: "ITM Agency Ubstadt Weiher", url: "https://www.itm-agency.com/home.html" },
     { name: "Infinity Staging Solution GmbH Berlin", url: "#" },
+    { name: "IBB Booking Berlin", url: "https://www.ibb-booking.com/" },
+    { name: "Avernus Entertainment", url: "http://avernusentertainment.com/" },
     { name: "VW-Audi Cruisers", url: "https://www.facebook.com/vwaudicruisers" },
+    { name: "Nine Lives Entertainment", url: "https://www.nine-lives-entertainment.com/home" },
     { name: "Musicaction", url: "http://musicaction.ca/" },
     { name: "Meisel Motorsport", url: "http://www.meisel-motorsport.ch/" },
-    { name: "Amweg Motorsport", url: "https://www.amweg-motorsport.ch/" }
-  ];
+    { name: "Amweg Motorsport", url: "https://www.amweg-motorsport.ch/" },
+    { name: "Boldt Konzertagentur Berlin", url: "https://www.boldtberlin.de/" },
+    { name: "Kingstar GmbH Hamburg", url: "https://www.kingstar-music.com/" }
+   ];
 
   // Filtere die Partner, um die Marquee-Partner zu entfernen
   const filteredPartners = partners.filter(partner => 
