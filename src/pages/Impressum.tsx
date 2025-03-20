@@ -1,17 +1,13 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-
 const Impressum: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Impressum | Race Attack";
   }, []);
-
-  return (
-    <div className="flex flex-col min-h-screen bg-black">
+  return <div className="flex flex-col min-h-screen bg-black">
       <Header />
       
       <main className="flex-grow pt-24 pb-16">
@@ -31,9 +27,7 @@ const Impressum: React.FC = () => {
               </p>
               
               <h3>Vertreten durch</h3>
-              <p>
-                Geschäftsführer: Patrick Meier
-              </p>
+              <p>Geschäftsführer: Livio Kägi</p>
               
               <h3>Kontakt</h3>
               <p>
@@ -63,8 +57,6 @@ const Impressum: React.FC = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Impressum;
