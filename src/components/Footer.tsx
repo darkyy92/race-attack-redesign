@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
@@ -38,11 +37,6 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-6 relative gold-line">Navigation</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-gold transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
                 <Link to="/nightliner" className="text-gray-400 hover:text-gold transition-colors">
                   Nightliner
                 </Link>
@@ -55,6 +49,11 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/truck" className="text-gray-400 hover:text-gold transition-colors">
                   Truck
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-gray-400 hover:text-gold transition-colors">
+                  Galerie
                 </Link>
               </li>
               <li>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -38,10 +37,10 @@ const Header: React.FC = () => {
   };
 
   const navLinks = [
-    { title: 'Home', path: '/' },
     { title: 'Nightliner', path: '/nightliner' },
     { title: 'Tour Crew', path: '/tour-crew' },
     { title: 'Truck', path: '/truck' },
+    { title: 'Galerie', path: '/gallery' },
     { title: 'Über Uns', path: '/ueber-uns' },
     { title: 'Kontakt', path: '/kontakt' },
   ];
