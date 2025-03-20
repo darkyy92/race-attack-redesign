@@ -1,51 +1,25 @@
-
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselPrevious, 
-  CarouselNext 
-} from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import { ChevronRight, Check, Music, Users, Coffee, Home } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-
 const NightlinerPage: React.FC = () => {
   const [activeGallery, setActiveGallery] = useState<string | null>(null);
 
   // SEO optimization - set title and meta tags
   useEffect(() => {
     document.title = "VIP Nightliner Mieten | Luxus Tourbusse für Bands & Künstler | Schweiz & Europa";
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        'Mieten Sie hochwertige VIP Nightliner für Ihre Tour durch Europa. 12 oder 16 Schlafplätze, luxuriöse Ausstattung, Küche und Badezimmer. Ihr Premium Tourbus-Partner in der Schweiz.');
+      metaDescription.setAttribute('content', 'Mieten Sie hochwertige VIP Nightliner für Ihre Tour durch Europa. 12 oder 16 Schlafplätze, luxuriöse Ausstattung, Küche und Badezimmer. Ihr Premium Tourbus-Partner in der Schweiz.');
     }
   }, []);
-
-  const sixteenSleeperImages = [
-    "https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner06.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/Livio20-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/Livio25-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/Livio45-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg"
-  ];
-
-  const twelveSleeperImages = [
-    "https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner05.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/lounge-front_lbb-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/dsc07852_lbb-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/backloungebreit_lbb-1.jpg",
-    "https://race-attack.ch/wp-content/uploads/2018/10/bettbreit_lbb-1.jpg"
-  ];
-
+  const sixteenSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner06.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio20-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio25-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio45-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg"];
+  const twelveSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner05.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/lounge-front_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/dsc07852_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/backloungebreit_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/bettbreit_lbb-1.jpg"];
   const toggleGallery = (gallery: string) => {
     if (activeGallery === gallery) {
       setActiveGallery(null);
@@ -55,51 +29,39 @@ const NightlinerPage: React.FC = () => {
   };
 
   // New feature data for the benefits section
-  const nightlinerBenefits = [
-    {
-      icon: <Users className="w-8 h-8 text-gold" />,
-      title: "Schlafkomfort",
-      description: "Bequeme Schlafkojen mit individueller Klimatisierung für jedes Mitglied Ihrer Tour-Crew."
-    },
-    {
-      icon: <Coffee className="w-8 h-8 text-gold" />,
-      title: "Vollausgestattete Küche",
-      description: "Selbstversorgung leicht gemacht mit Kühlschrank, Mikrowelle, Kaffeemaschine und mehr."
-    },
-    {
-      icon: <Home className="w-8 h-8 text-gold" />,
-      title: "Luxuriöse Lounges",
-      description: "Großzügige Aufenthaltsbereiche mit komfortablen Ledersitzen und Entertainment-Systemen."
-    },
-    {
-      icon: <Music className="w-8 h-8 text-gold" />,
-      title: "Für Musiker optimiert",
-      description: "Speziell für die Bedürfnisse von Bands und Künstlern auf Tour konzipiert."
-    }
-  ];
+  const nightlinerBenefits = [{
+    icon: <Users className="w-8 h-8 text-gold" />,
+    title: "Schlafkomfort",
+    description: "Bequeme Schlafkojen mit individueller Klimatisierung für jedes Mitglied Ihrer Tour-Crew."
+  }, {
+    icon: <Coffee className="w-8 h-8 text-gold" />,
+    title: "Vollausgestattete Küche",
+    description: "Selbstversorgung leicht gemacht mit Kühlschrank, Mikrowelle, Kaffeemaschine und mehr."
+  }, {
+    icon: <Home className="w-8 h-8 text-gold" />,
+    title: "Luxuriöse Lounges",
+    description: "Großzügige Aufenthaltsbereiche mit komfortablen Ledersitzen und Entertainment-Systemen."
+  }, {
+    icon: <Music className="w-8 h-8 text-gold" />,
+    title: "Für Musiker optimiert",
+    description: "Speziell für die Bedürfnisse von Bands und Künstlern auf Tour konzipiert."
+  }];
 
   // Additional usage scenarios for the Nightliner
-  const usageScenarios = [
-    {
-      title: "Musik-Tourneen",
-      description: "Ideal für Bands und Künstler auf Europa-Tournee mit kurzen oder langen Strecken zwischen Auftritten."
-    },
-    {
-      title: "Festival-Saison",
-      description: "Perfekt für die Festival-Saison mit bequemer Übernachtungsmöglichkeit direkt am Veranstaltungsort."
-    },
-    {
-      title: "Produktionsteams",
-      description: "Geeignet für Film- und TV-Produktionsteams, die flexibel und komfortabel reisen möchten."
-    },
-    {
-      title: "VIP-Transport",
-      description: "Luxuriöser Transport für VIPs, Geschäftsreisen oder besondere Anlässe mit höchstem Komfort."
-    }
-  ];
-
-  return (
-    <>
+  const usageScenarios = [{
+    title: "Musik-Tourneen",
+    description: "Ideal für Bands und Künstler auf Europa-Tournee mit kurzen oder langen Strecken zwischen Auftritten."
+  }, {
+    title: "Festival-Saison",
+    description: "Perfekt für die Festival-Saison mit bequemer Übernachtungsmöglichkeit direkt am Veranstaltungsort."
+  }, {
+    title: "Produktionsteams",
+    description: "Geeignet für Film- und TV-Produktionsteams, die flexibel und komfortabel reisen möchten."
+  }, {
+    title: "VIP-Transport",
+    description: "Luxuriöser Transport für VIPs, Geschäftsreisen oder besondere Anlässe mit höchstem Komfort."
+  }];
+  return <>
       <Helmet>
         <title>VIP Nightliner Mieten | Luxus Tourbusse für Bands & Künstler | Schweiz & Europa</title>
         <meta name="description" content="Mieten Sie hochwertige VIP Nightliner für Ihre Tour durch Europa. 12 oder 16 Schlafplätze, luxuriöse Ausstattung, Küche und Badezimmer. Ihr Premium Tourbus-Partner in der Schweiz." />
@@ -123,22 +85,22 @@ const NightlinerPage: React.FC = () => {
         {/* Schema.org structured data */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Race Attack VIP Nightliner",
-            "description": "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche, Badezimmer und Entertainment-System für Musiker und Künstler auf Tour.",
-            "brand": {
-              "@type": "Brand",
-              "name": "Race Attack"
-            },
-            "offers": {
-              "@type": "AggregateOffer",
-              "availability": "https://schema.org/InStock",
-              "priceCurrency": "CHF",
-              "url": "https://race-attack.ch/nightliner"
-            },
-            "image": "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg"
-          })}
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Race Attack VIP Nightliner",
+          "description": "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche, Badezimmer und Entertainment-System für Musiker und Künstler auf Tour.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Race Attack"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "CHF",
+            "url": "https://race-attack.ch/nightliner"
+          },
+          "image": "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg"
+        })}
         </script>
       </Helmet>
       <Header />
@@ -146,12 +108,7 @@ const NightlinerPage: React.FC = () => {
         {/* Hero Banner */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img 
-            src="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" 
-            alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" 
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <img src="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center">
               <h1 className="heading-xl text-white uppercase mb-4">
@@ -198,21 +155,14 @@ const NightlinerPage: React.FC = () => {
                   Beide Nightliner verfügen über ein weitläufiges Raumgefühl, große Fenster und eine luxuriöse Innenausstattung nach höchstem Standard. Reisen Sie komfortabel und ausgeruht von Auftritt zu Auftritt durch ganz Europa.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8">
-                  {["Komfortable Schlafkojen", "Voll ausgestattete Küche", "Moderne Badezimmer", "Entertainment-System", "Klimaanlage"].map((feature, index) => (
-                    <div key={index} className="flex items-center bg-black-light px-4 py-2 rounded-full">
+                  {["Komfortable Schlafkojen", "Voll ausgestattete Küche", "Moderne Badezimmer", "Entertainment-System", "Klimaanlage"].map((feature, index) => <div key={index} className="flex items-center bg-black-light px-4 py-2 rounded-full">
                       <Check size={16} className="text-gold mr-2" />
                       <span className="text-white text-sm">{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
               <div className="relative">
-                <img 
-                  src="https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg" 
-                  alt="Race Attack Nightliner - Komfortable Innenausstattung" 
-                  className="rounded-lg shadow-2xl z-10 relative"
-                  loading="lazy"
-                />
+                <img src="https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 rounded-lg -z-10"></div>
               </div>
             </div>
@@ -233,15 +183,13 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {nightlinerBenefits.map((benefit, index) => (
-                <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg">
+              {nightlinerBenefits.map((benefit, index) => <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg">
                   <div className="flex justify-center mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-bold text-center mb-3 text-gold">{benefit.title}</h3>
                   <p className="text-center text-gray-300">{benefit.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -270,16 +218,8 @@ const NightlinerPage: React.FC = () => {
                 </p>
                 
                 {/* Main Feature Image */}
-                <div 
-                  className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg"
-                  onClick={() => toggleGallery('16sleeper')}
-                >
-                  <img 
-                    src={sixteenSleeperImages[0]} 
-                    alt="16 Sleeper Nightliner - Premium Tourbus mit 16 Schlafplätzen" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
+                <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('16sleeper')}>
+                  <img src={sixteenSleeperImages[0]} alt="16 Sleeper Nightliner - Premium Tourbus mit 16 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <span className="text-white bg-gold px-4 py-2 rounded-md">Galerie öffnen</span>
                   </div>
@@ -335,38 +275,26 @@ const NightlinerPage: React.FC = () => {
                 </Link>
 
                 {/* Gallery Modal */}
-                {activeGallery === '16sleeper' && (
-                  <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+                {activeGallery === '16sleeper' && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
                     <div className="w-full max-w-5xl">
                       <div className="flex justify-end mb-4">
-                        <button 
-                          onClick={() => setActiveGallery(null)}
-                          className="text-white hover:text-gold"
-                        >
+                        <button onClick={() => setActiveGallery(null)} className="text-white hover:text-gold">
                           Schließen ×
                         </button>
                       </div>
                       <Carousel>
                         <CarouselContent>
-                          {sixteenSleeperImages.map((img, index) => (
-                            <CarouselItem key={index}>
+                          {sixteenSleeperImages.map((img, index) => <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
-                                <img 
-                                  src={img} 
-                                  alt={`16 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} 
-                                  className="max-h-full max-w-full object-contain" 
-                                  loading="lazy"
-                                />
+                                <img src={img} alt={`16 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-2 border-gold text-gold hover:bg-gold/20" />
                         <CarouselNext className="right-2 border-gold text-gold hover:bg-gold/20" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
               </div>
 
               {/* 12 Sleeper */}
@@ -378,16 +306,8 @@ const NightlinerPage: React.FC = () => {
                 </p>
                 
                 {/* Main Feature Image */}
-                <div 
-                  className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg"
-                  onClick={() => toggleGallery('12sleeper')}
-                >
-                  <img 
-                    src={twelveSleeperImages[0]} 
-                    alt="12 Sleeper Nightliner - Premium Tourbus mit 12 Schlafplätzen" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
+                <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('12sleeper')}>
+                  <img src={twelveSleeperImages[0]} alt="12 Sleeper Nightliner - Premium Tourbus mit 12 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <span className="text-white bg-gold px-4 py-2 rounded-md">Galerie öffnen</span>
                   </div>
@@ -443,38 +363,26 @@ const NightlinerPage: React.FC = () => {
                 </Link>
 
                 {/* Gallery Modal */}
-                {activeGallery === '12sleeper' && (
-                  <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+                {activeGallery === '12sleeper' && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
                     <div className="w-full max-w-5xl">
                       <div className="flex justify-end mb-4">
-                        <button 
-                          onClick={() => setActiveGallery(null)}
-                          className="text-white hover:text-gold"
-                        >
+                        <button onClick={() => setActiveGallery(null)} className="text-white hover:text-gold">
                           Schließen ×
                         </button>
                       </div>
                       <Carousel>
                         <CarouselContent>
-                          {twelveSleeperImages.map((img, index) => (
-                            <CarouselItem key={index}>
+                          {twelveSleeperImages.map((img, index) => <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
-                                <img 
-                                  src={img} 
-                                  alt={`12 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} 
-                                  className="max-h-full max-w-full object-contain"
-                                  loading="lazy" 
-                                />
+                                <img src={img} alt={`12 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-2 border-gold text-gold hover:bg-gold/20" />
                         <CarouselNext className="right-2 border-gold text-gold hover:bg-gold/20" />
                       </Carousel>
                     </div>
-                  </div>
-                )}
+                  </div>}
               </div>
             </div>
           </div>
@@ -494,14 +402,12 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {usageScenarios.map((scenario, index) => (
-                <Card key={index} className="bg-black border border-gold/20">
+              {usageScenarios.map((scenario, index) => <Card key={index} className="bg-black border border-gold/20">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 text-gold">{scenario.title}</h3>
                     <p className="text-gray-300">{scenario.description}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -532,30 +438,23 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="max-w-3xl mx-auto space-y-8">
-              {[
-                {
-                  question: "Was ist ein Nightliner?",
-                  answer: "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche, Badezimmer und Entertainment-Systeme."
-                },
-                {
-                  question: "Wie viele Personen können in einem Nightliner übernachten?",
-                  answer: "Unser 12 Sleeper Nightliner bietet Platz für 12 Personen, während unser 16 Sleeper Nightliner über 16 Schlafplätze verfügt (12 in einem Hauptbereich und 4 in einem separaten Bereich)."
-                },
-                {
-                  question: "Kann man im Nightliner kochen?",
-                  answer: "Ja, beide Nightliner verfügen über eine voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher, sodass Sie unterwegs Mahlzeiten zubereiten können."
-                },
-                {
-                  question: "Gibt es eine Toilette und Dusche im Nightliner?",
-                  answer: "Ja, unsere Nightliner bieten ein vollwertiges Badezimmer mit Dusche und Toilette (kein Chemie-WC) sowie einen separaten Duschraum für maximalen Komfort."
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20">
+              {[{
+              question: "Was ist ein Nightliner?",
+              answer: "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche, Badezimmer und Entertainment-Systeme."
+            }, {
+              question: "Wie viele Personen können in einem Nightliner übernachten?",
+              answer: "Unser 12 Sleeper Nightliner bietet Platz für 12 Personen, während unser 16 Sleeper Nightliner über 16 Schlafplätze verfügt (12 in einem Hauptbereich und 4 in einem separaten Bereich)."
+            }, {
+              question: "Kann man im Nightliner kochen?",
+              answer: "Ja, beide Nightliner verfügen über eine voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher, sodass Sie unterwegs Mahlzeiten zubereiten können."
+            }, {
+              question: "Gibt es eine Toilette und Dusche im Nightliner?",
+              answer: "Ja, unsere Nightliner bieten ein vollwertiges Badezimmer mit Dusche und Toilette (kein Chemie-WC) sowie einen separaten Duschraum für maximalen Komfort."
+            }].map((faq, index) => <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20">
                   <h3 className="text-xl font-bold mb-3 text-white">{faq.question}</h3>
                   <Separator className="bg-gold/20 my-3" />
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -585,7 +484,7 @@ const NightlinerPage: React.FC = () => {
                   <div className="bg-black/50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold mb-4 text-gold">Kontaktieren Sie uns</h3>
                     <div className="space-y-3 text-gray-300">
-                      <p>Telefon: +41 79 XXX XX XX</p>
+                      <p>Telefon: +41 78 606 10 32</p>
                       <p>Email: info@race-attack.ch</p>
                       <p>Verfügbar für Touren in der Schweiz und ganz Europa</p>
                     </div>
@@ -597,8 +496,6 @@ const NightlinerPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default NightlinerPage;
