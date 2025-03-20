@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -46,7 +47,7 @@ const Kontakt: React.FC = () => {
           <div className="container max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="heading-xl uppercase mb-6 reveal">
-                Kontakt<span className="gold-text">ieren</span> Sie Uns
+                <span className="gold-text">KONTAKTIEREN</span> SIE UNS
               </h1>
               <div className="gold-line mx-auto mb-8"></div>
               <p className="text-xl text-gray-300 reveal">
