@@ -52,9 +52,9 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
             <Link 
               to="/nightliner" 
-              className="group relative overflow-hidden rounded-md bg-gold px-8 py-3 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(203,154,61,0.5)] hover:scale-105"
+              className="group relative overflow-hidden rounded-md bg-gold px-8 py-3 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(203,154,61,0.5)] hover:scale-105 flex justify-center items-center"
             >
-              <span className="relative z-10 flex items-center transition-transform duration-500 group-hover:translate-x-2">
+              <span className="relative z-10 flex items-center justify-center transition-transform duration-500 group-hover:translate-x-2">
                 Nightliner entdecken
                 <ArrowRight className="ml-2 h-5 w-5 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1" />
               </span>
@@ -63,9 +63,9 @@ const HeroSection: React.FC = () => {
             
             <Link 
               to="/kontakt" 
-              className="group relative overflow-hidden rounded-md bg-transparent px-8 py-3 text-gold border-2 border-gold font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(203,154,61,0.3)] hover:scale-105"
+              className="group relative overflow-hidden rounded-md bg-transparent px-8 py-3 text-gold border-2 border-gold font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(203,154,61,0.3)] hover:scale-105 flex justify-center items-center"
             >
-              <span className="relative z-10 flex items-center transition-transform duration-500 group-hover:translate-x-2">
+              <span className="relative z-10 flex items-center justify-center transition-transform duration-500 group-hover:translate-x-2">
                 Kontakt
                 <ArrowRight className="ml-2 h-5 w-5 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1" />
               </span>
