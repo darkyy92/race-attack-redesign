@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
@@ -47,13 +46,6 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
           </div>
         )}
         <div className="h-0.5 w-20 bg-gradient-to-r from-gold to-gold-light mb-5"></div>
-        <p className="text-white/70 italic mb-4">Professionelle Tourunterstützung</p>
-        <div className="mt-4">
-          <Link to="/kontakt" className="flex items-center text-gold hover:text-gold-light transition-colors">
-            <span className="mr-2">Kontakt aufnehmen</span>
-            <ChevronRight size={16} />
-          </Link>
-        </div>
       </div>
     </div>
   );
