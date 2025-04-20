@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MapPin, Phone, Mail, Award, Clock, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 const UeberUns: React.FC = () => {
   useEffect(() => {
@@ -14,30 +15,13 @@ const UeberUns: React.FC = () => {
       metaDescription.setAttribute('content', 
         'Race Attack GmbH - Erfahrenes Team für professionellen Nightliner, Fahrzeugtransport und Tour Support in der Schweiz und Europa. Zuverlässig, flexibel und mit Leidenschaft für Motorsport und Musik.');
     }
-
-    // Animation handler
-    const handleAnimations = () => {
-      const animatedElements = document.querySelectorAll('.reveal');
-      
-      animatedElements.forEach(element => {
-        element.classList.add('visible');
-      });
-    };
-
-    // Initial check and add scroll listener
-    // Run immediately and then again after a small delay to ensure all elements are processed
-    handleAnimations();
-    
-    // Run again after a small delay to catch any elements that might not be fully rendered
-    setTimeout(handleAnimations, 100);
-    
-    window.addEventListener('scroll', handleAnimations);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', handleAnimations);
-    };
   }, []);
+
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -48,11 +32,11 @@ const UeberUns: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50"></div>
           <div className="container max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <h1 className="heading-xl uppercase mb-6 reveal">
+              <h1 className="heading-xl uppercase mb-6 animate-fade-in" data-aos="fade-in">
                 Über <span className="gold-text">Uns</span>
               </h1>
-              <div className="gold-line mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 reveal">
+              <div className="gold-line mx-auto mb-8 animate-fade-in" data-aos="fade-in"></div>
+              <p className="text-xl text-gray-300 animate-fade-in" data-aos="fade-in">
                 Lernen Sie Race Attack kennen – Ihr verlässlicher Partner für Nightliner, Tour Crew und Fahrzeugtransport in der Schweiz und ganz Europa.
               </p>
             </div>
@@ -65,18 +49,18 @@ const UeberUns: React.FC = () => {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="heading-lg mb-6 reveal">
+                <h2 className="heading-lg mb-6" data-aos="fade-in">
                   Unsere <span className="gold-text">Geschichte</span>
                 </h2>
                 <div className="gold-line mb-8"></div>
-                <p className="text-gray-300 mb-6 reveal">
+                <p className="text-gray-300 mb-6" data-aos="fade-in">
                   Race Attack ist ein schweizerisches Unternehmen mit Leidenschaft für professionellen Transport und Tourmanagement. Seit unserer Gründung haben wir uns auf hochwertige Nightliner-Services und zuverlässigen Fahrzeugtransport spezialisiert.
                 </p>
-                <p className="text-gray-300 mb-6 reveal">
+                <p className="text-gray-300 mb-6" data-aos="fade-in">
                   Mit unserem erfahrenen Team bieten wir massgeschneiderte Lösungen für Künstler, Bands, Motorsportteams und Veranstaltungen in der Schweiz und ganz Europa an. Unsere Expertise und Zuverlässigkeit haben uns zu einem geschätzten Partner in der Branche gemacht.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                  <div className="flex items-start reveal">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="100">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Award className="text-gold" size={24} />
@@ -87,7 +71,7 @@ const UeberUns: React.FC = () => {
                       <p className="text-gray-400">Höchste Standards und langjährige Erfahrung in der Tour- und Transportbranche.</p>
                     </div>
                   </div>
-                  <div className="flex items-start reveal">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="200">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Clock className="text-gold" size={24} />
@@ -98,7 +82,7 @@ const UeberUns: React.FC = () => {
                       <p className="text-gray-400">Pünktlichkeit und Verlässlichkeit stehen bei uns an erster Stelle.</p>
                     </div>
                   </div>
-                  <div className="flex items-start reveal">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="300">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Globe className="text-gold" size={24} />
@@ -111,7 +95,7 @@ const UeberUns: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="order-1 md:order-2 reveal">
+              <div className="order-1 md:order-2" data-aos="fade-in">
                 <img 
                   src="/images/about/race-attack-team.jpg"
                   alt="Race Attack - Über Uns"
@@ -129,11 +113,11 @@ const UeberUns: React.FC = () => {
         <section className="bg-black py-16">
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="bg-black-light/50 rounded-xl p-8 md:p-12 shadow-gold/5 shadow-xl border border-gold/10">
-              <h2 className="heading-lg text-center mb-12 reveal">
+              <h2 className="heading-lg text-center mb-12" data-aos="fade-in">
                 Kontaktieren Sie <span className="gold-text">Uns</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <div className="text-center reveal">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="100">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <MapPin className="text-gold" size={32} />
                   </div>
@@ -144,7 +128,7 @@ const UeberUns: React.FC = () => {
                     CH-8523 Hagenbuch
                   </p>
                 </div>
-                <div className="text-center reveal">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="200">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Phone className="text-gold" size={32} />
                   </div>
@@ -153,7 +137,7 @@ const UeberUns: React.FC = () => {
                     +41 78 606 10 32
                   </a>
                 </div>
-                <div className="text-center reveal">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="300">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Mail className="text-gold" size={32} />
                   </div>
@@ -163,7 +147,7 @@ const UeberUns: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="mt-12 text-center reveal">
+              <div className="mt-12 text-center" data-aos="fade-in">
                 <Link 
                   to="/kontakt" 
                   className="bg-gold text-white py-3 px-6 rounded-md hover:bg-gold/90 transition-colors inline-block"
@@ -176,20 +160,6 @@ const UeberUns: React.FC = () => {
         </section>
       </main>
       <Footer />
-      
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-          }
-          .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        `
-      }} />
     </div>
   );
 };

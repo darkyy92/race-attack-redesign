@@ -7,6 +7,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { ChevronRight, Check, Music, Users, Coffee, Home } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import AOS from 'aos';
+
 const NightlinerPage: React.FC = () => {
   const [activeGallery, setActiveGallery] = useState<string | null>(null);
 
@@ -18,6 +20,12 @@ const NightlinerPage: React.FC = () => {
       metaDescription.setAttribute('content', 'Mieten Sie hochwertige VIP Nightliner für Ihre Tour durch Europa. 12 oder 16 Schlafplätze, luxuriöse Ausstattung, Küche und Badezimmer. Ihr Premium Tourbus-Partner in der Schweiz.');
     }
   }, []);
+
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
   const sixteenSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner06.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio20-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio25-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio45-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg"];
   const twelveSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner05.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/lounge-front_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/dsc07852_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/backloungebreit_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/bettbreit_lbb-1.jpg"];
   const toggleGallery = (gallery: string) => {
@@ -111,14 +119,14 @@ const NightlinerPage: React.FC = () => {
           <img src="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center">
-              <h1 className="heading-xl text-white uppercase mb-4">
+              <h1 className="heading-xl text-white uppercase mb-4 animate-fade-in" data-aos="fade-in">
                 VIP <span className="text-gold">Nightliner</span>
               </h1>
-              <div className="gold-line mx-auto mb-6"></div>
-              <p className="text-xl text-white max-w-2xl mx-auto">
+              <div className="gold-line mx-auto mb-6 animate-fade-in" data-aos="fade-in" data-aos-delay="100"></div>
+              <p className="text-xl text-white max-w-2xl mx-auto animate-fade-in" data-aos="fade-in" data-aos-delay="200">
                 Premium Tourbusse für anspruchsvolle Künstler und Bands auf Europa-Tournee
               </p>
-              <div className="mt-8">
+              <div className="mt-8 animate-fade-in" data-aos="fade-in" data-aos-delay="300">
                 <Link to="/kontakt" className="gold-button">
                   Jetzt Verfügbarkeit prüfen
                 </Link>
@@ -144,24 +152,24 @@ const NightlinerPage: React.FC = () => {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="heading-lg mb-6">
+                <h2 className="heading-lg mb-6" data-aos="fade-right">
                   Luxuriöse <span className="text-gold">Tourbusse</span> für Ihre Europa-Tour
                 </h2>
                 <div className="gold-line mb-8 w-24"></div>
-                <p className="body-lg mb-6 text-gray-300">
+                <p className="body-lg mb-6 text-gray-300" data-aos="fade-right" data-aos-delay="100">
                   Unsere VIP Nightliner sind speziell für die anspruchsvollen Bedürfnisse von Künstlern, Bands und deren Crews konzipiert. Mit 12 oder 16 komfortablen Schlafplätzen, vollausgestatteter Küche und modernem Badezimmer bieten wir Ihnen ein echtes Zuhause auf Rädern.
                 </p>
-                <p className="body-lg mb-8 text-gray-300">
+                <p className="body-lg mb-8 text-gray-300" data-aos="fade-right" data-aos-delay="200">
                   Beide Nightliner verfügen über ein weitläufiges Raumgefühl, große Fenster und eine luxuriöse Innenausstattung nach höchstem Standard. Reisen Sie komfortabel und ausgeruht von Auftritt zu Auftritt durch ganz Europa.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex flex-wrap gap-4 mb-8" data-aos="fade-right" data-aos-delay="300">
                   {["Komfortable Schlafkojen", "Voll ausgestattete Küche", "Moderne Badezimmer", "Entertainment-System", "Klimaanlage"].map((feature, index) => <div key={index} className="flex items-center bg-black-light px-4 py-2 rounded-full">
                       <Check size={16} className="text-gold mr-2" />
                       <span className="text-white text-sm">{feature}</span>
                     </div>)}
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative" data-aos="fade-left">
                 <img src="https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 rounded-lg -z-10"></div>
               </div>
@@ -173,17 +181,17 @@ const NightlinerPage: React.FC = () => {
         <section className="py-16 bg-black-light">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-6">
+              <h2 className="heading-lg mb-6" data-aos="fade-in">
                 Vorteile unserer <span className="text-gold">Nightliner</span>
               </h2>
-              <div className="gold-line mx-auto mb-8"></div>
-              <p className="body-lg max-w-3xl mx-auto text-gray-300 mb-12">
+              <div className="gold-line mx-auto mb-8" data-aos="fade-in" data-aos-delay="100"></div>
+              <p className="body-lg max-w-3xl mx-auto text-gray-300 mb-12" data-aos="fade-in" data-aos-delay="200">
                 Erleben Sie die zahlreichen Vorteile unserer premium Nightliner, die speziell für die Bedürfnisse von Musikern und Künstlern auf Tour entwickelt wurden.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {nightlinerBenefits.map((benefit, index) => <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg">
+              {nightlinerBenefits.map((benefit, index) => <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg" data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="flex justify-center mb-4">
                     {benefit.icon}
                   </div>
@@ -198,11 +206,11 @@ const NightlinerPage: React.FC = () => {
         <section className="py-16">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-6">
+              <h2 className="heading-lg mb-6" data-aos="fade-in">
                 Unsere <span className="text-gold">Nightliner</span> Modelle
               </h2>
-              <div className="gold-line mx-auto mb-8"></div>
-              <p className="body-lg mb-8 text-gray-300 max-w-3xl mx-auto">
+              <div className="gold-line mx-auto mb-8" data-aos="fade-in" data-aos-delay="100"></div>
+              <p className="body-lg mb-8 text-gray-300 max-w-3xl mx-auto" data-aos="fade-in" data-aos-delay="200">
                 Wählen Sie zwischen zwei erstklassigen Nightliner-Modellen, je nach Größe Ihrer Tour-Crew und Ihren spezifischen Anforderungen.
               </p>
             </div>
@@ -210,10 +218,10 @@ const NightlinerPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
               {/* 16 Sleeper */}
-              <div className="glass-card p-8 rounded-lg">
+              <div className="glass-card p-8 rounded-lg" data-aos="fade-right">
                 <h2 className="heading-md mb-6 gold-text">16 Sleeper</h2>
                 <p className="body-md mb-6 text-gray-300">
-                  Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern. 
+                  Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern.
                   Luxuriöse Innenausstattung nach höchstem Standard für Ihre Tour durch Europa.
                 </p>
                 
@@ -298,10 +306,10 @@ const NightlinerPage: React.FC = () => {
               </div>
 
               {/* 12 Sleeper */}
-              <div className="glass-card p-8 rounded-lg">
+              <div className="glass-card p-8 rounded-lg" data-aos="fade-left">
                 <h2 className="heading-md mb-6 gold-text">12 Sleeper</h2>
                 <p className="body-md mb-6 text-gray-300">
-                  Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern. 
+                  Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern.
                   Luxuriöse Innenausstattung nach höchstem Standard für Ihre Tour durch Europa.
                 </p>
                 
@@ -392,17 +400,17 @@ const NightlinerPage: React.FC = () => {
         <section className="py-16 bg-black-light">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-6">
+              <h2 className="heading-lg mb-6" data-aos="fade-in">
                 Einsatzmöglichkeiten unserer <span className="text-gold">Nightliner</span>
               </h2>
-              <div className="gold-line mx-auto mb-8"></div>
-              <p className="body-lg mb-8 text-gray-300 max-w-3xl mx-auto">
+              <div className="gold-line mx-auto mb-8" data-aos="fade-in" data-aos-delay="100"></div>
+              <p className="body-lg mb-8 text-gray-300 max-w-3xl mx-auto" data-aos="fade-in" data-aos-delay="200">
                 Unsere Nightliner bieten vielseitige Einsatzmöglichkeiten für unterschiedliche Bedürfnisse. Erfahren Sie, wie Sie von unserem Premium-Service profitieren können.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {usageScenarios.map((scenario, index) => <Card key={index} className="bg-black border border-gold/20">
+              {usageScenarios.map((scenario, index) => <Card key={index} className="bg-black border border-gold/20" data-aos="fade-up" data-aos-delay={index * 100}>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 text-gold">{scenario.title}</h3>
                     <p className="text-gray-300">{scenario.description}</p>
@@ -418,11 +426,11 @@ const NightlinerPage: React.FC = () => {
           <div className="gold-decoration w-[600px] h-[600px] -left-[300px] -bottom-[300px] opacity-10"></div>
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="text-5xl text-gold mb-6">"</div>
-              <p className="text-2xl italic mb-8 text-gray-200">
+              <div className="text-5xl text-gold mb-6" data-aos="fade-in">"</div>
+              <p className="text-2xl italic mb-8 text-gray-200" data-aos="fade-in" data-aos-delay="100">
                 Mit unseren Race Attack Nightlinern bieten wir Künstlern und Bands ein rollendes Zuhause, das Komfort und Funktionalität perfekt verbindet. Erholung zwischen den Auftritten garantiert.
               </p>
-              <div className="text-gold font-bold">Race Attack Team</div>
+              <div className="text-gold font-bold" data-aos="fade-in" data-aos-delay="200">Race Attack Team</div>
             </div>
           </div>
         </section>
@@ -431,10 +439,10 @@ const NightlinerPage: React.FC = () => {
         <section className="py-16 bg-black">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="heading-lg mb-6">
+              <h2 className="heading-lg mb-6" data-aos="fade-in">
                 Häufig gestellte <span className="text-gold">Fragen</span>
               </h2>
-              <div className="gold-line mx-auto mb-8"></div>
+              <div className="gold-line mx-auto mb-8" data-aos="fade-in" data-aos-delay="100"></div>
             </div>
             
             <div className="max-w-3xl mx-auto space-y-8">
@@ -450,7 +458,7 @@ const NightlinerPage: React.FC = () => {
             }, {
               question: "Gibt es eine Toilette und Dusche im Nightliner?",
               answer: "Ja, unsere Nightliner bieten ein vollwertiges Badezimmer mit Dusche und Toilette (kein Chemie-WC) sowie einen separaten Duschraum für maximalen Komfort."
-            }].map((faq, index) => <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20">
+            }].map((faq, index) => <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20" data-aos="fade-up" data-aos-delay={index * 100}>
                   <h3 className="text-xl font-bold mb-3 text-white">{faq.question}</h3>
                   <Separator className="bg-gold/20 my-3" />
                   <p className="text-gray-300">{faq.answer}</p>
@@ -465,13 +473,13 @@ const NightlinerPage: React.FC = () => {
             <div className="bg-gradient-to-r from-black to-black-light p-8 md:p-12 rounded-lg shadow-lg border border-gold/20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="heading-lg mb-6">
+                  <h2 className="heading-lg mb-6" data-aos="fade-right">
                     Bereit für Ihre nächste <span className="text-gold">Tour?</span>
                   </h2>
-                  <p className="body-lg mb-8 text-gray-300">
+                  <p className="body-lg mb-8 text-gray-300" data-aos="fade-right" data-aos-delay="100">
                     Kontaktieren Sie uns jetzt für ein individuelles Angebot und sichern Sie sich Ihren premium Nightliner für Ihre Europa-Tour. Unser erfahrenes Team berät Sie gerne.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-right" data-aos-delay="200">
                     <Link to="/kontakt" className="gold-button">
                       Jetzt anfragen
                     </Link>
