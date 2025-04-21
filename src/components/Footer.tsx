@@ -13,9 +13,7 @@ const Footer: React.FC = () => {
                 Race<span className="text-gold">Attack</span>
               </span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Race Attack bietet Ihnen erstklassige Nightliner und professionelle Tour Crew Services für Künstler und Bands in der Schweiz und ganz Europa.
-            </p>
+            <p className="text-gray-400 mb-6 max-w-md">Race Attack bietet Ihnen erstklassige Nightliner und professionelle Tour Crew Services für Künstler und Bands in der Schweiz und ganz Europa. </p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors">
                 <Facebook size={20} />
