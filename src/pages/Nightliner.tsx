@@ -13,8 +13,6 @@ const NightlinerPage: React.FC = () => {
   const { t, i18n } = useTranslation('nightliner');
   const [activeGallery, setActiveGallery] = useState<string | null>(null);
 
-
-
   const sixteenSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner06.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio20-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio25-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio45-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg"];
   const twelveSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner05.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/lounge-front_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/dsc07852_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/backloungebreit_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/bettbreit_lbb-1.jpg"];
   const toggleGallery = (gallery: string) => {
@@ -27,13 +25,33 @@ const NightlinerPage: React.FC = () => {
 
   // New feature data for the benefits section
   const nightlinerBenefits = [
-    { icon: <Users className="w-8 h-8 text-gold" /> },
-    { icon: <Coffee className="w-8 h-8 text-gold" /> },
-    { icon: <Home className="w-8 h-8 text-gold" /> },
-    { icon: <Music className="w-8 h-8 text-gold" /> }
+    { icon: <Users className="w-8 h-8 text-gold" />, key: 'sleep' },
+    { icon: <Coffee className="w-8 h-8 text-gold" />, key: 'kitchen' },
+    { icon: <Home className="w-8 h-8 text-gold" />, key: 'lounge' },
+    { icon: <Music className="w-8 h-8 text-gold" />, key: 'music' }
   ];
+  
+  // Get translation data safely
+  const benefitsRaw = t('benefits.items', { returnObjects: true });
+  const benefitsItems = Array.isArray(benefitsRaw) ? benefitsRaw : [];
+  
+  const featuresRaw = t('introduction.features', { returnObjects: true });
+  const introductionFeatures = Array.isArray(featuresRaw) ? featuresRaw : [];
+  
+  const scenariosRaw = t('usageScenarios.scenarios', { returnObjects: true });
+  const usageScenarios = Array.isArray(scenariosRaw) ? scenariosRaw : [];
+  
+  const faqRaw = t('faq.items', { returnObjects: true });
+  const faqItems = Array.isArray(faqRaw) ? faqRaw : [];
+  
+  const sixteenRaw = t('models.sixteenSleeper.equipment', { returnObjects: true });
+  const sixteenSleeperEquipment = Array.isArray(sixteenRaw) ? sixteenRaw : [];
+  
+  const twelveRaw = t('models.twelveSleeper.equipment', { returnObjects: true });
+  const twelveSleeperEquipment = Array.isArray(twelveRaw) ? twelveRaw : [];
 
-  return <>
+  return (
+    <>
       <Helmet>
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
@@ -127,10 +145,12 @@ const NightlinerPage: React.FC = () => {
                   {t('introduction.description2')}
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8" data-aos="fade-right" data-aos-delay="100">
-                  {t('introduction.features', { returnObjects: true }).map((feature: string, index: number) => <div key={index} className="flex items-center bg-black-light px-4 py-2 rounded-full">
+                  {introductionFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-center bg-black-light px-4 py-2 rounded-full">
                       <Check size={16} className="text-gold mr-2" />
                       <span className="text-white text-sm">{feature}</span>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="relative" data-aos="fade-left">
@@ -155,13 +175,15 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {t('benefits.items', { returnObjects: true }).map((benefit: any, index: number) => <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg" data-aos="fade-up" data-aos-delay={index * 30}>
+              {benefitsItems.map((benefit, index) => (
+                <div key={index} className="bg-black p-6 rounded-lg border border-gold/20 shadow-lg" data-aos="fade-up" data-aos-delay={index * 30}>
                   <div className="flex justify-center mb-4">
-                    {nightlinerBenefits[index].icon}
+                    {nightlinerBenefits[index]?.icon}
                   </div>
                   <h3 className="text-xl font-bold text-center mb-3 text-gold">{benefit.title}</h3>
                   <p className="text-center text-gray-300">{benefit.description}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -193,57 +215,23 @@ const NightlinerPage: React.FC = () => {
                 <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('16sleeper')}>
                   <img src={sixteenSleeperImages[0]} alt="16 Sleeper Nightliner - Premium Tourbus mit 16 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <span className="text-white bg-gold px-4 py-2 rounded-md">Galerie öffnen</span>
+                    <span className="text-white bg-gold px-4 py-2 rounded-md">{t('models.galleryOpen')}</span>
                   </div>
                 </div>
 
                 {/* Features */}
-                <h3 className="text-xl font-semibold mb-4 text-white">Ausstattung:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('models.sixteenSleeper.equipmentTitle')}</h3>
                 <ul className="text-gray-300 space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>3 Flachbildfernseher, DVD, PlayStation, Festplatte mit Filmen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Duschraum</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Badezimmer mit Dusche und Toilette (kein Chemie-WC)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Schlafbereich mit 12 Kojen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Schlafbereich mit 4 Kojen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Alle Kojen mit separatem Licht, Strom, Ventilator, Klimaanlage, Frischluftsystem und nordischer Bettwäsche</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Vollständige Klimaanlage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Heizsystem</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Tische mit Ledersitzen</span>
-                  </li>
+                  {sixteenSleeperEquipment.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-gold mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
 
-                <Link to="/kontakt" className="gold-button inline-block">
-                  Jetzt anfragen
+                <Link to={i18n.language === 'en' ? '/contact' : '/kontakt'} className="gold-button inline-block">
+                  {t('models.cta')}
                 </Link>
 
                 {/* Gallery Modal */}
@@ -251,16 +239,18 @@ const NightlinerPage: React.FC = () => {
                     <div className="w-full max-w-5xl">
                       <div className="flex justify-end mb-4">
                         <button onClick={() => setActiveGallery(null)} className="text-white hover:text-gold">
-                          Schließen ×
+                          {t('models.galleryClose')}
                         </button>
                       </div>
                       <Carousel>
                         <CarouselContent>
-                          {sixteenSleeperImages.map((img, index) => <CarouselItem key={index}>
+                          {sixteenSleeperImages.map((img, index) => (
+                            <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
                                 <img src={img} alt={`16 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
-                            </CarouselItem>)}
+                            </CarouselItem>
+                          ))}
                         </CarouselContent>
                         <CarouselPrevious className="left-2 border-gold text-gold hover:bg-gold/20" />
                         <CarouselNext className="right-2 border-gold text-gold hover:bg-gold/20" />
@@ -281,57 +271,23 @@ const NightlinerPage: React.FC = () => {
                 <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('12sleeper')}>
                   <img src={twelveSleeperImages[0]} alt="12 Sleeper Nightliner - Premium Tourbus mit 12 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <span className="text-white bg-gold px-4 py-2 rounded-md">Galerie öffnen</span>
+                    <span className="text-white bg-gold px-4 py-2 rounded-md">{t('models.galleryOpen')}</span>
                   </div>
                 </div>
 
                 {/* Features */}
-                <h3 className="text-xl font-semibold mb-4 text-white">Ausstattung:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('models.twelveSleeper.equipmentTitle')}</h3>
                 <ul className="text-gray-300 space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>3 Flachbildfernseher, DVD, PlayStation, Festplatte mit Filmen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Duschraum</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>1 Badezimmer mit Dusche und Toilette (kein Chemie-WC)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>12 Schlafkojen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Alle Kojen mit separatem Licht, Strom, Ventilator, Klimaanlage, Frischluftsystem und nordischer Bettwäsche</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Vollständige Klimaanlage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Heizsystem</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Komfortable Backlounge</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-gold mr-2">•</span>
-                    <span>Tische mit Ledersitzen</span>
-                  </li>
+                  {twelveSleeperEquipment.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-gold mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
 
-                <Link to="/kontakt" className="gold-button inline-block">
-                  Jetzt anfragen
+                <Link to={i18n.language === 'en' ? '/contact' : '/kontakt'} className="gold-button inline-block">
+                  {t('models.cta')}
                 </Link>
 
                 {/* Gallery Modal */}
@@ -339,16 +295,18 @@ const NightlinerPage: React.FC = () => {
                     <div className="w-full max-w-5xl">
                       <div className="flex justify-end mb-4">
                         <button onClick={() => setActiveGallery(null)} className="text-white hover:text-gold">
-                          Schließen ×
+                          {t('models.galleryClose')}
                         </button>
                       </div>
                       <Carousel>
                         <CarouselContent>
-                          {twelveSleeperImages.map((img, index) => <CarouselItem key={index}>
+                          {twelveSleeperImages.map((img, index) => (
+                            <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
                                 <img src={img} alt={`12 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
-                            </CarouselItem>)}
+                            </CarouselItem>
+                          ))}
                         </CarouselContent>
                         <CarouselPrevious className="left-2 border-gold text-gold hover:bg-gold/20" />
                         <CarouselNext className="right-2 border-gold text-gold hover:bg-gold/20" />
@@ -374,12 +332,14 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {usageScenarios.map((scenario, index) => <Card key={index} className="bg-black border border-gold/20" data-aos="fade-up" data-aos-delay={index * 30}>
+              {usageScenarios.map((scenario, index) => (
+                <Card key={index} className="bg-black border border-gold/20" data-aos="fade-up" data-aos-delay={index * 30}>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 text-gold">{scenario.title}</h3>
                     <p className="text-gray-300">{scenario.description}</p>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -410,23 +370,13 @@ const NightlinerPage: React.FC = () => {
             </div>
             
             <div className="max-w-3xl mx-auto space-y-8">
-              {[{
-              question: "Was ist ein Nightliner?",
-              answer: "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche, Badezimmer und Entertainment-Systeme."
-            }, {
-              question: "Wie viele Personen können in einem Nightliner übernachten?",
-              answer: "Unser 12 Sleeper Nightliner bietet Platz für 12 Personen, während unser 16 Sleeper Nightliner über 16 Schlafplätze verfügt (12 in einem Hauptbereich und 4 in einem separaten Bereich)."
-            }, {
-              question: "Kann man im Nightliner kochen?",
-              answer: "Ja, beide Nightliner verfügen über eine voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher, sodass Sie unterwegs Mahlzeiten zubereiten können."
-            }, {
-              question: "Gibt es eine Toilette und Dusche im Nightliner?",
-              answer: "Ja, unsere Nightliner bieten ein vollwertiges Badezimmer mit Dusche und Toilette (kein Chemie-WC) sowie einen separaten Duschraum für maximalen Komfort."
-            }].map((faq, index) => <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20" data-aos="fade-up" data-aos-delay={index * 30}>
+              {faqItems.map((faq, index) => (
+                <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20" data-aos="fade-up" data-aos-delay={index * 30}>
                   <h3 className="text-xl font-bold mb-3 text-white">{faq.question}</h3>
                   <Separator className="bg-gold/20 my-3" />
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -468,6 +418,7 @@ const NightlinerPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </>;
+    </>
+  );
 };
 export default NightlinerPage;
