@@ -76,7 +76,6 @@ const Gallery: React.FC = () => {
               aspectRatio="square" 
               lightbox={true}
               showCaptions={false}
-              className="animate-on-scroll"
             />
           </div>
         </section>

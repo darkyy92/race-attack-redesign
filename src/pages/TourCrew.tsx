@@ -22,13 +22,13 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
     <div 
       className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 mb-20 rounded-lg overflow-hidden glass-card border border-gold/10 shadow-xl`}
       data-aos={reverse ? "fade-left" : "fade-right"}
-      data-aos-delay={100 * index}
+      data-aos-delay={30 * index}
     >
       <div className="w-full md:w-2/5 h-80 md:h-auto relative overflow-hidden">
         <img 
           src={image} 
           alt={`${name} - ${position} bei Race Attack`} 
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"
           loading={index < 3 ? "eager" : "lazy"}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>

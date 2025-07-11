@@ -73,7 +73,7 @@ const Truck: React.FC = () => {
                 Race Attack <span className="gold-text">Truck</span>
               </h1>
               <div className="gold-line mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 animate-on-scroll delay-200">
+              <p className="text-xl text-gray-300 animate-on-scroll delay-75">
                 Premium Fahrzeugtransport und professionelle Motorsport-Logistik für anspruchsvolle Kunden in der Schweiz und ganz Europa.
               </p>
             </div>
@@ -90,7 +90,7 @@ const Truck: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.2 }}
               >
                 <img 
                   src="/truck-images/race-attack-truck-nightliner04.jpg" 
@@ -104,7 +104,7 @@ const Truck: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.05 }}
                 >
                   <h2 className="heading-lg mb-6">
                     Professioneller <span className="text-gold">Fahrzeugtransport</span> für höchste Ansprüche
@@ -152,7 +152,7 @@ const Truck: React.FC = () => {
                 Unser <span className="text-gold">Truck</span> im Einsatz
               </h2>
               <div className="gold-line mx-auto mb-8"></div>
-              <p className="body-lg max-w-3xl mx-auto animate-on-scroll delay-200 mb-8">
+              <p className="body-lg max-w-3xl mx-auto animate-on-scroll delay-75 mb-8">
                 Entdecken Sie unseren vielseitigen Race Attack Truck, der für Racingeinsätze, Oldtimer- und Sportwagentransporte sowie Events mit grösseren Backline-Transporten konzipiert wurde.
               </p>
             </div>
@@ -204,7 +204,7 @@ const Truck: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.02 }}
                 >
                   <h3 className="text-xl font-bold mb-4 text-gold">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

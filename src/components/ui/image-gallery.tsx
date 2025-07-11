@@ -141,21 +141,21 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0, margin: "200px" }}
+              transition={{ duration: 0.15, delay: index * 0.02 }}
               className="relative overflow-hidden rounded-lg shadow-md cursor-pointer group h-full"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
               />
               {showCaptions && image.caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {image.caption}
                 </div>
               )}
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center justify-center">
                 <Maximize2 className="text-white w-8 h-8" />
               </div>
             </motion.div>
@@ -171,8 +171,8 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
             key={image.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true, amount: 0, margin: "200px" }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
             className={cn(
               "relative overflow-hidden rounded-lg shadow-md cursor-pointer group",
               getAspectRatioClass()
@@ -185,7 +185,7 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {showCaptions && image.caption && (
-              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                 {image.caption}
               </div>
             )}
@@ -210,10 +210,10 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
               onClick={() => handleImageClick(image, index)}
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0, margin: "200px" }}
+                transition={{ duration: 0.15 }}
                 className="relative h-full overflow-hidden rounded-lg shadow-md group"
               >
                 <img

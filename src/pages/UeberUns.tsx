@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MapPin, Phone, Mail, Award, Clock, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
 
 const UeberUns: React.FC = () => {
   useEffect(() => {
@@ -17,10 +16,6 @@ const UeberUns: React.FC = () => {
     }
   }, []);
 
-  useEffect(() => {
-    AOS.init({ once: true });
-    AOS.refresh();
-  }, []);
 
 
   return (
@@ -60,7 +55,7 @@ const UeberUns: React.FC = () => {
                   Mit unserem erfahrenen Team bieten wir massgeschneiderte Lösungen für Künstler, Bands, Motorsportteams und Veranstaltungen in der Schweiz und ganz Europa an. Unsere Expertise und Zuverlässigkeit haben uns zu einem geschätzten Partner in der Branche gemacht.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="100">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="50">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Award className="text-gold" size={24} />
@@ -71,7 +66,7 @@ const UeberUns: React.FC = () => {
                       <p className="text-gray-400">Höchste Standards und langjährige Erfahrung in der Tour- und Transportbranche.</p>
                     </div>
                   </div>
-                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="200">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="75">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Clock className="text-gold" size={24} />
@@ -82,7 +77,7 @@ const UeberUns: React.FC = () => {
                       <p className="text-gray-400">Pünktlichkeit und Verlässlichkeit stehen bei uns an erster Stelle.</p>
                     </div>
                   </div>
-                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="300">
+                  <div className="flex items-start" data-aos="fade-in" data-aos-delay="100">
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center">
                         <Globe className="text-gold" size={24} />
@@ -117,7 +112,7 @@ const UeberUns: React.FC = () => {
                 Kontaktieren Sie <span className="gold-text">Uns</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <div className="text-center" data-aos="fade-in" data-aos-delay="100">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="50">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <MapPin className="text-gold" size={32} />
                   </div>
@@ -128,7 +123,7 @@ const UeberUns: React.FC = () => {
                     CH-8523 Hagenbuch
                   </p>
                 </div>
-                <div className="text-center" data-aos="fade-in" data-aos-delay="200">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="75">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Phone className="text-gold" size={32} />
                   </div>
@@ -137,7 +132,7 @@ const UeberUns: React.FC = () => {
                     +41 78 606 10 32
                   </a>
                 </div>
-                <div className="text-center" data-aos="fade-in" data-aos-delay="300">
+                <div className="text-center" data-aos="fade-in" data-aos-delay="100">
                   <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Mail className="text-gold" size={32} />
                   </div>

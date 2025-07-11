@@ -48,7 +48,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${
         scrolled 
           ? 'py-3 shadow-lg' 
           : 'py-6'
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
     >
       {/* Frosted glass background when scrolled */}
       <div 
-        className={`absolute inset-0 transition-all duration-500 ${
+        className={`absolute inset-0 transition-all duration-200 ${
           scrolled 
             ? 'bg-black/70 backdrop-blur-lg' 
             : 'bg-transparent'
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
           >
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-heading font-bold text-white">
@@ -88,14 +88,14 @@ const Header: React.FC = () => {
                   key={index}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.02 }}
                   className="relative"
                   onMouseEnter={() => setHoveredLink(link.path)}
                   onMouseLeave={() => setHoveredLink(null)}
                 >
                   <Link
                     to={link.path}
-                    className={`text-white transition-colors duration-300 text-sm uppercase tracking-wider font-medium relative z-10 py-2 px-3 ${
+                    className={`text-white transition-colors duration-150 text-sm uppercase tracking-wider font-medium relative z-10 py-2 px-3 ${
                       isActive ? 'text-gold' : 'hover:text-gold'
                     }`}
                   >
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: navLinks.length * 0.1 }}
+              transition={{ duration: 0.2, delay: navLinks.length * 0.02 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -178,12 +178,12 @@ const Header: React.FC = () => {
                 {/* Logo in mobile menu */}
                 <Link 
                   to="/" 
-                  className="flex items-center justify-center mb-[8vh]" 
+                  className="flex items-center justify-center mb-[min(8vh,3rem)]" 
                   onClick={closeMobileMenu}
                 >
                   <span 
                     className="font-heading font-bold text-white"
-                    style={{ fontSize: 'clamp(1.875rem, 5vw, 3rem)' }}
+                    style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)' }}
                   >
                     Race<span className="text-gold">Attack</span>
                   </span>
@@ -198,16 +198,16 @@ const Header: React.FC = () => {
                         key={index}
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.02 }}
                         whileHover={{ scale: 1.05 }}
-                        className="text-center py-[1.5vh]"
+                        className="text-center py-[min(1.5vh,0.75rem)]"
                       >
                         <Link
                           to={link.path}
-                          className={`text-white transition-all duration-300 uppercase tracking-widest font-bold flex items-center justify-center ${
+                          className={`text-white transition-all duration-150 uppercase tracking-widest font-bold flex items-center justify-center ${
                             isActive ? 'text-gold' : 'hover:text-gold'
                           }`}
-                          style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}
+                          style={{ fontSize: 'clamp(1.125rem, 3.5vw, 2rem)' }}
                           onClick={closeMobileMenu}
                         >
                           {isActive && (
@@ -227,15 +227,15 @@ const Header: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: navLinks.length * 0.1 }}
-                    className="mt-[8vh]"
+                    transition={{ delay: navLinks.length * 0.02 }}
+                    className="mt-[min(8vh,4rem)]"
                   >
                     <Link
                       to="/kontakt"
                       className="gold-button uppercase tracking-widest font-bold inline-block"
                       style={{ 
-                        fontSize: 'clamp(1.125rem, 3.5vw, 2rem)',
-                        padding: 'clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 3rem)'
+                        fontSize: 'clamp(1rem, 3vw, 1.5rem)',
+                        padding: 'clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.5rem)'
                       }}
                       onClick={closeMobileMenu}
                     >

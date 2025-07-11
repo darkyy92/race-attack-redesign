@@ -96,7 +96,7 @@ const Yacht: React.FC = () => {
                 Segelyacht <span className="gold-text">TOAD</span> – Oyster 70
               </h1>
               <div className="gold-line mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 animate-on-scroll delay-200">
+              <p className="text-xl text-gray-300 animate-on-scroll delay-75">
                 Dein schwimmendes Boutique-Hotel auf den Kanarischen Inseln
               </p>
             </div>
@@ -113,7 +113,7 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.2 }}
               >
                 <img 
                   src="/images/yacht/race-attack-photo-yacht-4.jpg" 
@@ -127,7 +127,7 @@ const Yacht: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.2, delay: 0.05 }}
                 >
                   <h2 className="heading-lg mb-6">
                     Luxus & <span className="text-gold">Sicherheit</span> auf höchstem Niveau
@@ -222,7 +222,7 @@ const Yacht: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.02 }}
                 >
                   <h3 className="text-xl font-bold mb-4 text-gold">{section.category}</h3>
                   <ul className="space-y-2">
@@ -254,7 +254,7 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.2 }}
               >
                 <div className="bg-black p-8 rounded-lg shadow-lg border border-gold/20">
                   <h3 className="text-2xl font-bold mb-6 text-gold">Routenvorschläge</h3>
@@ -284,7 +284,7 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.2, delay: 0.05 }}
               >
                 <div className="bg-black p-8 rounded-lg shadow-lg border border-gold/20">
                   <h3 className="text-2xl font-bold mb-6 text-gold">Reiseplanung</h3>
@@ -320,7 +320,7 @@ const Yacht: React.FC = () => {
                 Die <span className="text-gold">TOAD</span> erleben
               </h2>
               <div className="gold-line mx-auto mb-8"></div>
-              <p className="body-lg max-w-3xl mx-auto animate-on-scroll delay-200 mb-8">
+              <p className="body-lg max-w-3xl mx-auto animate-on-scroll delay-75 mb-8">
                 Entdecken Sie unsere luxuriöse Oyster 70 und die traumhaften Segelreviere der Kanarischen Inseln.
               </p>
             </div>
@@ -333,14 +333,14 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.2 }}
               >
                 <img 
                   src={galleryImages[0].src} 
                   alt={galleryImages[0].alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                   <p className="absolute bottom-4 left-4 right-4 text-white text-sm">{galleryImages[0].caption}</p>
                 </div>
               </motion.div>
@@ -351,14 +351,14 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.2, delay: 0.02 }}
               >
                 <img 
                   src={galleryImages[1].src} 
                   alt={galleryImages[1].alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                   <p className="absolute bottom-4 left-4 right-4 text-white text-sm">{galleryImages[1].caption}</p>
                 </div>
               </motion.div>
@@ -371,14 +371,14 @@ const Yacht: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (index + 2) * 0.1 }}
+                  transition={{ duration: 0.2, delay: (index + 2) * 0.02 }}
                 >
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                     <p className="absolute bottom-4 left-4 right-4 text-white text-sm">{image.caption}</p>
                   </div>
                 </motion.div>
@@ -390,14 +390,14 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <img 
                   src={galleryImages[5].src} 
                   alt={galleryImages[5].alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                   <p className="absolute bottom-4 left-4 right-4 text-white text-sm">{galleryImages[5].caption}</p>
                 </div>
               </motion.div>
@@ -407,14 +407,14 @@ const Yacht: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <img 
                   src={galleryImages[6].src} 
                   alt={galleryImages[6].alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                   <p className="absolute bottom-4 left-4 right-4 text-white text-sm">{galleryImages[6].caption}</p>
                 </div>
               </motion.div>

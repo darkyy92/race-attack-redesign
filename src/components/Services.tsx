@@ -96,7 +96,7 @@ const Services: React.FC = () => {
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"
                 />
               </div>
               
