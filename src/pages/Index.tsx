@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import Services from '@/components/Services';
@@ -8,6 +9,8 @@ import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const { t } = useTranslation('home');
+  
   useEffect(() => {
     // Initialize animation observer for elements with .animate-on-scroll class
     const observer = new IntersectionObserver(
@@ -31,7 +34,7 @@ const Index = () => {
   
   // Setze Titel und Meta-Tags für SEO-Optimierung
   useEffect(() => {
-    document.title = "Race-Attack | Premium Nightliner & Tour Crew | Schweiz";
+    document.title = t('meta.title');
     
     // Meta-Description Tag
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -40,13 +43,13 @@ const Index = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Premium Nightliner und professionelle Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa. Höchste Qualität für Ihre Tournee.');
+    metaDescription.setAttribute('content', t('meta.description'));
     
     // Weitere Meta-Tags für SEO-Optimierung
     const metaTags = [
-      { name: 'keywords', content: 'Nightliner, Tourbus mieten, Nightliner Schweiz, Nightliner Europa, Tour Crew buchen, Schweiz, Europa' },
-      { property: 'og:title', content: 'Race-Attack | Premium Nightliner & Tour Crew' },
-      { property: 'og:description', content: 'Premium Nightliner und professionelle Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.' },
+      { name: 'keywords', content: t('meta.keywords') },
+      { property: 'og:title', content: t('meta.title') },
+      { property: 'og:description', content: t('meta.description') },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://race-attack.ch' }
     ];
@@ -60,7 +63,7 @@ const Index = () => {
       }
       metaTag.setAttribute('content', tag.content);
     });
-  }, []);
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-black text-white">

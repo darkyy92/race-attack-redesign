@@ -1,0 +1,39 @@
+{
+  "footer": {
+    "description": "Race Attack bietet Ihnen erstklassige Nightliner und professionelle Tour Crew Services für Künstler und Bands in der Schweiz und ganz Europa.",
+    "copyright": "© {{year}} Race Attack GmbH. Alle Rechte vorbehalten.",
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "navigation": {
+    "title": "Navigation",
+    "nightliner": "Nightliner",
+    "tourCrew": "Tour Crew",
+    "truck": "Truck",
+    "yacht": "Yacht",
+    "gallery": "Galerie",
+    "aboutUs": "Über Uns",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "company": "Race Attack GmbH",
+    "address": {
+      "street": "Kappel 1",
+      "postalCode": "CH-8523",
+      "city": "Hagenbuch",
+      "country": "Schweiz"
+    },
+    "phone": "+41 78 606 10 32",
+    "email": "info@race-attack.ch"
+  },
+  "legal": {
+    "imprint": "Impressum",
+    "termsAndConditions": "AGB",
+    "privacyPolicy": "Datenschutz"
+  },
+  "socialMedia": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  }
+}

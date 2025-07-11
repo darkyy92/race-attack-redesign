@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "RACE-ATTACK",
+    "subtitle": "Premium nightliner and tour crew for demanding artists and bands in Switzerland and throughout Europe.",
+    "buttons": {
+      "discover": "Discover Nightliner",
+      "contact": "Contact"
+    },
+    "scrollDown": "Scroll down"
+  },
+  "services": {
+    "sectionTitle": "Our",
+    "sectionTitleHighlight": "Services",
+    "sectionSubtitle": "Experience first-class comfort and reliability with our premium transport solutions and professional tour services.",
+    "nightliner": {
+      "title": "Nightliner",
+      "description": "Luxurious tour buses with 12 or 16 berths and first-class equipment for artists and bands on tour.",
+      "features": [
+        "Comfortable sleeping berths",
+        "Fully equipped living area",
+        "High-quality sound systems",
+        "Satellite TV & WiFi"
+      ]
+    },
+    "tourCrew": {
+      "title": "Tour Crew",
+      "description": "Professional team with comprehensive experience in tour planning and execution.",
+      "features": [
+        "Tour managers & guitar techs",
+        "Sound & light engineers",
+        "Experienced bus drivers",
+        "Complete tour package"
+      ]
+    },
+    "truck": {
+      "title": "Truck",
+      "description": "Renault Magnum with Achleitner trailer for equipment and vehicle transport.",
+      "features": [
+        "Up to 70m³ cargo volume",
+        "2.5-ton tail lift",
+        "Lounge with 2 beds",
+        "For racing and events"
+      ]
+    },
+    "learnMore": "Learn more"
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "sectionTitleHighlight": "Us",
+    "sectionSubtitle": "Get in touch for a no-obligation consultation or quote for your project.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Your email",
+      "phone": "Phone",
+      "phonePlaceholder": "Phone number",
+      "service": "Service",
+      "servicePlaceholder": "Please select",
+      "serviceOptions": {
+        "nightliner": "Nightliner",
+        "tourCrew": "Tour Crew",
+        "truck": "Truck",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Your inquiry",
+      "submitButton": "Send inquiry",
+      "submitting": "Sending...",
+      "successTitle": "Inquiry received",
+      "successMessage": "Thank you for your inquiry. We will contact you shortly.",
+      "privacyNotice": "By submitting, you agree to our",
+      "privacyLink": "Privacy Policy",
+      "privacyNoticeSuffix": ".",
+      "other": "Other"
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "company": "Race Attack GmbH",
+      "street": "Kappel 1",
+      "city": "CH-8523 Hagenbuch",
+      "country": "Switzerland",
+      "availability": {
+        "title": "Check availability",
+        "description": "Contact us directly by phone or email for a quick availability check.",
+        "button": "Call now"
+      }
+    }
+  },
+  "references": {
+    "title": "Our",
+    "titleHighlight": "References",
+    "subtitle": "Trust our years of experience and expertise with renowned artists and event organizers.",
+    "artistsTitle": "Artists & Bands",
+    "partnersTitle": "Partners & Event Organizers"
+  },
+  "marquee": {
+    "title": "Our",
+    "titleHighlight": "Partners"
+  },
+  "meta": {
+    "title": "Race-Attack | Premium Nightliner & Tour Crew | Switzerland",
+    "description": "Premium nightliner and professional tour crew for demanding artists and bands in Switzerland and throughout Europe. Highest quality for your tour.",
+    "keywords": "Nightliner, tour bus rental, nightliner Switzerland, nightliner Europe, book tour crew, Switzerland, Europe"
+  }
+}

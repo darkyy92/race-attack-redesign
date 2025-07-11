@@ -1,0 +1,111 @@
+{
+  "privacy": {
+    "title": "Datenschutz",
+    "pageTitle": "Datenschutz | Race Attack",
+    "lastUpdated": "Stand: {{date}} | Gültig gemäss dem neuen Schweizer Datenschutzgesetz (nDSG/revDSG) seit 1. September 2023",
+    "sections": {
+      "responsibleParty": "Verantwortliche Stelle und Kontakt",
+      "dataProcessing": "Erhebung und Bearbeitung personenbezogener Daten",
+      "dataCategories": "Kategorien bearbeiteter Personendaten",
+      "processingPurpose": "Zweck der Datenbearbeitung",
+      "legalBasis": "Rechtsgrundlagen",
+      "dataSharing": "Datenweitergabe und Empfänger",
+      "recipientCategories": "Empfängerkategorien",
+      "internationalTransfer": "Datenübermittlung ins Ausland",
+      "cookies": "Cookies und Tracking-Technologien",
+      "cookieTypes": "Verwendete Cookies",
+      "cookieManagement": "Cookie-Verwaltung",
+      "yourRights": "Ihre Rechte",
+      "dataSecurity": "Datensicherheit",
+      "retention": "Aufbewahrung und Löschung",
+      "impactAssessment": "Datenschutz-Folgenabschätzung",
+      "breachNotification": "Meldung von Datenschutzverletzungen",
+      "minors": "Minderjährige",
+      "changes": "Änderungen dieser Datenschutzerklärung",
+      "supervisoryAuthority": "Aufsichtsbehörde",
+      "dataProtectionConsulting": "Datenschutzberatung"
+    },
+    "company": {
+      "name": "Race-Attack GmbH",
+      "owner": "Inhaber: Livio Kägi",
+      "address": "Schulstrasse 6b",
+      "postalCode": "8542 Wiesendangen",
+      "country": "Schweiz",
+      "uid": "UID: CHE-162.556.838",
+      "email": "E-Mail: info@race-attack.ch",
+      "phone": "Telefon: +41 78 606 10 32"
+    },
+    "authority": {
+      "name": "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)",
+      "address": "Feldeggweg 1",
+      "postalCode": "3003 Bern",
+      "country": "Schweiz",
+      "website": "Website: www.edoeb.admin.ch"
+    }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "pageTitle": "Impressum | Race Attack",
+    "sections": {
+      "legalInfo": "Angaben gemäss Art. 5 TMG / Art. 322 OR",
+      "representedBy": "Vertreten durch",
+      "contact": "Kontakt",
+      "commercialRegister": "Handelsregister",
+      "vat": "Mehrwertsteuer",
+      "contentResponsibility": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+      "disclaimer": "Haftungsausschluss",
+      "contentLiability": "Haftung für Inhalte",
+      "linkLiability": "Haftung für Links",
+      "copyright": "Urheberrecht"
+    },
+    "company": {
+      "name": "Race-Attack GmbH",
+      "legalForm": "Gesellschaft mit beschränkter Haftung",
+      "address": "Schulstrasse 6b",
+      "postalCode": "8542 Wiesendangen",
+      "country": "Schweiz",
+      "ceo": "Geschäftsführer: Livio Kägi",
+      "phone": "Telefon: +41 78 606 10 32",
+      "email": "E-Mail: info@race-attack.ch",
+      "website": "Website: www.race-attack.ch",
+      "registerInfo": "Eingetragen im Handelsregister des Kantons Zürich",
+      "registerLocation": "Sitz: Wiesendangen",
+      "uid": "UID: CHE-162.556.838",
+      "status": "Status: aktiv",
+      "vatId": "UID: CHE-162.556.838 MWST"
+    }
+  },
+  "terms": {
+    "title": "AGB",
+    "pageTitle": "AGB | Race Attack",
+    "mainTitle": "Allgemeine Geschäftsbedingungen",
+    "subtitle": "Race-Attack GmbH",
+    "sections": {
+      "offerAndContract": "§ 1 Angebot und Vertragsabschluss",
+      "scopeOfServices": "§ 2 Leistungsumfang",
+      "priceAndPayment": "§ 3 Preis und Zahlung",
+      "cancellationByCustomer": "§ 4 Kündigung und Rücktritt durch den Besteller",
+      "cancellationByCarrier": "§ 5 Kündigung und Rücktritt durch den Beförderer",
+      "liability": "§ 6 Haftung",
+      "jurisdiction": "§ 7 Gerichtsstand",
+      "applicableLaw": "§ 8 Geltendes Recht",
+      "drivers": "§ 9 Fahrer / Doppelfahrer",
+      "headcount": "§ 10 Vollzähligkeit der Personen",
+      "transportConditions": "§ 11 Beförderungsbedingungen",
+      "routing": "§ 12 Routing / Persönliches",
+      "standbyOperation": "§ 13 Standbetrieb auf Festivals, Clubs, Hallen, Off-Days",
+      "offDays": "§ 14 Off-Days und Verpflegung",
+      "insurance": "§ 15 Versicherungen"
+    },
+    "jurisdiction": {
+      "location": "Gerichtsstand ist Winterthur."
+    }
+  },
+  "navigation": {
+    "backToHome": "Zurück zur Startseite",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "terms": "AGB"
+  }
+}

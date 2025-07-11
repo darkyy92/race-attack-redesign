@@ -1,5 +1,6 @@
 import { Marquee } from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 // Partners with logos from the /public/logos/ folder
 const partners = [
@@ -37,6 +38,7 @@ const partners = [
 
 export function MarqueeDemo() {
   const [isClient, setIsClient] = useState(false);
+  const { t } = useTranslation('home');
 
   useEffect(() => {
     setIsClient(true);
@@ -50,7 +52,7 @@ export function MarqueeDemo() {
       <div className="container max-w-7xl mx-auto mb-10">
         <div className="text-center mb-10 animate-on-scroll">
           <h2 className="heading-lg uppercase mb-4">
-            Unsere <span className="gold-text">Partner</span>
+            {t('marquee.title')} <span className="gold-text">{t('marquee.titleHighlight')}</span>
           </h2>
           <div className="gold-line mx-auto"></div>
         </div>

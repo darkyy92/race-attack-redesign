@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Race Attack Yacht | Sailing Yacht TOAD - Oyster 70 | Luxury Charter Canary Islands",
+    "description": "Charter cruises on the sailing yacht TOAD – Oyster 70. Luxurious 22m yacht with 5 cabins in the Canary Islands. Year-round sailing with ideal climate."
+  },
+  "hero": {
+    "title": "Sailing Yacht",
+    "titleHighlight": "TOAD",
+    "subtitle": "– Oyster 70",
+    "description": "Your floating boutique hotel in the Canary Islands"
+  },
+  "luxurySection": {
+    "title": "Luxury &",
+    "titleHighlight": "Safety",
+    "subtitle": "at the highest level",
+    "description": "The TOAD is moored year-round in the southwest of Gran Canaria. The Canary Islands offer constant northeast trade winds, mild 26°C air and over 20°C water temperature – ideal from September to May.",
+    "features": [
+      "Oyster 70 with 5 cabins, state-of-the-art technology and complete safety equipment",
+      "Weekly cruises, routes according to wind, weather and your wishes",
+      "Best climate from autumn to spring, hardly any charter traffic",
+      "Multiple daily direct flights, transfer service included"
+    ],
+    "cta": "Make an inquiry now"
+  },
+  "specifications": {
+    "title": "Technical",
+    "titleHighlight": "Specifications",
+    "categories": {
+      "dimensions": {
+        "title": "Dimensions",
+        "specs": {
+          "lengthWidth": {
+            "label": "Length / Width",
+            "value": "almost 22 m / nearly 6 m"
+          },
+          "mast": {
+            "label": "Mast",
+            "value": "30 m"
+          },
+          "sailArea": {
+            "label": "Sail area",
+            "value": "approx. 260 m² upwind, over 300 m² downwind"
+          }
+        }
+      },
+      "accommodation": {
+        "title": "Accommodation",
+        "specs": {
+          "cabins": {
+            "label": "Cabins",
+            "value": "5 double cabins"
+          },
+          "sanitary": {
+            "label": "Sanitary",
+            "value": "Each cabin with its own WC / shower"
+          },
+          "comfort": {
+            "label": "Comfort",
+            "value": "Air conditioning, large kitchen, salon with panoramic windows"
+          }
+        }
+      },
+      "equipment": {
+        "title": "Equipment",
+        "specs": {
+          "propulsion": {
+            "label": "Propulsion",
+            "value": "Powerful main engine + large generator"
+          },
+          "deck": {
+            "label": "Deck",
+            "value": "Complete teak deck, protected cockpit, sun loungers"
+          },
+          "tenders": {
+            "label": "Tenders",
+            "value": "RibEye dinghy with 25 HP"
+          }
+        }
+      },
+      "supply": {
+        "title": "Supply",
+        "specs": {
+          "cooling": {
+            "label": "Cooling",
+            "value": "Large refrigerators / freezers"
+          },
+          "tanks": {
+            "label": "Tanks",
+            "value": "Large water and diesel tanks"
+          },
+          "water": {
+            "label": "Water",
+            "value": "Watermaker on board"
+          }
+        }
+      },
+      "safety": {
+        "title": "Safety",
+        "specs": {
+          "rescue": {
+            "label": "Rescue equipment",
+            "value": "AIS life jackets, life raft, EPIRB emergency beacon"
+          },
+          "navigation": {
+            "label": "Navigation",
+            "value": "Radar, VHF radio"
+          },
+          "medical": {
+            "label": "Medical",
+            "value": "Comprehensive medical kit (skipper military medically trained)"
+          }
+        }
+      }
+    }
+  },
+  "routes": {
+    "title": "Your cruise in the",
+    "titleHighlight": "Canary Islands",
+    "suggestions": {
+      "title": "Route suggestions",
+      "routes": [
+        "Circumnavigation of Gran Canaria",
+        "Tenerife – La Gomera",
+        "Fuerteventura or, on longer cruises, to La Palma",
+        "\"Easy Going\" from bay to bay or sporty mileage cruise – you decide (beginners welcome and actively involved if desired)"
+      ]
+    },
+    "planning": {
+      "title": "Travel planning",
+      "options": [
+        "Direct flight Zurich → Gran Canaria with Edelweiss (approx. 4 h, CHF 300–550)",
+        "Direct flight Basel → Gran Canaria with EasyJet (from approx. CHF 300)",
+        "Many other cities in Europe from ~ EUR 100",
+        "We are happy to organize the transfer from the airport to the TOAD"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Experience the",
+    "titleHighlight": "TOAD",
+    "subtitle": "",
+    "description": "Discover our luxurious Oyster 70 and the fantastic sailing areas of the Canary Islands.",
+    "images": [
+      {
+        "alt": "Sailing yacht TOAD - Oyster 70 under sail",
+        "caption": "The TOAD at full speed – 260m² sail area upwind"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Luxurious deck",
+        "caption": "Complete teak deck with protected cockpit"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Oyster 70 in harbor",
+        "caption": "The elegant TOAD – 22 meters of pure sailing art"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Cabin",
+        "caption": "5 double cabins with own WC/shower"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Anchoring in the bay",
+        "caption": "Dreamlike bays often all to yourself"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Comfortable salon",
+        "caption": "Salon with panoramic windows and air conditioning"
+      },
+      {
+        "alt": "Sailing yacht TOAD - Sailing at sunset",
+        "caption": "Unforgettable moments on the Atlantic"
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Flexibility meets luxury: Weekly cruises, routes according to wind, weather and your wishes. Often you have the bays to yourself.",
+    "author": "Race Attack Yacht Charter"
+  },
+  "cta": {
+    "title": "Ready to",
+    "titleHighlight": "cast off?",
+    "description": "Get in touch for your desired date – we look forward to hearing from you! Experience unforgettable sailing trips on the TOAD in the waters of the Canary Islands.",
+    "primaryButton": "Request charter",
+    "secondaryButton": "View more pictures"
+  },
+  "marquee": {
+    "items": ["Sailing Yacht", "Oyster 70", "Gran Canaria", "Canary Islands", "Charter", "Sailing Cruise", "Luxury", "TOAD"]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Race Attack Truck | Premium Fahrzeugtransport & Motorsport Logistik",
+    "description": "Unser Race Attack Truck bietet 70m³ Ladevolumen für bis zu drei Fahrzeuge plus Equipment. Ideal für Racingeinsätze, Oldtimer- und Sportwagentransporte in der Schweiz und Europa."
+  },
+  "hero": {
+    "title": "Race Attack",
+    "titleHighlight": "Truck",
+    "subtitle": "Premium Fahrzeugtransport und professionelle Motorsport-Logistik für anspruchsvolle Kunden in der Schweiz und ganz Europa."
+  },
+  "mainSection": {
+    "title": "Professioneller",
+    "titleHighlight": "Fahrzeugtransport",
+    "titleSuffix": "für höchste Ansprüche",
+    "description": "Unser Race Attack Truck ist die perfekte Lösung für anspruchsvolle Fahrzeugtransporte und Motorsport-Logistik. Mit einem Renault Magnum Zugfahrzeug und einem speziell angefertigten Achleitner Auflieger bieten wir Ihnen maximale Flexibilität und Sicherheit für Ihre wertvollen Fahrzeuge.",
+    "features": [
+      "Grosszügiges Ladevolumen von ca. 70m³",
+      "Kapazität für bis zu drei Fahrzeuge plus Equipment",
+      "2,5 Tonnen Hebebühne für sicheres Be- und Entladen",
+      "Komfortable Lounge mit Küche und 2 Betten im vorderen Teil",
+      "Ausgestattet mit Elektrotablet und Druckluftinstallation"
+    ],
+    "cta": "Jetzt Anfrage stellen"
+  },
+  "gallery": {
+    "title": "Unser",
+    "titleHighlight": "Truck",
+    "titleSuffix": "im Einsatz",
+    "description": "Entdecken Sie unseren vielseitigen Race Attack Truck, der für Racingeinsätze, Oldtimer- und Sportwagentransporte sowie Events mit grösseren Backline-Transporten konzipiert wurde.",
+    "images": [
+      {
+        "alt": "Race Attack Truck - Aussenansicht mit Zugmaschine",
+        "caption": "Renault Magnum Zugfahrzeug mit Achleitner Auflieger"
+      },
+      {
+        "alt": "Race Attack Truck - Innenansicht mit Fahrzeugtransport",
+        "caption": "Kapazität für bis zu drei Fahrzeuge plus Equipment"
+      },
+      {
+        "alt": "Race Attack Truck - Detailansicht der Laderampe",
+        "caption": "2,5 Tonnen Hebebühne für sicheres Be- und Entladen"
+      }
+    ]
+  },
+  "features": {
+    "title": "Vielseitige",
+    "titleHighlight": "Einsatzmöglichkeiten",
+    "items": [
+      {
+        "title": "Motorsport Teams",
+        "description": "Ideal für bis zu drei Rennteams mit Fahrzeugen und kompletter Ausrüstung."
+      },
+      {
+        "title": "Oldtimer Transport",
+        "description": "Sicherer und schonender Transport Ihrer wertvollen Oldtimer und Klassiker."
+      },
+      {
+        "title": "Sportwagen Logistik",
+        "description": "Professioneller Transport exklusiver Sportwagen zu Events und Ausstellungen."
+      },
+      {
+        "title": "Event Equipment",
+        "description": "Grosszügiger Platz für Backline-Transporte und Event-Ausrüstung."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Mit unserem Race Attack Truck bieten wir Ihnen eine zuverlässige und flexible Transportlösung für Ihre wertvollen Fahrzeuge und Equipment. Profitieren Sie von unserem Erfahrungsschatz in der Motorsport-Logistik.",
+    "author": "Race Attack Team"
+  },
+  "cta": {
+    "title": "Bereit für Ihren nächsten",
+    "titleHighlight": "Transport?",
+    "description": "Kontaktieren Sie uns noch heute für ein individuelles Angebot für Ihren Fahrzeugtransport oder Ihre Motorsport-Logistik. Unser erfahrenes Team steht Ihnen gerne zur Verfügung.",
+    "primaryButton": "Jetzt anfragen",
+    "secondaryButton": "Mehr Bilder ansehen"
+  },
+  "marquee": {
+    "items": ["Motorsport", "Fahrzeugtransport", "Oldtimer", "Sportwagen", "Renneinsätze", "Logistik", "Schweiz", "Europa"]
+  }
+}

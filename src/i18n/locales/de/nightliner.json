@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "VIP Nightliner Mieten | Luxus Tourbusse für Bands & Künstler | Schweiz & Europa",
+    "description": "Mieten Sie hochwertige VIP Nightliner für Ihre Tour durch Europa. 12 oder 16 Schlafplätze, luxuriöse Ausstattung, Küche und Badezimmer. Ihr Premium Tourbus-Partner in der Schweiz.",
+    "keywords": "Nightliner, Tourbus mieten, Nightliner Schweiz, Nightliner Europa, Tour Crew, VIP Bus, Bandbus"
+  },
+  "hero": {
+    "title": "VIP",
+    "titleHighlight": "Nightliner",
+    "subtitle": "Premium Tourbusse für anspruchsvolle Künstler und Bands auf Europa-Tournee",
+    "cta": "Jetzt Verfügbarkeit prüfen"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Nightliner"
+  },
+  "introduction": {
+    "title": "Luxuriöse",
+    "titleHighlight": "Tourbusse",
+    "titleSuffix": "für Ihre Europa-Tour",
+    "description1": "Unsere VIP Nightliner sind speziell für die anspruchsvollen Bedürfnisse von Künstlern, Bands und deren Crews konzipiert. Mit 12 oder 16 komfortablen Schlafplätzen, vollausgestatteter Küche und modernem Badezimmer bieten wir Ihnen ein echtes Zuhause auf Rädern.",
+    "description2": "Beide Nightliner verfügen über ein weitläufiges Raumgefühl, große Fenster und eine luxuriöse Innenausstattung nach höchstem Standard. Reisen Sie komfortabel und ausgeruht von Auftritt zu Auftritt durch ganz Europa.",
+    "features": [
+      "Komfortable Schlafkojen",
+      "Voll ausgestattete Küche",
+      "Moderne Badezimmer",
+      "Entertainment-System",
+      "Klimaanlage"
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile unserer",
+    "titleHighlight": "Nightliner",
+    "subtitle": "Erleben Sie die zahlreichen Vorteile unserer premium Nightliner, die speziell für die Bedürfnisse von Musikern und Künstlern auf Tour entwickelt wurden.",
+    "items": [
+      {
+        "title": "Schlafkomfort",
+        "description": "Bequeme Schlafkojen mit individueller Klimatisierung für jedes Mitglied Ihrer Tour-Crew."
+      },
+      {
+        "title": "Vollausgestattete Küche",
+        "description": "Selbstversorgung leicht gemacht mit Kühlschrank, Mikrowelle, Kaffeemaschine und mehr."
+      },
+      {
+        "title": "Luxuriöse Lounges",
+        "description": "Großzügige Aufenthaltsbereiche mit komfortablen Ledersitzen und Entertainment-Systemen."
+      },
+      {
+        "title": "Für Musiker optimiert",
+        "description": "Speziell für die Bedürfnisse von Bands und Künstlern auf Tour konzipiert."
+      }
+    ]
+  },
+  "models": {
+    "title": "Unsere",
+    "titleHighlight": "Nightliner",
+    "titleSuffix": "Modelle",
+    "subtitle": "Wählen Sie zwischen zwei erstklassigen Nightliner-Modellen, je nach Größe Ihrer Tour-Crew und Ihren spezifischen Anforderungen.",
+    "galleryOpen": "Galerie öffnen",
+    "galleryClose": "Schließen ×",
+    "cta": "Jetzt anfragen",
+    "sixteenSleeper": {
+      "title": "16 Sleeper",
+      "description": "Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern. Luxuriöse Innenausstattung nach höchstem Standard für Ihre Tour durch Europa.",
+      "equipmentTitle": "Ausstattung:",
+      "equipment": [
+        "Voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher",
+        "3 Flachbildfernseher, DVD, PlayStation, Festplatte mit Filmen",
+        "1 Duschraum",
+        "1 Badezimmer mit Dusche und Toilette (kein Chemie-WC)",
+        "1 Schlafbereich mit 12 Kojen",
+        "1 Schlafbereich mit 4 Kojen",
+        "Alle Kojen mit separatem Licht, Strom, Ventilator, Klimaanlage, Frischluftsystem und nordischer Bettwäsche",
+        "Vollständige Klimaanlage",
+        "Heizsystem",
+        "Tische mit Ledersitzen"
+      ]
+    },
+    "twelveSleeper": {
+      "title": "12 Sleeper",
+      "description": "Einstöckiger Nightliner/Tourbus mit weitläufigem Raumgefühl und großen Fenstern. Luxuriöse Innenausstattung nach höchstem Standard für Ihre Tour durch Europa.",
+      "equipmentTitle": "Ausstattung:",
+      "equipment": [
+        "Voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher",
+        "3 Flachbildfernseher, DVD, PlayStation, Festplatte mit Filmen",
+        "1 Duschraum",
+        "1 Badezimmer mit Dusche und Toilette (kein Chemie-WC)",
+        "12 Schlafkojen",
+        "Alle Kojen mit separatem Licht, Strom, Ventilator, Klimaanlage, Frischluftsystem und nordischer Bettwäsche",
+        "Vollständige Klimaanlage",
+        "Heizsystem",
+        "Komfortable Backlounge",
+        "Tische mit Ledersitzen"
+      ]
+    }
+  },
+  "usageScenarios": {
+    "title": "Einsatzmöglichkeiten unserer",
+    "titleHighlight": "Nightliner",
+    "subtitle": "Unsere Nightliner bieten vielseitige Einsatzmöglichkeiten für unterschiedliche Bedürfnisse. Erfahren Sie, wie Sie von unserem Premium-Service profitieren können.",
+    "scenarios": [
+      {
+        "title": "Musik-Tourneen",
+        "description": "Ideal für Bands und Künstler auf Europa-Tournee mit kurzen oder langen Strecken zwischen Auftritten."
+      },
+      {
+        "title": "Festival-Saison",
+        "description": "Perfekt für die Festival-Saison mit bequemer Übernachtungsmöglichkeit direkt am Veranstaltungsort."
+      },
+      {
+        "title": "Produktionsteams",
+        "description": "Geeignet für Film- und TV-Produktionsteams, die flexibel und komfortabel reisen möchten."
+      },
+      {
+        "title": "VIP-Transport",
+        "description": "Luxuriöser Transport für VIPs, Geschäftsreisen oder besondere Anlässe mit höchstem Komfort."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Mit unseren Race Attack Nightlinern bieten wir Künstlern und Bands ein rollendes Zuhause, das Komfort und Funktionalität perfekt verbindet. Erholung zwischen den Auftritten garantiert.",
+    "author": "Race Attack Team"
+  },
+  "faq": {
+    "title": "Häufig gestellte",
+    "titleHighlight": "Fragen",
+    "questions": [
+      {
+        "question": "Was ist ein Nightliner?",
+        "answer": "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche, Badezimmer und Entertainment-Systeme."
+      },
+      {
+        "question": "Wie viele Personen können in einem Nightliner übernachten?",
+        "answer": "Unser 12 Sleeper Nightliner bietet Platz für 12 Personen, während unser 16 Sleeper Nightliner über 16 Schlafplätze verfügt (12 in einem Hauptbereich und 4 in einem separaten Bereich)."
+      },
+      {
+        "question": "Kann man im Nightliner kochen?",
+        "answer": "Ja, beide Nightliner verfügen über eine voll ausgestattete Küche mit Kühlschrank, Kaffeemaschine, Mikrowelle, Toaster und Wasserkocher, sodass Sie unterwegs Mahlzeiten zubereiten können."
+      },
+      {
+        "question": "Gibt es eine Toilette und Dusche im Nightliner?",
+        "answer": "Ja, unsere Nightliner bieten ein vollwertiges Badezimmer mit Dusche und Toilette (kein Chemie-WC) sowie einen separaten Duschraum für maximalen Komfort."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für Ihre nächste",
+    "titleHighlight": "Tour?",
+    "description": "Kontaktieren Sie uns jetzt für ein individuelles Angebot und sichern Sie sich Ihren premium Nightliner für Ihre Europa-Tour. Unser erfahrenes Team berät Sie gerne.",
+    "primaryButton": "Jetzt anfragen",
+    "secondaryButton": "Mehr Bilder ansehen",
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "phone": "Telefon: +41 78 606 10 32",
+      "email": "Email: info@race-attack.ch",
+      "availability": "Verfügbar für Touren in der Schweiz und ganz Europa"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "About Us | Race Attack - Your Partner for Nightliner & Tour Support in Switzerland",
+    "description": "Race Attack GmbH - Experienced team for professional nightliner, vehicle transport and tour support in Switzerland and Europe. Reliable, flexible and passionate about motorsport and music."
+  },
+  "hero": {
+    "title": {
+      "prefix": "About",
+      "highlight": "Us"
+    },
+    "subtitle": "Get to know Race Attack – Your reliable partner for nightliner, tour crew and vehicle transport in Switzerland and throughout Europe."
+  },
+  "story": {
+    "title": {
+      "prefix": "Our",
+      "highlight": "Story"
+    },
+    "paragraph1": "Race Attack is a Swiss company with a passion for professional transport and tour management. Since our founding, we have specialized in high-quality nightliner services and reliable vehicle transport.",
+    "paragraph2": "With our experienced team, we offer tailor-made solutions for artists, bands, motorsport teams and events in Switzerland and throughout Europe. Our expertise and reliability have made us a valued partner in the industry."
+  },
+  "values": {
+    "quality": {
+      "title": "Quality & Experience",
+      "description": "Highest standards and years of experience in the tour and transport industry."
+    },
+    "reliability": {
+      "title": "Reliability",
+      "description": "Punctuality and dependability are our top priorities."
+    },
+    "coverage": {
+      "title": "Active throughout Europe",
+      "description": "We are at your service in Switzerland and all of Europe."
+    }
+  },
+  "contact": {
+    "title": {
+      "prefix": "Contact",
+      "highlight": "Us"
+    },
+    "address": {
+      "title": "Address",
+      "company": "Race-Attack GmbH",
+      "street": "Kappel 1",
+      "location": "CH-8523 Hagenbuch"
+    },
+    "phone": {
+      "title": "Phone",
+      "number": "+41 78 606 10 32"
+    },
+    "email": {
+      "title": "Email",
+      "address": "info@race-attack.ch"
+    },
+    "cta": "Get in touch"
+  },
+  "image": {
+    "alt": "Race Attack - About Us"
+  }
+}

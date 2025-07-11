@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Tour Crew | Professional Tour Support | Race-Attack",
+    "longTitle": "Tour Crew | Professional Tour Support for Bands in Europe | Race-Attack",
+    "description": "Book our experienced tour crew for your next tour with our nightliner. Guitar technicians, sound engineers, and more - all from one source.",
+    "keywords": "Tour Crew, Band Technicians, Guitar Technician, Nightliner Crew, Tour Manager, Sound Engineer, Backliner",
+    "ogTitle": "Tour Crew | Professional Tour Support for Bands in Europe",
+    "ogDescription": "Professional tour crew for artists and bands in Switzerland and throughout Europe with extensive experience with international acts.",
+    "twitterTitle": "Tour Crew | Professional Tour Support | Race-Attack",
+    "twitterDescription": "Book our experienced tour crew for your next tour with our nightliner. Guitar technicians, sound engineers, and more - all from one source."
+  },
+  "hero": {
+    "title": "Tour",
+    "titleHighlight": "Crew",
+    "subtitle": "Professional Support for Your Tour Throughout Europe",
+    "description": "We offer you some of the best professionals for your absolutely stress-free tour with our nightliner. From experienced guitar technicians to sound engineers - you'll find everything under one roof with us.",
+    "additionalInfo": "Combine our services with our first-class",
+    "nightlinerLink": "Nightliner Tour Bus",
+    "additionalInfoEnd": "for a complete tour package!"
+  },
+  "team": {
+    "sectionTitle": "Our Professional",
+    "sectionTitleHighlight": "Tour Crew",
+    "backgroundText": "CREW",
+    "members": {
+      "rafael": {
+        "name": "Rafael Salzmann",
+        "position": "Tour Manager / Guitar Technician",
+        "bands": "Eluveitie"
+      },
+      "cal": {
+        "name": "Cal South",
+        "position": "Drum Technician / Backliner",
+        "bands": "Eluveitie, Gregory Porter, Aloe Blacc, Eric Harland, Patricia Kass, Mummy"
+      },
+      "tom": {
+        "name": "Tom Wenger",
+        "position": "Guitar Technician / Backliner"
+      },
+      "szymon": {
+        "name": "Szymon Mierzejewski",
+        "position": "Guitar Technician / Backliner",
+        "bands": "Eluveitie, Exodus, Moonspell, Death Angel, Behemoth, Korpiklaani, Cannibal Corpse, Unleashed, Immortal"
+      },
+      "sven": {
+        "name": "Sven Gerber",
+        "position": "Sound Engineer"
+      },
+      "daniel": {
+        "name": "Daniel Michel",
+        "position": "Lighting Technician"
+      },
+      "chad": {
+        "name": "Chad Gunter",
+        "position": "Merchandise Manager"
+      }
+    },
+    "imageAlt": "{{name}} - {{position}} at Race Attack"
+  },
+  "cta": {
+    "title": "Ready to Book Our Tour Crew?",
+    "description": "Contact us today to book our experienced tour crew for your next event or tour with our nightliner. We offer customized complete solutions for your individual needs.",
+    "requestQuote": "Request Quote",
+    "phoneNumber": "+41 78 606 10 32"
+  },
+  "services": {
+    "guitarTech": "Guitar Technician",
+    "soundEngineer": "Sound Engineer",
+    "tourManager": "Tour Manager",
+    "backliner": "Backliner"
+  }
+}

@@ -138,3 +138,8 @@ Currently no testing framework is set up. When implementing tests:
 - Consider adding Vitest for unit testing (works well with Vite)
 - Add testing scripts to package.json
 - Follow React Testing Library patterns
+
+## Tools & Services Warning
+
+### Vendor Restrictions
+- Do not use Zen MCP in this project!

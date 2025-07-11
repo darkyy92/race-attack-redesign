@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
 const Footer: React.FC = () => {
+  const { t, i18n } = useTranslation('common');
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-black text-white pt-16 pb-8">
+  
+  return (
+    <footer className="bg-black text-white pt-16 pb-8">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo and Description */}
@@ -13,7 +18,7 @@ const Footer: React.FC = () => {
                 Race<span className="text-gold">Attack</span>
               </span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md">Race Attack bietet Ihnen erstklassige Nightliner und professionelle Tour Crew Services für Künstler und Bands in der Schweiz und ganz Europa. </p>
+            <p className="text-gray-400 mb-6 max-w-md">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors">
                 <Facebook size={20} />
@@ -29,41 +34,41 @@ const Footer: React.FC = () => {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 relative gold-line">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-6 relative gold-line">{t('navigation.title')}</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/nightliner" className="text-gray-400 hover:text-gold transition-colors">
-                  Nightliner
+                  {t('navigation.nightliner')}
                 </Link>
               </li>
               <li>
                 <Link to="/tour-crew" className="text-gray-400 hover:text-gold transition-colors">
-                  Tour Crew
+                  {t('navigation.tourCrew')}
                 </Link>
               </li>
               <li>
                 <Link to="/truck" className="text-gray-400 hover:text-gold transition-colors">
-                  Truck
+                  {t('navigation.truck')}
                 </Link>
               </li>
               <li>
                 <Link to="/yacht" className="text-gray-400 hover:text-gold transition-colors">
-                  Yacht
+                  {t('navigation.yacht')}
                 </Link>
               </li>
               <li>
                 <Link to="/gallery" className="text-gray-400 hover:text-gold transition-colors">
-                  Galerie
+                  {t('navigation.gallery')}
                 </Link>
               </li>
               <li>
-                <Link to="/ueber-uns" className="text-gray-400 hover:text-gold transition-colors">
-                  Über Uns
+                <Link to={i18n.language === 'en' ? '/about-us' : '/ueber-uns'} className="text-gray-400 hover:text-gold transition-colors">
+                  {t('navigation.aboutUs')}
                 </Link>
               </li>
               <li>
-                <Link to="/kontakt" className="text-gray-400 hover:text-gold transition-colors">
-                  Kontakt
+                <Link to={i18n.language === 'en' ? '/contact' : '/kontakt'} className="text-gray-400 hover:text-gold transition-colors">
+                  {t('navigation.contact')}
                 </Link>
               </li>
             </ul>
@@ -71,27 +76,27 @@ const Footer: React.FC = () => {
           
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 relative gold-line">Kontakt</h4>
+            <h4 className="text-lg font-semibold mb-6 relative gold-line">{t('contact.title')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="text-gold mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  Race Attack GmbH<br />
-                  Kappel 1<br />
-                  CH-8523 Hagenbuch<br />
-                  Schweiz
+                  {t('contact.company')}<br />
+                  {t('contact.address.street')}<br />
+                  {t('contact.address.city')}<br />
+                  {t('contact.address.country')}
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="text-gold mr-3 flex-shrink-0" />
                 <a href="tel:+41786061032" className="text-gray-400 hover:text-gold transition-colors">
-                  +41 78 606 10 32
+                  {t('contact.phone')}
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-gold mr-3 flex-shrink-0" />
                 <a href="mailto:info@race-attack.ch" className="text-gray-400 hover:text-gold transition-colors">
-                  info@race-attack.ch
+                  {t('contact.email')}
                 </a>
               </li>
             </ul>
@@ -101,22 +106,23 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 text-center md:text-left md:flex md:justify-between md:items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Race Attack GmbH. Alle Rechte vorbehalten.
+            {t('footer.copyright', { year: currentYear })}
           </p>
           <div className="mt-4 md:mt-0 space-x-6 text-sm text-gray-500">
-            <Link to="/impressum" className="hover:text-gold transition-colors">
-              Impressum
+            <Link to={i18n.language === 'en' ? '/imprint' : '/impressum'} className="hover:text-gold transition-colors">
+              {t('legal.imprint')}
             </Link>
             <Link to="/agb" className="hover:text-gold transition-colors">
-              AGB
+              {t('legal.termsAndConditions')}
             </Link>
-            <Link to="/datenschutz" className="hover:text-gold transition-colors">
-              Datenschutz
+            <Link to={i18n.language === 'en' ? '/privacy-policy' : '/datenschutz'} className="hover:text-gold transition-colors">
+              {t('legal.privacyPolicy')}
             </Link>
-            
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n/i18n";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Nightliner from "./pages/Nightliner";
@@ -34,12 +36,13 @@ const App = () => {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+    <I18nextProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
@@ -49,16 +52,21 @@ const App = () => {
               <Route path="/truck" element={<Truck />} />
               <Route path="/yacht" element={<Yacht />} />
               <Route path="/ueber-uns" element={<UeberUns />} />
+              <Route path="/about-us" element={<UeberUns />} />
               <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/contact" element={<Kontakt />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/privacy-policy" element={<Datenschutz />} />
               <Route path="/impressum" element={<Impressum />} />
+              <Route path="/imprint" element={<Impressum />} />
               <Route path="/agb" element={<AGB />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </HelmetProvider>
-    </QueryClientProvider>
+            </BrowserRouter>
+          </TooltipProvider>
+        </HelmetProvider>
+      </QueryClientProvider>
+    </I18nextProvider>
   );
 };
 

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const References: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation('home');
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -91,10 +93,10 @@ const References: React.FC = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="heading-lg uppercase mb-4">
-            Unsere <span className="gold-text">Referenzen</span>
+            {t('references.title')} <span className="gold-text">{t('references.titleHighlight')}</span>
           </h2>
           <p className="body-md max-w-2xl mx-auto text-gray-300 mb-2">
-            Vertrauen Sie auf unsere langjährige Erfahrung und Expertise mit namhaften Künstlern und Veranstaltern.
+            {t('references.subtitle')}
           </p>
           <div className="gold-line mx-auto"></div>
         </div>
@@ -102,7 +104,7 @@ const References: React.FC = () => {
         <div className="flex flex-col gap-12">
           {/* Artists */}
           <div className="glass-card rounded-lg p-8 animate-on-scroll">
-            <h3 className="heading-sm mb-6 text-center gold-text">Künstler & Bands</h3>
+            <h3 className="heading-sm mb-6 text-center gold-text">{t('references.artistsTitle')}</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {artistsAndBands.map((reference, index) => (
                 <a 
@@ -120,7 +122,7 @@ const References: React.FC = () => {
           
           {/* Partners */}
           <div className="glass-card rounded-lg p-8 animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-            <h3 className="heading-sm mb-6 text-center gold-text">Partner & Veranstalter</h3>
+            <h3 className="heading-sm mb-6 text-center gold-text">{t('references.partnersTitle')}</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {filteredPartners.map((partner, index) => (
                 <a 

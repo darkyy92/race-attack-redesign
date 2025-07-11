@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Race Attack Truck | Premium Vehicle Transport & Motorsport Logistics",
+    "description": "Our Race Attack Truck offers 70m³ loading volume for up to three vehicles plus equipment. Ideal for racing events, classic and sports car transport in Switzerland and Europe."
+  },
+  "hero": {
+    "title": "Race Attack",
+    "titleHighlight": "Truck",
+    "subtitle": "Premium vehicle transport and professional motorsport logistics for demanding customers in Switzerland and throughout Europe."
+  },
+  "mainSection": {
+    "title": "Professional",
+    "titleHighlight": "Vehicle Transport",
+    "titleSuffix": "for the highest demands",
+    "description": "Our Race Attack Truck is the perfect solution for demanding vehicle transports and motorsport logistics. With a Renault Magnum tractor unit and a specially manufactured Achleitner trailer, we offer you maximum flexibility and safety for your valuable vehicles.",
+    "features": [
+      "Generous loading volume of approx. 70m³",
+      "Capacity for up to three vehicles plus equipment",
+      "2.5 ton lifting platform for safe loading and unloading",
+      "Comfortable lounge with kitchen and 2 beds in the front section",
+      "Equipped with electrical outlets and compressed air installation"
+    ],
+    "cta": "Make an inquiry now"
+  },
+  "gallery": {
+    "title": "Our",
+    "titleHighlight": "Truck",
+    "titleSuffix": "in action",
+    "description": "Discover our versatile Race Attack Truck, designed for racing events, classic and sports car transports as well as events with larger backline transports.",
+    "images": [
+      {
+        "alt": "Race Attack Truck - Exterior view with tractor unit",
+        "caption": "Renault Magnum tractor unit with Achleitner trailer"
+      },
+      {
+        "alt": "Race Attack Truck - Interior view with vehicle transport",
+        "caption": "Capacity for up to three vehicles plus equipment"
+      },
+      {
+        "alt": "Race Attack Truck - Detail view of the loading ramp",
+        "caption": "2.5 ton lifting platform for safe loading and unloading"
+      }
+    ]
+  },
+  "features": {
+    "title": "Versatile",
+    "titleHighlight": "Applications",
+    "items": [
+      {
+        "title": "Motorsport Teams",
+        "description": "Ideal for up to three racing teams with vehicles and complete equipment."
+      },
+      {
+        "title": "Classic Car Transport",
+        "description": "Safe and gentle transport of your valuable classic cars and vintage vehicles."
+      },
+      {
+        "title": "Sports Car Logistics",
+        "description": "Professional transport of exclusive sports cars to events and exhibitions."
+      },
+      {
+        "title": "Event Equipment",
+        "description": "Generous space for backline transports and event equipment."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "With our Race Attack Truck, we offer you a reliable and flexible transport solution for your valuable vehicles and equipment. Benefit from our wealth of experience in motorsport logistics.",
+    "author": "Race Attack Team"
+  },
+  "cta": {
+    "title": "Ready for your next",
+    "titleHighlight": "Transport?",
+    "description": "Contact us today for a customized quote for your vehicle transport or motorsport logistics. Our experienced team is at your disposal.",
+    "primaryButton": "Inquire now",
+    "secondaryButton": "View more pictures"
+  },
+  "marquee": {
+    "items": ["Motorsport", "Vehicle Transport", "Classic Cars", "Sports Cars", "Racing Events", "Logistics", "Switzerland", "Europe"]
+  }
+}

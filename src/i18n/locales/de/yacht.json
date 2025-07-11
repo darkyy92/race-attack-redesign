@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Race Attack Yacht | Segelyacht TOAD - Oyster 70 | Luxus Charter Kanaren",
+    "description": "Charter-Törns auf der Segelyacht TOAD – Oyster 70. Luxuriöse 22m Yacht mit 5 Kabinen auf den Kanaren. Ganzjähriges Segeln mit idealem Klima."
+  },
+  "hero": {
+    "title": "Segelyacht",
+    "titleHighlight": "TOAD",
+    "subtitle": "– Oyster 70",
+    "description": "Dein schwimmendes Boutique-Hotel auf den Kanarischen Inseln"
+  },
+  "luxurySection": {
+    "title": "Luxus &",
+    "titleHighlight": "Sicherheit",
+    "subtitle": "auf höchstem Niveau",
+    "description": "Die TOAD liegt ganzjährig im Südwesten von Gran Canaria. Die Kanaren bieten konstanten Passatwind aus Nordost, milde 26 °C Luft- und über 20 °C Wassertemperatur – ideal von September bis Mai.",
+    "features": [
+      "Oyster 70 mit 5 Kabinen, modernster Technik und kompletter Sicherheitsausrüstung",
+      "Wöchentliche Törns, Routen nach Wind, Wetter und deinen Wünschen",
+      "Bestes Klima von Herbst bis Frühling, kaum Charterverkehr",
+      "Mehrere Direktflüge täglich, Transferservice inklusive"
+    ],
+    "cta": "Jetzt Anfrage stellen"
+  },
+  "specifications": {
+    "title": "Technische",
+    "titleHighlight": "Eckdaten",
+    "categories": {
+      "dimensions": {
+        "title": "Abmessungen",
+        "specs": {
+          "lengthWidth": {
+            "label": "Länge / Breite",
+            "value": "knapp 22 m / fast 6 m"
+          },
+          "mast": {
+            "label": "Mast",
+            "value": "30 m"
+          },
+          "sailArea": {
+            "label": "Segelfläche",
+            "value": "ca. 260 m² am Wind, über 300 m² vor dem Wind"
+          }
+        }
+      },
+      "accommodation": {
+        "title": "Unterkunft",
+        "specs": {
+          "cabins": {
+            "label": "Kabinen",
+            "value": "5 Doppelkabinen"
+          },
+          "sanitary": {
+            "label": "Sanitär",
+            "value": "Jede Kabine mit eigenem WC / Dusche"
+          },
+          "comfort": {
+            "label": "Komfort",
+            "value": "Klimaanlage, grosse Küche, Salon mit Panoramafenstern"
+          }
+        }
+      },
+      "equipment": {
+        "title": "Ausstattung",
+        "specs": {
+          "propulsion": {
+            "label": "Antrieb",
+            "value": "Starker Hauptmotor + grosser Generator"
+          },
+          "deck": {
+            "label": "Deck",
+            "value": "Komplettes Teakdeck, geschütztes Cockpit, Sonnenliegen"
+          },
+          "tenders": {
+            "label": "Beiboote",
+            "value": "RibEye-Dinghy mit 25 PS"
+          }
+        }
+      },
+      "supply": {
+        "title": "Versorgung",
+        "specs": {
+          "cooling": {
+            "label": "Kühlung",
+            "value": "Grosse Kühl- / Gefrierschränke"
+          },
+          "tanks": {
+            "label": "Tanks",
+            "value": "Grosse Wasser- und Dieseltanks"
+          },
+          "water": {
+            "label": "Wasser",
+            "value": "Entsalzungsanlage an Bord"
+          }
+        }
+      },
+      "safety": {
+        "title": "Sicherheit",
+        "specs": {
+          "rescue": {
+            "label": "Rettungsmittel",
+            "value": "AIS-Rettungswesten, Rettungsinsel, EPIRB-Notsender"
+          },
+          "navigation": {
+            "label": "Navigation",
+            "value": "Radar, UKW / VHF-Funk"
+          },
+          "medical": {
+            "label": "Medizinisch",
+            "value": "Umfangreiche Bordapotheke (Skipper militärisch medizinisch geschult)"
+          }
+        }
+      }
+    }
+  },
+  "routes": {
+    "title": "Dein Törn auf den",
+    "titleHighlight": "Kanaren",
+    "suggestions": {
+      "title": "Routenvorschläge",
+      "routes": [
+        "Inselumrundung Gran Canaria",
+        "Teneriffa – La Gomera",
+        "Fuerteventura oder, bei längeren Törns, bis La Palma",
+        "\"Easy Going\" von Bucht zu Bucht oder sportlicher Meilentörn – du entscheidest (Anfänger willkommen und auf Wunsch aktiv eingebunden)"
+      ]
+    },
+    "planning": {
+      "title": "Reiseplanung",
+      "options": [
+        "Direktflug Zürich → Gran Canaria mit Edelweiss (ca. 4 h, CHF 300–550)",
+        "Direktflug Basel → Gran Canaria mit EasyJet (ab ca. CHF 300)",
+        "Viele weitere Städte in Europa ab ~ EUR 100",
+        "Transfer vom Flughafen zur TOAD organisieren wir gern"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Die",
+    "titleHighlight": "TOAD",
+    "subtitle": "erleben",
+    "description": "Entdecken Sie unsere luxuriöse Oyster 70 und die traumhaften Segelreviere der Kanarischen Inseln.",
+    "images": [
+      {
+        "alt": "Segelyacht TOAD - Oyster 70 unter Segeln",
+        "caption": "Die TOAD in voller Fahrt – 260m² Segelfläche am Wind"
+      },
+      {
+        "alt": "Segelyacht TOAD - Luxuriöses Deck",
+        "caption": "Komplettes Teakdeck mit geschütztem Cockpit"
+      },
+      {
+        "alt": "Segelyacht TOAD - Oyster 70 im Hafen",
+        "caption": "Die elegante TOAD – 22 Meter pure Segelkunst"
+      },
+      {
+        "alt": "Segelyacht TOAD - Kabine",
+        "caption": "5 Doppelkabinen mit eigenem WC/Dusche"
+      },
+      {
+        "alt": "Segelyacht TOAD - Ankern in der Bucht",
+        "caption": "Traumhafte Buchten oft ganz für sich allein"
+      },
+      {
+        "alt": "Segelyacht TOAD - Komfortabler Salon",
+        "caption": "Salon mit Panoramafenstern und Klimaanlage"
+      },
+      {
+        "alt": "Segelyacht TOAD - Segeln bei Sonnenuntergang",
+        "caption": "Unvergessliche Momente auf dem Atlantik"
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Flexibilität trifft auf Luxus: Wöchentliche Törns, Routen nach Wind, Wetter und deinen Wünschen. Oft hast du die Buchten für dich allein.",
+    "author": "Race Attack Yacht Charter"
+  },
+  "cta": {
+    "title": "Bereit, die Leinen",
+    "titleHighlight": "loszuwerfen?",
+    "description": "Melde dich für deinen Wunschtermin – wir freuen uns auf dich! Erlebe unvergessliche Segeltörns auf der TOAD in den Gewässern der Kanarischen Inseln.",
+    "primaryButton": "Charter anfragen",
+    "secondaryButton": "Mehr Bilder ansehen"
+  },
+  "marquee": {
+    "items": ["Segelyacht", "Oyster 70", "Gran Canaria", "Kanaren", "Charter", "Segeltörn", "Luxus", "TOAD"]
+  }
+}

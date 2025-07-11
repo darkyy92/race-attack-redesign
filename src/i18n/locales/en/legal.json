@@ -1,0 +1,111 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "pageTitle": "Privacy Policy | Race Attack",
+    "lastUpdated": "Last updated: {{date}} | Valid according to the new Swiss Data Protection Act (nDSG/revDSG) since September 1, 2023",
+    "sections": {
+      "responsibleParty": "Responsible Party and Contact",
+      "dataProcessing": "Collection and Processing of Personal Data",
+      "dataCategories": "Categories of Personal Data Processed",
+      "processingPurpose": "Purpose of Data Processing",
+      "legalBasis": "Legal Basis",
+      "dataSharing": "Data Sharing and Recipients",
+      "recipientCategories": "Recipient Categories",
+      "internationalTransfer": "International Data Transfer",
+      "cookies": "Cookies and Tracking Technologies",
+      "cookieTypes": "Types of Cookies Used",
+      "cookieManagement": "Cookie Management",
+      "yourRights": "Your Rights",
+      "dataSecurity": "Data Security",
+      "retention": "Retention and Deletion",
+      "impactAssessment": "Data Protection Impact Assessment",
+      "breachNotification": "Data Breach Notification",
+      "minors": "Minors",
+      "changes": "Changes to this Privacy Policy",
+      "supervisoryAuthority": "Supervisory Authority",
+      "dataProtectionConsulting": "Data Protection Consulting"
+    },
+    "company": {
+      "name": "Race-Attack GmbH",
+      "owner": "Owner: Livio Kägi",
+      "address": "Schulstrasse 6b",
+      "postalCode": "8542 Wiesendangen",
+      "country": "Switzerland",
+      "uid": "UID: CHE-162.556.838",
+      "email": "Email: info@race-attack.ch",
+      "phone": "Phone: +41 78 606 10 32"
+    },
+    "authority": {
+      "name": "Federal Data Protection and Information Commissioner (FDPIC)",
+      "address": "Feldeggweg 1",
+      "postalCode": "3003 Bern",
+      "country": "Switzerland",
+      "website": "Website: www.edoeb.admin.ch"
+    }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "pageTitle": "Imprint | Race Attack",
+    "sections": {
+      "legalInfo": "Information according to Art. 5 TMG / Art. 322 OR",
+      "representedBy": "Represented by",
+      "contact": "Contact",
+      "commercialRegister": "Commercial Register",
+      "vat": "Value Added Tax",
+      "contentResponsibility": "Responsible for Content according to § 55 Para. 2 RStV",
+      "disclaimer": "Disclaimer",
+      "contentLiability": "Liability for Content",
+      "linkLiability": "Liability for Links",
+      "copyright": "Copyright"
+    },
+    "company": {
+      "name": "Race-Attack GmbH",
+      "legalForm": "Limited Liability Company",
+      "address": "Schulstrasse 6b",
+      "postalCode": "8542 Wiesendangen",
+      "country": "Switzerland",
+      "ceo": "CEO: Livio Kägi",
+      "phone": "Phone: +41 78 606 10 32",
+      "email": "Email: info@race-attack.ch",
+      "website": "Website: www.race-attack.ch",
+      "registerInfo": "Registered in the Commercial Register of Canton Zurich",
+      "registerLocation": "Location: Wiesendangen",
+      "uid": "UID: CHE-162.556.838",
+      "status": "Status: active",
+      "vatId": "UID: CHE-162.556.838 VAT"
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "pageTitle": "Terms and Conditions | Race Attack",
+    "mainTitle": "General Terms and Conditions",
+    "subtitle": "Race-Attack GmbH",
+    "sections": {
+      "offerAndContract": "§ 1 Offer and Contract Conclusion",
+      "scopeOfServices": "§ 2 Scope of Services",
+      "priceAndPayment": "§ 3 Price and Payment",
+      "cancellationByCustomer": "§ 4 Cancellation and Withdrawal by Customer",
+      "cancellationByCarrier": "§ 5 Cancellation and Withdrawal by Carrier",
+      "liability": "§ 6 Liability",
+      "jurisdiction": "§ 7 Jurisdiction",
+      "applicableLaw": "§ 8 Applicable Law",
+      "drivers": "§ 9 Drivers / Double Drivers",
+      "headcount": "§ 10 Complete Headcount",
+      "transportConditions": "§ 11 Transport Conditions",
+      "routing": "§ 12 Routing / Personal",
+      "standbyOperation": "§ 13 Standby Operation at Festivals, Clubs, Halls, Off-Days",
+      "offDays": "§ 14 Off-Days and Catering",
+      "insurance": "§ 15 Insurance"
+    },
+    "jurisdiction": {
+      "location": "Place of jurisdiction is Winterthur."
+    }
+  },
+  "navigation": {
+    "backToHome": "Back to Home",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint",
+    "terms": "Terms & Conditions"
+  }
+}

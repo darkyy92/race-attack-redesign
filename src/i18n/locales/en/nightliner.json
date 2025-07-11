@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "VIP Nightliner Rental | Luxury Tour Buses for Bands & Artists | Switzerland & Europe",
+    "description": "Rent premium VIP Nightliners for your European tour. 12 or 16 sleeping berths, luxurious amenities, kitchen and bathroom. Your premium tour bus partner in Switzerland.",
+    "keywords": "Nightliner, tour bus rental, Nightliner Switzerland, Nightliner Europe, tour crew, VIP bus, band bus"
+  },
+  "hero": {
+    "title": "VIP",
+    "titleHighlight": "Nightliner",
+    "subtitle": "Premium tour buses for discerning artists and bands on European tours",
+    "cta": "Check availability now"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Nightliner"
+  },
+  "introduction": {
+    "title": "Luxurious",
+    "titleHighlight": "Tour Buses",
+    "titleSuffix": "for Your European Tour",
+    "description1": "Our VIP Nightliners are specially designed for the demanding needs of artists, bands and their crews. With 12 or 16 comfortable sleeping berths, fully equipped kitchen and modern bathroom, we offer you a real home on wheels.",
+    "description2": "Both Nightliners feature a spacious feel, large windows and luxurious interiors of the highest standard. Travel comfortably and well-rested from show to show throughout Europe.",
+    "features": [
+      "Comfortable sleeping berths",
+      "Fully equipped kitchen",
+      "Modern bathrooms",
+      "Entertainment system",
+      "Air conditioning"
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of our",
+    "titleHighlight": "Nightliners",
+    "subtitle": "Experience the numerous benefits of our premium Nightliners, specifically developed for the needs of musicians and artists on tour.",
+    "items": [
+      {
+        "title": "Sleeping Comfort",
+        "description": "Comfortable sleeping berths with individual climate control for each member of your tour crew."
+      },
+      {
+        "title": "Fully Equipped Kitchen",
+        "description": "Self-catering made easy with refrigerator, microwave, coffee machine and more."
+      },
+      {
+        "title": "Luxurious Lounges",
+        "description": "Spacious lounge areas with comfortable leather seats and entertainment systems."
+      },
+      {
+        "title": "Optimized for Musicians",
+        "description": "Specifically designed for the needs of bands and artists on tour."
+      }
+    ]
+  },
+  "models": {
+    "title": "Our",
+    "titleHighlight": "Nightliner",
+    "titleSuffix": "Models",
+    "subtitle": "Choose between two first-class Nightliner models, depending on the size of your tour crew and your specific requirements.",
+    "galleryOpen": "Open gallery",
+    "galleryClose": "Close ×",
+    "cta": "Request now",
+    "sixteenSleeper": {
+      "title": "16 Sleeper",
+      "description": "Single-deck Nightliner/tour bus with spacious feel and large windows. Luxurious interior of the highest standard for your European tour.",
+      "equipmentTitle": "Equipment:",
+      "equipment": [
+        "Fully equipped kitchen with refrigerator, coffee machine, microwave, toaster and kettle",
+        "3 flat screen TVs, DVD, PlayStation, hard drive with movies",
+        "1 shower room",
+        "1 bathroom with shower and toilet (no chemical toilet)",
+        "1 sleeping area with 12 berths",
+        "1 sleeping area with 4 berths",
+        "All berths with separate light, power, fan, air conditioning, fresh air system and Nordic bedding",
+        "Full air conditioning",
+        "Heating system",
+        "Tables with leather seats"
+      ]
+    },
+    "twelveSleeper": {
+      "title": "12 Sleeper",
+      "description": "Single-deck Nightliner/tour bus with spacious feel and large windows. Luxurious interior of the highest standard for your European tour.",
+      "equipmentTitle": "Equipment:",
+      "equipment": [
+        "Fully equipped kitchen with refrigerator, coffee machine, microwave, toaster and kettle",
+        "3 flat screen TVs, DVD, PlayStation, hard drive with movies",
+        "1 shower room",
+        "1 bathroom with shower and toilet (no chemical toilet)",
+        "12 sleeping berths",
+        "All berths with separate light, power, fan, air conditioning, fresh air system and Nordic bedding",
+        "Full air conditioning",
+        "Heating system",
+        "Comfortable back lounge",
+        "Tables with leather seats"
+      ]
+    }
+  },
+  "usageScenarios": {
+    "title": "Applications for our",
+    "titleHighlight": "Nightliners",
+    "subtitle": "Our Nightliners offer versatile applications for different needs. Learn how you can benefit from our premium service.",
+    "scenarios": [
+      {
+        "title": "Music Tours",
+        "description": "Ideal for bands and artists on European tours with short or long distances between performances."
+      },
+      {
+        "title": "Festival Season",
+        "description": "Perfect for the festival season with comfortable overnight accommodation directly at the venue."
+      },
+      {
+        "title": "Production Teams",
+        "description": "Suitable for film and TV production teams who want to travel flexibly and comfortably."
+      },
+      {
+        "title": "VIP Transport",
+        "description": "Luxurious transport for VIPs, business trips or special occasions with the highest comfort."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "With our Race Attack Nightliners, we offer artists and bands a rolling home that perfectly combines comfort and functionality. Rest between performances guaranteed.",
+    "author": "Race Attack Team"
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "questions": [
+      {
+        "question": "What is a Nightliner?",
+        "answer": "A Nightliner is a specially equipped tour bus with sleeping accommodations, mainly used by bands, artists and their crews on tours. Our Nightliners offer 12 or 16 comfortable sleeping berths, fully equipped kitchen, bathroom and entertainment systems."
+      },
+      {
+        "question": "How many people can sleep in a Nightliner?",
+        "answer": "Our 12 Sleeper Nightliner accommodates 12 people, while our 16 Sleeper Nightliner has 16 sleeping places (12 in a main area and 4 in a separate area)."
+      },
+      {
+        "question": "Can you cook in the Nightliner?",
+        "answer": "Yes, both Nightliners have a fully equipped kitchen with refrigerator, coffee machine, microwave, toaster and kettle, so you can prepare meals on the road."
+      },
+      {
+        "question": "Is there a toilet and shower in the Nightliner?",
+        "answer": "Yes, our Nightliners offer a full bathroom with shower and toilet (no chemical toilet) as well as a separate shower room for maximum comfort."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for your next",
+    "titleHighlight": "Tour?",
+    "description": "Contact us now for a personalized quote and secure your premium Nightliner for your European tour. Our experienced team is happy to advise you.",
+    "primaryButton": "Request now",
+    "secondaryButton": "View more images",
+    "contact": {
+      "title": "Contact us",
+      "phone": "Phone: +41 78 606 10 32",
+      "email": "Email: info@race-attack.ch",
+      "availability": "Available for tours in Switzerland and throughout Europe"
+    }
+  }
+}

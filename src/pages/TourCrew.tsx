@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
@@ -18,6 +19,8 @@ interface CrewMemberProps {
 }
 
 const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, reverse = false, index }) => {
+  const { t } = useTranslation('tourCrew');
+  
   return (
     <div 
       className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 mb-20 rounded-lg overflow-hidden glass-card border border-gold/10 shadow-xl`}
@@ -27,7 +30,7 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
       <div className="w-full md:w-2/5 h-80 md:h-auto relative overflow-hidden">
         <img 
           src={image} 
-          alt={`${name} - ${position} bei Race Attack`} 
+          alt={t('team.imageAlt', { name, position })} 
           className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"
           loading={index < 3 ? "eager" : "lazy"}
         />
@@ -52,25 +55,27 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
 };
 
 const TourCrew: React.FC = () => {
+  const { t, i18n } = useTranslation('tourCrew');
+  
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Tour Crew | Professionelle Tourbegleitung | Race-Attack";
-  }, []);
+    document.title = t('meta.title');
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <Helmet>
-        <title>Tour Crew | Professionelle Tourbegleitung für Bands in Europa | Race-Attack</title>
-        <meta name="description" content="Buchen Sie unsere erfahrene Tour Crew für Ihre nächste Tournee mit unserem Nightliner. Gitarrentechniker, Tontechniker und mehr aus einer Hand." />
-        <meta name="keywords" content="Tour Crew, Bandtechniker, Gitarrentechniker, Nightliner Crew, Tourmanager, Tontechniker, Backliner" />
-        <link rel="canonical" href="https://race-attack.ch/tour-crew" />
-        <meta property="og:title" content="Tour Crew | Professionelle Tourbegleitung für Bands in Europa" />
-        <meta property="og:description" content="Professionelle Tour Crew für Künstler und Bands in der Schweiz und ganz Europa mit umfassender Erfahrung bei internationalen Acts." />
-        <meta property="og:url" content="https://race-attack.ch/tour-crew" />
+        <title>{t('meta.longTitle')}</title>
+        <meta name="description" content={t('meta.description')} />
+        <meta name="keywords" content={t('meta.keywords')} />
+        <link rel="canonical" href={`https://race-attack.ch${i18n.language === 'en' ? '/en' : ''}/tour-crew`} />
+        <meta property="og:title" content={t('meta.ogTitle')} />
+        <meta property="og:description" content={t('meta.ogDescription')} />
+        <meta property="og:url" content={`https://race-attack.ch${i18n.language === 'en' ? '/en' : ''}/tour-crew`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tour Crew | Professionelle Tourbegleitung | Race-Attack" />
-        <meta name="twitter:description" content="Buchen Sie unsere erfahrene Tour Crew für Ihre nächste Tournee mit unserem Nightliner. Gitarrentechniker, Tontechniker und mehr aus einer Hand." />
+        <meta name="twitter:title" content={t('meta.twitterTitle')} />
+        <meta name="twitter:description" content={t('meta.twitterDescription')} />
         <script type="application/ld+json">
           {`
             {
@@ -82,7 +87,7 @@ const TourCrew: React.FC = () => {
                 "name": "Race Attack GmbH",
                 "url": "https://race-attack.ch"
               },
-              "description": "Professionelle Tour Crew für Künstler und Bands in der Schweiz und ganz Europa.",
+              "description": "${t('meta.ogDescription')}",
               "serviceType": "Tour Support",
               "areaServed": ["Switzerland", "Europe"],
               "hasOfferCatalog": {
@@ -93,28 +98,28 @@ const TourCrew: React.FC = () => {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Gitarren-Techniker"
+                      "name": "${t('services.guitarTech')}"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Tontechniker"
+                      "name": "${t('services.soundEngineer')}"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Tourmanager"
+                      "name": "${t('services.tourManager')}"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Backliner"
+                      "name": "${t('services.backliner')}"
                     }
                   }
                 ]
@@ -134,7 +139,7 @@ const TourCrew: React.FC = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6 animate-fade-in">
-              <span className="text-gold">Tour</span> Crew
+              <span className="text-gold">{t('hero.title')}</span> {t('hero.titleHighlight')}
             </h1>
             <div className="flex justify-center mb-10">
               <Separator className="w-32 h-1 bg-gradient-to-r from-gold to-gold-light animate-fade-in" />
@@ -142,13 +147,13 @@ const TourCrew: React.FC = () => {
             
             <div className="glass-card p-8 md:p-12 rounded-lg mb-16 animate-fade-in">
               <h2 className="text-xl md:text-2xl text-white mb-6 font-heading">
-                Professionelle Unterstützung für Ihre Tour in ganz Europa
+                {t('hero.subtitle')}
               </h2>
               <p className="text-lg md:text-xl text-white/90 mb-8">
-                Wir bieten Ihnen einige der besten Profis für Ihre absolut stressfreie Tournee mit unserem Nightliner. Von erfahrenen Gitarren-Technikern bis zu Tontechnikern - bei uns finden Sie alles unter einem Dach.
+                {t('hero.description')}
               </p>
               <p className="text-lg text-white/80 mb-8">
-                Kombinieren Sie unser Angebot mit unserem erstklassigen <Link to="/nightliner" className="text-gold hover:text-gold-light">Nightliner Tourbus</Link> für ein komplettes Tour-Paket!
+                {t('hero.additionalInfo')} <Link to={i18n.language === 'en' ? "/en/nightliner" : "/nightliner"} className="text-gold hover:text-gold-light">{t('hero.nightlinerLink')}</Link> {t('hero.additionalInfoEnd')}
               </p>
               <div className="flex justify-center">
                 <Separator className="w-32 h-0.5 bg-gold/70" />
@@ -162,61 +167,62 @@ const TourCrew: React.FC = () => {
       <section className="py-16 px-4 md:px-6 lg:px-8 bg-black">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16 relative">
-            <span className="relative z-10">Unsere professionelle <span className="text-gold">Tour Crew</span></span>
-            <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-6xl text-gold/5 font-bold">CREW</span>
+            <span className="relative z-10">{t('team.sectionTitle')} <span className="text-gold">{t('team.sectionTitleHighlight')}</span></span>
+            <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-6xl text-gold/5 font-bold">{t('team.backgroundText')}</span>
           </h2>
           
           <CrewMember 
-            name="Rafael Salzmann" 
-            position="Tourmanager / Gitarren-Techniker" 
-            bands="Eluveitie"
+            name={t('team.members.rafael.name')} 
+            position={t('team.members.rafael.position')} 
+            bands={t('team.members.rafael.bands')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg"
             index={1}
           />
           
           <CrewMember 
-            name="Cal South" 
-            position="Schlagzeug-Techniker / Backliner" 
-            bands="Eluveitie, Gregory Porter, Aloe Blacc, Eric Harland, Patricia Kass, Mummy"
+            name={t('team.members.cal.name')} 
+            position={t('team.members.cal.position')} 
+            bands={t('team.members.cal.bands')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/Cal-South-768x426.jpg"
             reverse={true}
             index={2}
           />
           
           <CrewMember 
-            name="Tom Wenger" 
-            position="Gitarren-Techniker / Backliner"
+            name={t('team.members.tom.name')} 
+            position={t('team.members.tom.position')}
+            bands={t('team.members.tom.bands', { defaultValue: undefined })}
             image="https://race-attack.ch/wp-content/uploads/2018/10/tom1-768x426.jpg"
             index={3}
           />
           
           <CrewMember 
-            name="Szymon Mierzejewski" 
-            position="Gitarren-Techniker / Backliner" 
-            bands="Eluveitie, Exodus, Moonspell, Death Angel, Behemoth, Korpiklaani, Cannibal Corpse, Unleashed, Immortal"
+            name={t('team.members.szymon.name')} 
+            position={t('team.members.szymon.position')} 
+            bands={t('team.members.szymon.bands')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/Shymon-768x426.jpg"
             reverse={true}
             index={4}
           />
           
           <CrewMember 
-            name="Sven Gerber" 
-            position="Tontechniker"
+            name={t('team.members.sven.name')} 
+            position={t('team.members.sven.position')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/sven-768x426.jpg"
             index={5}
           />
           
           <CrewMember 
-            name="Daniel Michel" 
-            position="Lichttechniker"
+            name={t('team.members.daniel.name')} 
+            position={t('team.members.daniel.position')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/daniel-768x426.jpg"
             reverse={true}
             index={6}
           />
           
           <CrewMember 
-            name="Chad Gunter" 
-            position="Merchandise-Verantwortlicher"
+            name={t('team.members.chad.name')} 
+            position={t('team.members.chad.position')}
             image="https://race-attack.ch/wp-content/uploads/2018/10/chad-768x426.jpg"
             index={7}
           />
@@ -231,21 +237,21 @@ const TourCrew: React.FC = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           <Card className="glass-card border-gold/20 p-8 md:p-12 shadow-2xl animate-fade-in">
             <CardContent className="p-0 text-center">
-              <h2 className="heading-lg text-white mb-6">Bereit, unsere Tour-Crew zu buchen?</h2>
+              <h2 className="heading-lg text-white mb-6">{t('cta.title')}</h2>
               <p className="text-white/80 mb-10 max-w-3xl mx-auto">
-                Kontaktieren Sie uns noch heute, um unsere erfahrene Tour-Crew für Ihre nächste Veranstaltung oder Tournee mit unserem Nightliner zu buchen. Wir bieten massgeschneiderte Komplettlösungen für Ihren individuellen Bedarf.
+                {t('cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
-                <Link to="/kontakt">
+                <Link to={i18n.language === 'en' ? "/en/contact" : "/kontakt"}>
                   <Button className="gold-button flex items-center gap-2">
-                    <span>Angebot anfragen</span>
+                    <span>{t('cta.requestQuote')}</span>
                     <ChevronRight size={18} />
                   </Button>
                 </Link>
                 <a href="tel:+41786061032">
                   <Button variant="outline" className="text-gold border-gold hover:bg-gold/10 flex items-center gap-2">
                     <PhoneCall size={18} />
-                    <span>+41 78 606 10 32</span>
+                    <span>{t('cta.phoneNumber')}</span>
                   </Button>
                 </a>
               </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation('home');
   const scrollToNextSection = () => {
     const nextSection = document.getElementById('services');
     if (nextSection) {
@@ -38,20 +40,19 @@ const HeroSection: React.FC = () => {
         <div className="animate-fade-in">
           {/* Race-Attack Logo large */}
           <h1 className="heading-xl uppercase mb-10 font-bold tracking-wider">
-            <span className="block text-white">RACE-</span>
-            <span className="block text-white mt-[10px]">ATTACK</span>
+            <span className="block text-white">{t('hero.title')}</span>
           </h1>
           
           <p className="body-lg max-w-2xl mx-auto mb-10 text-gray-300">
-            Premium Nightliner und Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
             <Link to="/nightliner" className="gold-button w-full sm:w-auto">
-              Nightliner entdecken
+              {t('hero.buttons.discover')}
             </Link>
             <Link to="/kontakt" className="gold-outline-button w-full sm:w-auto">
-              Kontakt
+              {t('hero.buttons.contact')}
             </Link>
           </div>
         </div>
@@ -60,7 +61,7 @@ const HeroSection: React.FC = () => {
         <button 
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white hover:text-gold animate-bounce transition-colors"
           onClick={scrollToNextSection}
-          aria-label="Nach unten scrollen"
+          aria-label={t('hero.scrollDown')}
         >
           <ChevronDown size={32} />
         </button>

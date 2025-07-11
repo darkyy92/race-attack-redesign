@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "RACE-ATTACK",
+    "subtitle": "Premium Nightliner und Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.",
+    "buttons": {
+      "discover": "Nightliner entdecken",
+      "contact": "Kontakt"
+    },
+    "scrollDown": "Nach unten scrollen"
+  },
+  "services": {
+    "sectionTitle": "Unsere",
+    "sectionTitleHighlight": "Dienstleistungen",
+    "sectionSubtitle": "Erleben Sie erstklassigen Komfort und Zuverlässigkeit mit unseren Premium-Transportlösungen und professionellen Tour-Services.",
+    "nightliner": {
+      "title": "Nightliner",
+      "description": "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen und erstklassiger Ausstattung für Künstler und Bands auf Tour.",
+      "features": [
+        "Komfortable Schlafplätze",
+        "Voll ausgestatteter Wohnbereich",
+        "Hochwertige Soundsysteme",
+        "Satellitenfernsehen & WLAN"
+      ]
+    },
+    "tourCrew": {
+      "title": "Tour Crew",
+      "description": "Professionelles Team mit umfassender Erfahrung in der Tourplanung und -durchführung.",
+      "features": [
+        "Tourmanager & Guitar-Techs",
+        "Sound & Light Engineers",
+        "Erfahrene Busfahrer",
+        "Komplettes Tour-Package"
+      ]
+    },
+    "truck": {
+      "title": "Truck",
+      "description": "Renault Magnum mit Achleitner Auflieger für Equipment und Fahrzeugtransporte.",
+      "features": [
+        "Bis zu 70m³ Ladevolumen",
+        "2,5 Tonnen Hebebühne",
+        "Lounge mit 2 Betten",
+        "Für Racing und Events"
+      ]
+    },
+    "learnMore": "Mehr erfahren"
+  },
+  "contact": {
+    "sectionTitle": "Kontaktieren",
+    "sectionTitleHighlight": "Sie uns",
+    "sectionSubtitle": "Nehmen Sie Kontakt auf für eine unverbindliche Beratung oder ein Angebot für Ihr Projekt.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "Ihre E-Mail",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefonnummer",
+      "service": "Dienstleistung",
+      "servicePlaceholder": "Bitte wählen",
+      "serviceOptions": {
+        "nightliner": "Nightliner",
+        "tourCrew": "Tour Crew",
+        "truck": "Truck",
+        "other": "Anderes"
+      },
+      "message": "Nachricht",
+      "messagePlaceholder": "Ihre Anfrage",
+      "submitButton": "Anfrage senden",
+      "submitting": "Wird gesendet...",
+      "successTitle": "Anfrage erhalten",
+      "successMessage": "Vielen Dank für Ihre Anfrage. Wir werden uns in Kürze bei Ihnen melden.",
+      "privacyNotice": "Mit dem Absenden stimmen Sie unserer",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyNoticeSuffix": " zu.",
+      "other": "Anderes"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "address": "Adresse",
+      "company": "Race Attack GmbH",
+      "street": "Kappel 1",
+      "city": "CH-8523 Hagenbuch",
+      "country": "Schweiz",
+      "availability": {
+        "title": "Verfügbarkeit prüfen",
+        "description": "Kontaktieren Sie uns direkt per Telefon oder E-Mail für eine schnelle Verfügbarkeitsprüfung.",
+        "button": "Jetzt anrufen"
+      }
+    }
+  },
+  "references": {
+    "title": "Unsere",
+    "titleHighlight": "Referenzen",
+    "subtitle": "Vertrauen Sie auf unsere langjährige Erfahrung und Expertise mit namhaften Künstlern und Veranstaltern.",
+    "artistsTitle": "Künstler & Bands",
+    "partnersTitle": "Partner & Veranstalter"
+  },
+  "marquee": {
+    "title": "Unsere",
+    "titleHighlight": "Partner"
+  },
+  "meta": {
+    "title": "Race-Attack | Premium Nightliner & Tour Crew | Schweiz",
+    "description": "Premium Nightliner und professionelle Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa. Höchste Qualität für Ihre Tournee.",
+    "keywords": "Nightliner, Tourbus mieten, Nightliner Schweiz, Nightliner Europa, Tour Crew buchen, Schweiz, Europa"
+  }
+}

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface Service {
   title: string;
@@ -13,6 +14,7 @@ interface Service {
 
 const Services: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t, i18n } = useTranslation('home');
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,37 +38,37 @@ const Services: React.FC = () => {
 
   const services: Service[] = [
     {
-      title: "Nightliner",
-      description: "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen und erstklassiger Ausstattung für Künstler und Bands auf Tour.",
+      title: t('services.nightliner.title'),
+      description: t('services.nightliner.description'),
       features: [
-        "Komfortable Schlafplätze",
-        "Voll ausgestatteter Wohnbereich",
-        "Hochwertige Soundsysteme",
-        "Satellitenfernsehen & WLAN"
+        t('services.nightliner.features.0'),
+        t('services.nightliner.features.1'),
+        t('services.nightliner.features.2'),
+        t('services.nightliner.features.3')
       ],
       image: "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg",
       link: "/nightliner"
     },
     {
-      title: "Tour Crew",
-      description: "Professionelles Team mit umfassender Erfahrung in der Tourplanung und -durchführung.",
+      title: t('services.tourCrew.title'),
+      description: t('services.tourCrew.description'),
       features: [
-        "Tourmanager & Guitar-Techs",
-        "Sound & Light Engineers",
-        "Erfahrene Busfahrer",
-        "Komplettes Tour-Package"
+        t('services.tourCrew.features.0'),
+        t('services.tourCrew.features.1'),
+        t('services.tourCrew.features.2'),
+        t('services.tourCrew.features.3')
       ],
       image: "https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg",
       link: "/tour-crew"
     },
     {
-      title: "Truck",
-      description: "Renault Magnum mit Achleitner Auflieger für Equipment und Fahrzeugtransporte.",
+      title: t('services.truck.title'),
+      description: t('services.truck.description'),
       features: [
-        "Bis zu 70m³ Ladevolumen",
-        "2,5 Tonnen Hebebühne",
-        "Lounge mit 2 Betten",
-        "Für Racing und Events"
+        t('services.truck.features.0'),
+        t('services.truck.features.1'),
+        t('services.truck.features.2'),
+        t('services.truck.features.3')
       ],
       image: "https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner04.jpg",
       link: "/truck"
@@ -78,10 +80,10 @@ const Services: React.FC = () => {
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="heading-lg uppercase mb-4">
-            Unsere <span className="gold-text">Dienstleistungen</span>
+            {t('services.sectionTitle')} <span className="gold-text">{t('services.sectionTitleHighlight')}</span>
           </h2>
           <p className="body-md max-w-2xl mx-auto text-gray-300">
-            Erleben Sie erstklassigen Komfort und Zuverlässigkeit mit unseren Premium-Transportlösungen und professionellen Tour-Services.
+            {t('services.sectionSubtitle')}
           </p>
         </div>
         
@@ -117,7 +119,7 @@ const Services: React.FC = () => {
                   to={service.link} 
                   className="inline-flex items-center text-gold hover:text-gold-light transition-colors"
                 >
-                  Mehr erfahren <ArrowRight size={16} className="ml-2" />
+                  {t('services.learnMore')} <ArrowRight size={16} className="ml-2" />
                 </Link>
               </div>
             </div>

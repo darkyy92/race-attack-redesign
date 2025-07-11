@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Contact | Race Attack - Nightliner & Tour Support in Switzerland",
+    "description": "Contact Race Attack for professional nightliner service and tour support in Switzerland and Europe. We are here for you!"
+  },
+  "hero": {
+    "title": {
+      "highlight": "CONTACT",
+      "text": "US"
+    },
+    "subtitle": "Do you have questions or would you like a quote? We look forward to your message."
+  },
+  "contactInfo": {
+    "title": {
+      "text": "Our",
+      "highlight": "Contact Details"
+    },
+    "address": {
+      "label": "Address",
+      "company": "Race-Attack GmbH",
+      "street": "Kappel 1",
+      "postalCode": "CH-8523 Hagenbuch",
+      "country": "Switzerland"
+    },
+    "phone": {
+      "label": "Phone",
+      "number": "+41 78 606 10 32"
+    },
+    "email": {
+      "label": "Email",
+      "address": "info@race-attack.ch"
+    }
+  },
+  "contactForm": {
+    "title": {
+      "text": "Send us a",
+      "highlight": "Message"
+    },
+    "fields": {
+      "name": {
+        "label": "Name *",
+        "placeholder": ""
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": ""
+      },
+      "subject": {
+        "label": "Subject *",
+        "placeholder": ""
+      },
+      "message": {
+        "label": "Message *",
+        "placeholder": ""
+      },
+      "privacy": {
+        "label": "I have read the",
+        "link": "Privacy Policy",
+        "linkUrl": "/privacy-policy",
+        "labelEnd": "and accept it."
+      }
+    },
+    "submit": "Send Message"
+  },
+  "map": {
+    "title": {
+      "text": "Our",
+      "highlight": "Location"
+    },
+    "iframeTitle": "Race Attack Location"
+  }
+}

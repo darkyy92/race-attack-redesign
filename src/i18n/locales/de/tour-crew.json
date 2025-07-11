@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Tour Crew | Professionelle Tourbegleitung | Race-Attack",
+    "longTitle": "Tour Crew | Professionelle Tourbegleitung für Bands in Europa | Race-Attack",
+    "description": "Buchen Sie unsere erfahrene Tour Crew für Ihre nächste Tournee mit unserem Nightliner. Gitarrentechniker, Tontechniker und mehr aus einer Hand.",
+    "keywords": "Tour Crew, Bandtechniker, Gitarrentechniker, Nightliner Crew, Tourmanager, Tontechniker, Backliner",
+    "ogTitle": "Tour Crew | Professionelle Tourbegleitung für Bands in Europa",
+    "ogDescription": "Professionelle Tour Crew für Künstler und Bands in der Schweiz und ganz Europa mit umfassender Erfahrung bei internationalen Acts.",
+    "twitterTitle": "Tour Crew | Professionelle Tourbegleitung | Race-Attack",
+    "twitterDescription": "Buchen Sie unsere erfahrene Tour Crew für Ihre nächste Tournee mit unserem Nightliner. Gitarrentechniker, Tontechniker und mehr aus einer Hand."
+  },
+  "hero": {
+    "title": "Tour",
+    "titleHighlight": "Crew",
+    "subtitle": "Professionelle Unterstützung für Ihre Tour in ganz Europa",
+    "description": "Wir bieten Ihnen einige der besten Profis für Ihre absolut stressfreie Tournee mit unserem Nightliner. Von erfahrenen Gitarren-Technikern bis zu Tontechnikern - bei uns finden Sie alles unter einem Dach.",
+    "additionalInfo": "Kombinieren Sie unser Angebot mit unserem erstklassigen",
+    "nightlinerLink": "Nightliner Tourbus",
+    "additionalInfoEnd": "für ein komplettes Tour-Paket!"
+  },
+  "team": {
+    "sectionTitle": "Unsere professionelle",
+    "sectionTitleHighlight": "Tour Crew",
+    "backgroundText": "CREW",
+    "members": {
+      "rafael": {
+        "name": "Rafael Salzmann",
+        "position": "Tourmanager / Gitarren-Techniker",
+        "bands": "Eluveitie"
+      },
+      "cal": {
+        "name": "Cal South",
+        "position": "Schlagzeug-Techniker / Backliner",
+        "bands": "Eluveitie, Gregory Porter, Aloe Blacc, Eric Harland, Patricia Kass, Mummy"
+      },
+      "tom": {
+        "name": "Tom Wenger",
+        "position": "Gitarren-Techniker / Backliner"
+      },
+      "szymon": {
+        "name": "Szymon Mierzejewski",
+        "position": "Gitarren-Techniker / Backliner",
+        "bands": "Eluveitie, Exodus, Moonspell, Death Angel, Behemoth, Korpiklaani, Cannibal Corpse, Unleashed, Immortal"
+      },
+      "sven": {
+        "name": "Sven Gerber",
+        "position": "Tontechniker"
+      },
+      "daniel": {
+        "name": "Daniel Michel",
+        "position": "Lichttechniker"
+      },
+      "chad": {
+        "name": "Chad Gunter",
+        "position": "Merchandise-Verantwortlicher"
+      }
+    },
+    "imageAlt": "{{name}} - {{position}} bei Race Attack"
+  },
+  "cta": {
+    "title": "Bereit, unsere Tour-Crew zu buchen?",
+    "description": "Kontaktieren Sie uns noch heute, um unsere erfahrene Tour-Crew für Ihre nächste Veranstaltung oder Tournee mit unserem Nightliner zu buchen. Wir bieten massgeschneiderte Komplettlösungen für Ihren individuellen Bedarf.",
+    "requestQuote": "Angebot anfragen",
+    "phoneNumber": "+41 78 606 10 32"
+  },
+  "services": {
+    "guitarTech": "Gitarren-Techniker",
+    "soundEngineer": "Tontechniker",
+    "tourManager": "Tourmanager",
+    "backliner": "Backliner"
+  }
+}

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const location = useLocation();
+  const { t, i18n } = useTranslation('navigation');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,14 +39,19 @@ const Header: React.FC = () => {
   };
 
   const navLinks = [
-    { title: 'Nightliner', path: '/nightliner' },
-    { title: 'Tour Crew', path: '/tour-crew' },
-    { title: 'Truck', path: '/truck' },
-    { title: 'Yacht', path: '/yacht' },
-    { title: 'Galerie', path: '/gallery' },
-    { title: 'Über Uns', path: '/ueber-uns' },
-    { title: 'Kontakt', path: '/kontakt' },
+    { title: t('nightliner'), path: '/nightliner' },
+    { title: t('tourCrew'), path: '/tour-crew' },
+    { title: t('truck'), path: '/truck' },
+    { title: t('yacht'), path: '/yacht' },
+    { title: t('gallery'), path: '/gallery' },
+    { title: t('aboutUs'), path: i18n.language === 'en' ? '/about-us' : '/ueber-uns' },
+    { title: t('contact'), path: i18n.language === 'en' ? '/contact' : '/kontakt' },
   ];
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'de' ? 'en' : 'de';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <header
@@ -137,16 +144,29 @@ const Header: React.FC = () => {
                 to="/kontakt"
                 className="gold-button py-2 px-4 text-sm uppercase tracking-wider font-medium"
               >
-                Anfrage
+                {t('inquiryButton')}
               </Link>
             </motion.div>
+            
+            {/* Language Switcher */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2, delay: (navLinks.length + 1) * 0.02 }}
+              onClick={toggleLanguage}
+              className="ml-4 text-white hover:text-gold transition-colors flex items-center gap-2 text-sm uppercase tracking-wider font-medium"
+              aria-label="Toggle language"
+            >
+              <Globe size={18} />
+              {i18n.language === 'de' ? 'DE' : 'EN'}
+            </motion.button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
             className="xl:hidden text-white hover:text-gold transition-colors"
             onClick={toggleMobileMenu}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileMenuOpen ? t('closeMenu') : t('openMenu')}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -168,7 +188,7 @@ const Header: React.FC = () => {
               <button 
                 onClick={closeMobileMenu}
                 className="absolute top-4 sm:top-6 right-4 sm:right-6 text-white hover:text-gold transition-colors z-50"
-                aria-label="Close menu"
+                aria-label={t('closeMenu')}
               >
                 <X size={28} />
               </button>
@@ -239,9 +259,25 @@ const Header: React.FC = () => {
                       }}
                       onClick={closeMobileMenu}
                     >
-                      Anfrage
+                      {t('inquiryButton')}
                     </Link>
                   </motion.div>
+                  
+                  {/* Language Switcher in Mobile Menu */}
+                  <motion.button
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: (navLinks.length + 1) * 0.02 }}
+                    onClick={() => {
+                      toggleLanguage();
+                      closeMobileMenu();
+                    }}
+                    className="mt-[min(4vh,2rem)] text-white hover:text-gold transition-colors flex items-center justify-center gap-3 uppercase tracking-widest font-bold"
+                    style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)' }}
+                  >
+                    <Globe size={24} />
+                    {i18n.language === 'de' ? 'Deutsch' : 'English'}
+                  </motion.button>
                 </nav>
               </div>
             </div>

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Über Uns | Race Attack - Ihr Partner für Nightliner & Tour Support in der Schweiz",
+    "description": "Race Attack GmbH - Erfahrenes Team für professionellen Nightliner, Fahrzeugtransport und Tour Support in der Schweiz und Europa. Zuverlässig, flexibel und mit Leidenschaft für Motorsport und Musik."
+  },
+  "hero": {
+    "title": {
+      "prefix": "Über",
+      "highlight": "Uns"
+    },
+    "subtitle": "Lernen Sie Race Attack kennen – Ihr verlässlicher Partner für Nightliner, Tour Crew und Fahrzeugtransport in der Schweiz und ganz Europa."
+  },
+  "story": {
+    "title": {
+      "prefix": "Unsere",
+      "highlight": "Geschichte"
+    },
+    "paragraph1": "Race Attack ist ein schweizerisches Unternehmen mit Leidenschaft für professionellen Transport und Tourmanagement. Seit unserer Gründung haben wir uns auf hochwertige Nightliner-Services und zuverlässigen Fahrzeugtransport spezialisiert.",
+    "paragraph2": "Mit unserem erfahrenen Team bieten wir massgeschneiderte Lösungen für Künstler, Bands, Motorsportteams und Veranstaltungen in der Schweiz und ganz Europa an. Unsere Expertise und Zuverlässigkeit haben uns zu einem geschätzten Partner in der Branche gemacht."
+  },
+  "values": {
+    "quality": {
+      "title": "Qualität & Erfahrung",
+      "description": "Höchste Standards und langjährige Erfahrung in der Tour- und Transportbranche."
+    },
+    "reliability": {
+      "title": "Zuverlässigkeit",
+      "description": "Pünktlichkeit und Verlässlichkeit stehen bei uns an erster Stelle."
+    },
+    "coverage": {
+      "title": "Europaweit aktiv",
+      "description": "Wir sind in der Schweiz und ganz Europa für Sie im Einsatz."
+    }
+  },
+  "contact": {
+    "title": {
+      "prefix": "Kontaktieren Sie",
+      "highlight": "Uns"
+    },
+    "address": {
+      "title": "Adresse",
+      "company": "Race-Attack GmbH",
+      "street": "Kappel 1",
+      "location": "CH-8523 Hagenbuch"
+    },
+    "phone": {
+      "title": "Telefon",
+      "number": "+41 78 606 10 32"
+    },
+    "email": {
+      "title": "E-Mail",
+      "address": "info@race-attack.ch"
+    },
+    "cta": "Jetzt anfragen"
+  },
+  "image": {
+    "alt": "Race Attack - Über Uns"
+  }
+}
