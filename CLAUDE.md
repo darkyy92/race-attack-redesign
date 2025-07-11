@@ -8,6 +8,8 @@ Race-Attack is a premium nightliner (tour bus) and tour crew service company web
 
 ## Development Commands
 
+IMPORTANT: NEVER run the dev server, assume it runs already on localhost:8080
+
 ```bash
 # Start development server (runs on port 8080)
 npm run dev
@@ -87,7 +89,7 @@ toast({ title: "Success", description: "Message" })
 ### Current Routes
 - `/` - Home
 - `/nightliner` - Nightliner services
-- `/tour-crew` - Tour crew services  
+- `/tour-crew` - Tour crew services
 - `/gallery` - Image gallery
 - `/truck` - Truck/logistics services
 - `/about-us`, `/ueber-uns` - About page (English/German)
