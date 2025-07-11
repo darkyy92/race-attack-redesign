@@ -47,6 +47,11 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/yacht" className="text-gray-400 hover:text-gold transition-colors">
+                  Yacht
+                </Link>
+              </li>
+              <li>
                 <Link to="/gallery" className="text-gray-400 hover:text-gold transition-colors">
                   Galerie
                 </Link>
@@ -101,6 +106,9 @@ const Footer: React.FC = () => {
           <div className="mt-4 md:mt-0 space-x-6 text-sm text-gray-500">
             <Link to="/impressum" className="hover:text-gold transition-colors">
               Impressum
+            </Link>
+            <Link to="/agb" className="hover:text-gold transition-colors">
+              AGB
             </Link>
             <Link to="/datenschutz" className="hover:text-gold transition-colors">
               Datenschutz

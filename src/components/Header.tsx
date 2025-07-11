@@ -40,6 +40,7 @@ const Header: React.FC = () => {
     { title: 'Nightliner', path: '/nightliner' },
     { title: 'Tour Crew', path: '/tour-crew' },
     { title: 'Truck', path: '/truck' },
+    { title: 'Yacht', path: '/yacht' },
     { title: 'Galerie', path: '/gallery' },
     { title: 'Über Uns', path: '/ueber-uns' },
     { title: 'Kontakt', path: '/kontakt' },
