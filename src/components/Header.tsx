@@ -163,73 +163,87 @@ const Header: React.FC = () => {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
-            <div className="flex flex-col h-full pt-20 px-6 relative">
+            <div className="flex flex-col h-full pt-16 sm:pt-20 px-6 relative overflow-y-auto">
               {/* Close button */}
               <button 
                 onClick={closeMobileMenu}
-                className="absolute top-6 right-6 text-white hover:text-gold transition-colors"
+                className="absolute top-4 sm:top-6 right-4 sm:right-6 text-white hover:text-gold transition-colors z-50"
                 aria-label="Close menu"
               >
                 <X size={28} />
               </button>
               
-              {/* Logo in mobile menu */}
-              <Link 
-                to="/" 
-                className="flex items-center mb-10" 
-                onClick={closeMobileMenu}
-              >
-                <span className="text-2xl font-heading font-bold text-white">
-                  Race<span className="text-gold">Attack</span>
-                </span>
-              </Link>
-              
-              <nav className="flex flex-col space-y-6">
-                {navLinks.map((link, index) => {
-                  const isActive = location.pathname === link.path;
-                  
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ x: 10 }}
-                    >
-                      <Link
-                        to={link.path}
-                        className={`text-white transition-colors duration-300 text-lg uppercase tracking-wider font-medium flex items-center ${
-                          isActive ? 'text-gold' : 'hover:text-gold'
-                        }`}
-                        onClick={closeMobileMenu}
-                      >
-                        {isActive && (
-                          <motion.div 
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            className="w-2 h-2 rounded-full bg-gold mr-3"
-                          />
-                        )}
-                        {link.title}
-                      </Link>
-                    </motion.div>
-                  );
-                })}
-                
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navLinks.length * 0.1 }}
+              {/* Centered content container */}
+              <div className="flex flex-col items-center justify-center min-h-full py-8">
+                {/* Logo in mobile menu */}
+                <Link 
+                  to="/" 
+                  className="flex items-center justify-center mb-[8vh]" 
+                  onClick={closeMobileMenu}
                 >
-                  <Link
-                    to="/kontakt"
-                    className="gold-button py-3 px-6 text-base uppercase tracking-wider font-medium inline-block mt-4"
-                    onClick={closeMobileMenu}
+                  <span 
+                    className="font-heading font-bold text-white"
+                    style={{ fontSize: 'clamp(1.875rem, 5vw, 3rem)' }}
                   >
-                    Anfrage
-                  </Link>
-                </motion.div>
-              </nav>
+                    Race<span className="text-gold">Attack</span>
+                  </span>
+                </Link>
+                
+                <nav className="flex flex-col items-center justify-center w-full">
+                  {navLinks.map((link, index) => {
+                    const isActive = location.pathname === link.path;
+                    
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ scale: 1.05 }}
+                        className="text-center py-[1.5vh]"
+                      >
+                        <Link
+                          to={link.path}
+                          className={`text-white transition-all duration-300 uppercase tracking-widest font-bold flex items-center justify-center ${
+                            isActive ? 'text-gold' : 'hover:text-gold'
+                          }`}
+                          style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}
+                          onClick={closeMobileMenu}
+                        >
+                          {isActive && (
+                            <motion.div 
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              className="rounded-full bg-gold mr-3"
+                              style={{ width: 'clamp(0.5rem, 1.5vw, 0.75rem)', height: 'clamp(0.5rem, 1.5vw, 0.75rem)' }}
+                            />
+                          )}
+                          {link.title}
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
+                  
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: navLinks.length * 0.1 }}
+                    className="mt-[8vh]"
+                  >
+                    <Link
+                      to="/kontakt"
+                      className="gold-button uppercase tracking-widest font-bold inline-block"
+                      style={{ 
+                        fontSize: 'clamp(1.125rem, 3.5vw, 2rem)',
+                        padding: 'clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 3rem)'
+                      }}
+                      onClick={closeMobileMenu}
+                    >
+                      Anfrage
+                    </Link>
+                  </motion.div>
+                </nav>
+              </div>
             </div>
           </motion.div>
         )}
