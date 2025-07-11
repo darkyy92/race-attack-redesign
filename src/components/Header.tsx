@@ -63,7 +63,7 @@ const Header: React.FC = () => {
         }`}
       />
       
-      <div className="container max-w-7xl mx-auto px-4 lg:px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 xl:px-6 relative z-10">
         <div className="flex items-center justify-between">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-8">
             {navLinks.map((link, index) => {
               const isActive = location.pathname === link.path;
               const isHovered = hoveredLink === link.path;
@@ -144,7 +144,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden text-white hover:text-gold transition-colors"
+            className="xl:hidden text-white hover:text-gold transition-colors"
             onClick={toggleMobileMenu}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
