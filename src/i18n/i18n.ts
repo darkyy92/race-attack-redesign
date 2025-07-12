@@ -63,18 +63,19 @@ i18n
     resources,
     fallbackLng: 'de',
     defaultNS: 'common',
+    supportedLngs: ['de', 'en'],
+    
+    interpolation: {
+      escapeValue: false
+    },
     
     detection: {
-      order: ['navigator', 'htmlTag', 'cookie', 'localStorage', 'sessionStorage', 'querystring', 'path', 'subdomain'],
-      caches: ['localStorage', 'cookie'],
+      order: ['navigator', 'localStorage'],
+      caches: ['localStorage']
     },
-
-    interpolation: {
-      escapeValue: false // React already escapes by default
-    },
-
+    
     react: {
-      useSuspense: false
+      useSuspense: true
     }
   });
 
