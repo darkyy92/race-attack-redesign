@@ -1,10 +1,89 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '@/config/emailjs';
+import { toast } from '@/components/ui/use-toast';
+import { useTranslation } from 'react-i18next';
 
 const Kontakt: React.FC = () => {
+  const { t } = useTranslation('contact');
+  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+    privacy: false
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+      
+      // Prepare template parameters
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || 'Nicht angegeben',
+        service: formData.service,
+        message: formData.message
+      };
+      
+      // Send email
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+      
+      toast({
+        title: t('contactForm.success.title'),
+        description: t('contactForm.success.message'),
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+        privacy: false
+      });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: t('contactForm.error.title'),
+        description: t('contactForm.error.message'),
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
   useEffect(() => {
     // Set page title and meta description for SEO
     document.title = "Kontakt | Race Attack - Nightliner & Tour Support in der Schweiz";
@@ -123,28 +202,34 @@ const Kontakt: React.FC = () => {
                   Senden Sie uns eine <span className="gold-text">Nachricht</span>
                 </h2>
                 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Name *
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('contactForm.fields.firstName.label')}
                       </label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        placeholder={t('contactForm.fields.firstName.placeholder')}
                         className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        E-Mail *
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('contactForm.fields.lastName.label')}
                       </label>
                       <input
-                        type="email"
-                        id="email"
-                        name="email"
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        placeholder={t('contactForm.fields.lastName.placeholder')}
                         className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
                         required
                       />
@@ -152,26 +237,68 @@ const Kontakt: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                      Betreff *
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      {t('contactForm.fields.email.label')}
                     </label>
                     <input
-                      type="text"
-                      id="subject"
-                      name="subject"
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder={t('contactForm.fields.email.placeholder')}
                       className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
                       required
                     />
                   </div>
                   
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('contactForm.fields.phone.label') || 'Telefon'}
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder={t('contactForm.fields.phone.placeholder') || '+41 79 123 45 67'}
+                        className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('contactForm.fields.service.label') || 'Dienstleistung *'}
+                      </label>
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleChange}
+                        className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
+                        required
+                      >
+                        <option value="" disabled>{t('contactForm.fields.service.placeholder') || 'Bitte wählen'}</option>
+                        <option value="nightliner">{t('contactForm.fields.service.options.nightliner') || 'Nightliner'}</option>
+                        <option value="tour-crew">{t('contactForm.fields.service.options.tourCrew') || 'Tour Crew'}</option>
+                        <option value="truck">{t('contactForm.fields.service.options.truck') || 'Truck'}</option>
+                        <option value="other">{t('contactForm.fields.service.options.other') || 'Anderes'}</option>
+                      </select>
+                    </div>
+                  </div>
+                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Nachricht *
+                      {t('contactForm.fields.message.label')}
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={6}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder={t('contactForm.fields.message.placeholder')}
                       className="w-full bg-black border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent"
                       required
                     ></textarea>
@@ -182,20 +309,23 @@ const Kontakt: React.FC = () => {
                       type="checkbox"
                       id="privacy"
                       name="privacy"
+                      checked={formData.privacy}
+                      onChange={handleChange}
                       className="h-4 w-4 text-gold border-gray-700 rounded focus:ring-gold"
                       required
                     />
                     <label htmlFor="privacy" className="ml-2 block text-sm text-gray-400">
-                      Ich habe die <a href="/datenschutz" className="text-gold hover:underline">Datenschutzerklärung</a> gelesen und akzeptiere diese.
+                      {t('contactForm.fields.privacy.label')} <a href={t('contactForm.fields.privacy.linkUrl')} className="text-gold hover:underline">{t('contactForm.fields.privacy.link')}</a> {t('contactForm.fields.privacy.labelEnd')}
                     </label>
                   </div>
                   
                   <div>
                     <button
                       type="submit"
-                      className="bg-gold text-white py-3 px-8 rounded-md hover:bg-gold/90 transition-colors inline-block"
+                      disabled={isSubmitting}
+                      className="bg-gold text-white py-3 px-8 rounded-md hover:bg-gold/90 transition-colors inline-block disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Nachricht senden
+                      {isSubmitting ? t('contactForm.submitting') : t('contactForm.submit')}
                     </button>
                   </div>
                 </form>

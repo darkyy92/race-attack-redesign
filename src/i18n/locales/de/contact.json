@@ -41,17 +41,35 @@
         "label": "Name *",
         "placeholder": ""
       },
+      "firstName": {
+        "label": "Vorname *",
+        "placeholder": "Max"
+      },
+      "lastName": {
+        "label": "Nachname *",
+        "placeholder": "Mustermann"
+      },
       "email": {
         "label": "E-Mail *",
-        "placeholder": ""
+        "placeholder": "ihre.email@beispiel.ch"
       },
-      "subject": {
-        "label": "Betreff *",
-        "placeholder": ""
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+41 79 123 45 67"
+      },
+      "service": {
+        "label": "Dienstleistung *",
+        "placeholder": "Bitte wählen",
+        "options": {
+          "nightliner": "Nightliner",
+          "tourCrew": "Tour Crew",
+          "truck": "Truck",
+          "other": "Anderes"
+        }
       },
       "message": {
         "label": "Nachricht *",
-        "placeholder": ""
+        "placeholder": "Ihre Nachricht..."
       },
       "privacy": {
         "label": "Ich habe die",
@@ -60,7 +78,16 @@
         "labelEnd": "gelesen und akzeptiere diese."
       }
     },
-    "submit": "Nachricht senden"
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "success": {
+      "title": "Nachricht gesendet",
+      "message": "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden."
+    },
+    "error": {
+      "title": "Fehler",
+      "message": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    }
   },
   "map": {
     "title": {

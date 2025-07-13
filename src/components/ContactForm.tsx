@@ -3,12 +3,15 @@ import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '@/config/emailjs';
 
 const ContactForm: React.FC = () => {
   const { t, i18n } = useTranslation('home');
   
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     service: '',
@@ -25,25 +28,55 @@ const ContactForm: React.FC = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Mock form submission - in a real app, this would send data to a server
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+      
+      // Prepare template parameters
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || 'Nicht angegeben',
+        service: formData.service,
+        message: formData.message
+      };
+      
+      // Send email
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+      
       toast({
         title: t('contact.form.successTitle'),
         description: t('contact.form.successMessage'),
       });
+      
+      // Reset form
       setFormData({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         phone: '',
         service: '',
         message: ''
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: t('contact.form.errorTitle') || 'Error',
+        description: t('contact.form.errorMessage') || 'Failed to send message. Please try again.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,18 +100,33 @@ const ContactForm: React.FC = () => {
           <div className="animate-on-scroll">
             <form onSubmit={handleSubmit} className="glass-card rounded-lg p-8">
               <div className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">{t('contact.form.name')}</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-black border border-gold/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50 text-white placeholder-gray-500"
-                    placeholder={t('contact.form.namePlaceholder')}
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-1">{t('contact.form.firstName') || 'First Name'}</label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black border border-gold/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50 text-white placeholder-gray-500"
+                      placeholder={t('contact.form.firstNamePlaceholder') || 'John'}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-1">{t('contact.form.lastName') || 'Last Name'}</label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black border border-gold/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50 text-white placeholder-gray-500"
+                      placeholder={t('contact.form.lastNamePlaceholder') || 'Doe'}
+                    />
+                  </div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

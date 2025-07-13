@@ -51,10 +51,14 @@
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",
+      "firstName": "Vorname",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Nachname",
+      "lastNamePlaceholder": "Mustermann",
       "email": "E-Mail",
-      "emailPlaceholder": "Ihre E-Mail",
+      "emailPlaceholder": "ihre.email@beispiel.ch",
       "phone": "Telefon",
-      "phonePlaceholder": "Telefonnummer",
+      "phonePlaceholder": "+41 79 123 45 67",
       "service": "Dienstleistung",
       "servicePlaceholder": "Bitte wählen",
       "serviceOptions": {
@@ -69,6 +73,8 @@
       "submitting": "Wird gesendet...",
       "successTitle": "Anfrage erhalten",
       "successMessage": "Vielen Dank für Ihre Anfrage. Wir werden uns in Kürze bei Ihnen melden.",
+      "errorTitle": "Fehler",
+      "errorMessage": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
       "privacyNotice": "Mit dem Absenden stimmen Sie unserer",
       "privacyLink": "Datenschutzerklärung",
       "privacyNoticeSuffix": " zu.",
@@ -83,6 +89,7 @@
       "street": "Kappel 1",
       "city": "CH-8523 Hagenbuch",
       "country": "Schweiz",
+      "switzerland": "Schweiz",
       "availability": {
         "title": "Verfügbarkeit prüfen",
         "description": "Kontaktieren Sie uns direkt per Telefon oder E-Mail für eine schnelle Verfügbarkeitsprüfung.",

@@ -51,10 +51,14 @@
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
       "email": "Email",
-      "emailPlaceholder": "Your email",
+      "emailPlaceholder": "your.email@example.ch",
       "phone": "Phone",
-      "phonePlaceholder": "Phone number",
+      "phonePlaceholder": "+41 79 123 45 67",
       "service": "Service",
       "servicePlaceholder": "Please select",
       "serviceOptions": {
@@ -69,6 +73,8 @@
       "submitting": "Sending...",
       "successTitle": "Inquiry received",
       "successMessage": "Thank you for your inquiry. We will contact you shortly.",
+      "errorTitle": "Error",
+      "errorMessage": "Failed to send message. Please try again.",
       "privacyNotice": "By submitting, you agree to our",
       "privacyLink": "Privacy Policy",
       "privacyNoticeSuffix": ".",
@@ -83,6 +89,7 @@
       "street": "Kappel 1",
       "city": "CH-8523 Hagenbuch",
       "country": "Switzerland",
+      "switzerland": "Switzerland",
       "availability": {
         "title": "Check availability",
         "description": "Contact us directly by phone or email for a quick availability check.",
