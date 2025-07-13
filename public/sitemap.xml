@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://race-attack.ch/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://race-attack.ch/"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://race-attack.ch/hero-nightliner.jpg</image:loc>
+      <image:title>Race Attack Premium Nightliner Services</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Nightliner Service Page (High Priority for Bookings) -->
+  <url>
+    <loc>https://race-attack.ch/nightliner</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/nightliner"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/nightliner"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://race-attack.ch/nightliner-main.jpg</image:loc>
+      <image:title>Luxury Nightliner Tour Bus</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Tour Crew Service Page -->
+  <url>
+    <loc>https://race-attack.ch/tour-crew</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/tour-crew"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/tour-crew"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Truck/Logistics Service Page -->
+  <url>
+    <loc>https://race-attack.ch/truck</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/truck"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/truck"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://race-attack.ch/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/gallery"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/gallery"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- About Us Pages -->
+  <url>
+    <loc>https://race-attack.ch/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/about-us"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/ueber-uns"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/about-us"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://race-attack.ch/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/kontakt"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/contact"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://race-attack.ch/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/datenschutz"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/privacy-policy"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/imprint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/impressum"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://race-attack.ch/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://race-attack.ch/imprint"/>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>

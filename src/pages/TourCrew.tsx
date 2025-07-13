@@ -230,6 +230,48 @@ const TourCrew: React.FC = () => {
         </div>
       </section>
       
+      {/* Cross-promotion Section for Nightliner */}
+      <section className="py-16 px-4 md:px-6 bg-black">
+        <div className="container mx-auto max-w-5xl">
+          <Card className="glass-card border-gold/20 p-8 md:p-12 shadow-xl animate-fade-in">
+            <CardContent className="p-0">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    {i18n.language === 'de' 
+                      ? 'Perfekt kombinierbar mit unserem Nightliner'
+                      : 'Perfect combination with our Nightliner'}
+                  </h3>
+                  <p className="text-white/80 mb-6">
+                    {i18n.language === 'de'
+                      ? 'Für eine rundum perfekte Tour: Kombinieren Sie unsere professionelle Tour Crew mit einem luxuriösen Nightliner. Komfortabler Transport und erstklassiger Support aus einer Hand.'
+                      : 'For the perfect tour experience: Combine our professional tour crew with a luxury nightliner. Comfortable transport and first-class support from a single source.'}
+                  </p>
+                  <Link to="/nightliner">
+                    <Button className="gold-button flex items-center gap-2">
+                      <span>
+                        {i18n.language === 'de' 
+                          ? 'Nightliner entdecken'
+                          : 'Discover Nightliner'}
+                      </span>
+                      <ChevronRight size={18} />
+                    </Button>
+                  </Link>
+                </div>
+                <div className="md:w-1/3">
+                  <OptimizedImage
+                    src="/images/nightliner-ps.jpg"
+                    alt={i18n.language === 'de' ? 'VIP Nightliner' : 'VIP Nightliner'}
+                    className="w-full h-48 object-cover rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-b from-black-light to-black relative overflow-hidden">
         <div className="absolute inset-0 z-0">

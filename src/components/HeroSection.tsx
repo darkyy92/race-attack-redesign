@@ -41,6 +41,9 @@ const HeroSection: React.FC = () => {
           {/* Race-Attack Logo large */}
           <h1 className="heading-xl uppercase mb-10 font-bold tracking-wider">
             <span className="block text-white">{t('hero.title')}</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 normal-case font-medium tracking-normal gold-text">
+              {t('hero.titleSEO')}
+            </span>
           </h1>
           
           <p className="body-lg max-w-2xl mx-auto mb-10 text-gray-300">

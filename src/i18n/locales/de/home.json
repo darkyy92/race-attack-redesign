@@ -1,20 +1,21 @@
 {
   "hero": {
     "title": "RACE-ATTACK",
-    "subtitle": "Premium Nightliner und Tour Crew für anspruchsvolle Künstler und Bands in der Schweiz und ganz Europa.",
+    "titleSEO": "Premium Nightliner & Tourbus Vermietung",
+    "subtitle": "Schweizer Qualität in der Nightliner-Vermietung für Künstler in Europa. Zuverlässige Luxus-Tourbusse, professionelle Crew, umfassende Tour-Betreuung.",
     "buttons": {
-      "discover": "Nightliner entdecken",
-      "contact": "Kontakt"
+      "discover": "Unsere Flotte",
+      "contact": "Jetzt kontaktieren"
     },
     "scrollDown": "Nach unten scrollen"
   },
   "services": {
-    "sectionTitle": "Unsere",
-    "sectionTitleHighlight": "Dienstleistungen",
-    "sectionSubtitle": "Erleben Sie erstklassigen Komfort und Zuverlässigkeit mit unseren Premium-Transportlösungen und professionellen Tour-Services.",
+    "sectionTitle": "Tourbus & Crew",
+    "sectionTitleHighlight": "Services Schweiz",
+    "sectionSubtitle": "Schweizer Präzision trifft Tournee-Exzellenz: zuverlässige Nightliner-Flotte, erfahrene Crew & sicherer Equipment-Transport. Ihre Europa-Tournee-Komplettlösung.",
     "nightliner": {
-      "title": "Nightliner",
-      "description": "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen und erstklassiger Ausstattung für Künstler und Bands auf Tour.",
+      "title": "Nightliner Tourbus Vermietung",
+      "description": "Schweizer Luxus-Sleeper-Busse mit 12-16 Schlafplätzen. Zuverlässige Flotte, erfahrene Fahrer, professionelle Tour-Betreuung in ganz Europa.",
       "features": [
         "Komfortable Schlafplätze",
         "Voll ausgestatteter Wohnbereich",
@@ -23,8 +24,8 @@
       ]
     },
     "tourCrew": {
-      "title": "Tour Crew",
-      "description": "Professionelles Team mit umfassender Erfahrung in der Tourplanung und -durchführung.",
+      "title": "Professionelle Tour Crew Services",
+      "description": "Erfahrene Tourmanager, Tontechniker & Backline-Techniker. Komplette Crew-Lösungen für Europa-Tourneen vom führenden Schweizer Tour-Support-Unternehmen.",
       "features": [
         "Tourmanager & Guitar-Techs",
         "Sound & Light Engineers",
@@ -33,8 +34,8 @@
       ]
     },
     "truck": {
-      "title": "Truck",
-      "description": "Renault Magnum mit Achleitner Auflieger für Equipment und Fahrzeugtransporte.",
+      "title": "Equipment Transport & Logistik",
+      "description": "Professioneller Truck-Service für Tour-Equipment & Fahrzeugtransporte. 70m³ Kapazität, Spezialauflieger für sichere Europa-Logistik.",
       "features": [
         "Bis zu 70m³ Ladevolumen",
         "2,5 Tonnen Hebebühne",
@@ -45,9 +46,9 @@
     "learnMore": "Mehr erfahren"
   },
   "contact": {
-    "sectionTitle": "Kontaktieren",
-    "sectionTitleHighlight": "Sie uns",
-    "sectionSubtitle": "Nehmen Sie Kontakt auf für eine unverbindliche Beratung oder ein Angebot für Ihr Projekt.",
+    "sectionTitle": "Nightliner",
+    "sectionTitleHighlight": "jetzt buchen",
+    "sectionSubtitle": "Persönliche Beratung • Massgeschneiderte Tour-Lösungen • Schweizer Zuverlässigkeit garantiert. Ihr erfahrener Partner für erfolgreiche Europa-Tourneen.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",
@@ -98,11 +99,11 @@
     }
   },
   "references": {
-    "title": "Unsere",
-    "titleHighlight": "Referenzen",
-    "subtitle": "Vertrauen Sie auf unsere langjährige Erfahrung und Expertise mit namhaften Künstlern und Veranstaltern.",
-    "artistsTitle": "Künstler & Bands",
-    "partnersTitle": "Partner & Veranstalter"
+    "title": "Vertrauen von",
+    "titleHighlight": "namhaften Künstlern",
+    "subtitle": "Wir bieten Schweizer Zuverlässigkeit für Weltklasse-Künstler, grosse Festivals & Tourproduktionen in ganz Europa. Ihre Tour verdient erfahrene Profis.",
+    "artistsTitle": "Künstler & Bands die wir betreut haben",
+    "partnersTitle": "Tour-Partner & Produktionsfirmen"
   },
   "marquee": {
     "title": "Unsere",

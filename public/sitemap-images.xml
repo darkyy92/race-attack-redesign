@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Gallery Images -->
+  <url>
+    <loc>https://race-attack.ch/gallery</loc>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-1.jpg</image:loc>
+      <image:title>Race Attack Nightliner Tour Bus Interior</image:title>
+      <image:caption>Luxury tour bus interior with sleeping bunks for musicians</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-2.jpg</image:loc>
+      <image:title>Professional Tour Crew at Work</image:title>
+      <image:caption>Race Attack crew setting up stage equipment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-3.jpg</image:loc>
+      <image:title>Nightliner Bus Exterior</image:title>
+      <image:caption>Modern tour bus for European music tours</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-4.jpg</image:loc>
+      <image:title>Tour Production Equipment</image:title>
+      <image:caption>Professional audio and lighting equipment transport</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-5.jpg</image:loc>
+      <image:title>Backstage Tour Support</image:title>
+      <image:caption>Race Attack crew providing backstage support</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-6.jpg</image:loc>
+      <image:title>Nightliner Lounge Area</image:title>
+      <image:caption>Comfortable lounge area in tour bus</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-7.jpg</image:loc>
+      <image:title>Tour Logistics Truck</image:title>
+      <image:caption>Equipment transport truck for touring productions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/gallery-8.jpg</image:loc>
+      <image:title>Festival Stage Setup</image:title>
+      <image:caption>Race Attack crew at major festival</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Service Page Images -->
+  <url>
+    <loc>https://race-attack.ch/</loc>
+    <image:image>
+      <image:loc>https://race-attack.ch/hero-nightliner.jpg</image:loc>
+      <image:title>Race Attack Premium Nightliner Services Switzerland</image:title>
+      <image:caption>Luxury tour bus rental for musicians and bands in Europe</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/truck-services.jpg</image:loc>
+      <image:title>Tour Equipment Transport Services</image:title>
+      <image:caption>Professional logistics for touring productions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/race-attack-logo.svg</image:loc>
+      <image:title>Race Attack Logo</image:title>
+      <image:caption>Race Attack - Premium Tour Services Since 1991</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://race-attack.ch/nightliner</loc>
+    <image:image>
+      <image:loc>https://race-attack.ch/nightliner-main.jpg</image:loc>
+      <image:title>Luxury Nightliner Tour Bus Rental</image:title>
+      <image:caption>Premium tour bus with sleeping bunks and lounge area</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://race-attack.ch/nightliner-interior.jpg</image:loc>
+      <image:title>Tour Bus Interior Amenities</image:title>
+      <image:caption>Comfortable sleeping bunks and entertainment system</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

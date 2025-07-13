@@ -6,6 +6,9 @@ import Footer from '@/components/Footer';
 import { Marquee } from '@/components/ui/marquee';
 import { ImageGallery, GalleryImage } from '@/components/ui/image-gallery';
 import { OptimizedImage } from '@/components/ui/optimized-image';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ChevronRight } from 'lucide-react';
 
 const Truck: React.FC = () => {
   useEffect(() => {
@@ -262,6 +265,41 @@ const Truck: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        
+        {/* Cross-promotion Section for Nightliner */}
+        <section className="py-16 bg-black">
+          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+            <Card className="glass-card border-gold/20 p-8 md:p-12 shadow-xl">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="md:w-1/3">
+                    <OptimizedImage
+                      src="/images/nightliner-ps.jpg"
+                      alt="VIP Nightliner"
+                      className="w-full h-56 object-cover rounded-lg shadow-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="md:w-2/3">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                      Komplettlösung für Ihre Tour
+                    </h3>
+                    <p className="text-white/80 mb-6">
+                      Neben unserem Truck-Service bieten wir auch luxuriöse Nightliner für den Transport von Künstlern und Bands. 
+                      Die perfekte Kombination: Equipment-Transport mit dem Truck und komfortabler Personentransport mit dem Nightliner - alles aus einer Hand.
+                    </p>
+                    <Link to="/nightliner">
+                      <Button className="gold-button flex items-center gap-2">
+                        <span>Nightliner entdecken</span>
+                        <ChevronRight size={18} />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>

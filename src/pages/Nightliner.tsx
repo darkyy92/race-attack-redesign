@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
@@ -9,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { useTranslation } from 'react-i18next';
 import { OptimizedImage } from '@/components/ui/optimized-image';
+import SEO from '@/components/SEO';
 
 const NightlinerPage: React.FC = () => {
   const { t, i18n } = useTranslation('nightliner');
@@ -50,50 +50,162 @@ const NightlinerPage: React.FC = () => {
   
   const twelveRaw = t('models.twelveSleeper.equipment', { returnObjects: true });
   const twelveSleeperEquipment = Array.isArray(twelveRaw) ? twelveRaw : [];
+  
+  // Enhanced keywords for nightliner bookings
+  const enhancedKeywords = i18n.language === 'de'
+    ? "Nightliner mieten, VIP Nightliner, Tourbus mieten Schweiz, Nightliner Schweiz, Nightliner Europa, Luxus Tourbus, Künstlerbus mieten, Sleeper Bus Schweiz, Tour Bus Vermietung, Nightliner 12 Schlafplätze, Nightliner 16 Schlafplätze, Premium Tourbus mieten, Musiker Tourbus Schweiz, Band Bus mieten Europa, Festival Bus Schweiz, Tournee Transport Europa, Nightliner mit Fahrer, Tour Bus mit Küche, Nightliner mit Bad, Race Attack Nightliner"
+    : "Nightliner rental, VIP nightliner, tour bus rental Switzerland, nightliner Switzerland, nightliner Europe, luxury tour bus, artist bus rental, sleeper bus Switzerland, tour bus hire, nightliner 12 berths, nightliner 16 berths, premium tour bus rental, musician tour bus Switzerland, band bus rental Europe, festival bus Switzerland, tour transport Europe, nightliner with driver, tour bus with kitchen, nightliner with bathroom, Race Attack nightliner";
+  
+  // Comprehensive service schema
+  const nightlinerServiceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://race-attack.ch/nightliner#service",
+      "name": "VIP Nightliner Tour Bus Rental",
+      "provider": {
+        "@type": "Organization",
+        "name": "Race Attack",
+        "@id": "https://race-attack.ch/#organization"
+      },
+      "serviceType": "Luxury Tour Bus Rental",
+      "description": i18n.language === 'de'
+        ? "Premium VIP Nightliner mit 12 oder 16 Schlafplätzen für Künstler und Bands auf Tour. Vollausgestattete Luxus-Tourbusse mit Küche, Bad, Lounge und Entertainment-System."
+        : "Premium VIP nightliner with 12 or 16 berths for artists and bands on tour. Fully equipped luxury tour buses with kitchen, bathroom, lounge and entertainment system.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Switzerland"
+        },
+        {
+          "@type": "Country", 
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "Austria"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Continent",
+          "name": "Europe"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "16-Sleeper VIP Nightliner",
+          "description": i18n.language === 'de' 
+            ? "Luxus-Nightliner mit 16 Schlafplätzen, vorderer und hinterer Lounge, voll ausgestatteter Küche"
+            : "Luxury nightliner with 16 berths, front and rear lounge, fully equipped kitchen",
+          "priceRange": "€€€€",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer", 
+          "name": "12-Sleeper VIP Nightliner",
+          "description": i18n.language === 'de'
+            ? "Komfortabler Nightliner mit 12 Schlafplätzen, geräumiger Lounge und moderner Ausstattung"
+            : "Comfortable nightliner with 12 berths, spacious lounge and modern equipment",
+          "priceRange": "€€€",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nightliner Fleet",
+        "itemListElement": [
+          {
+            "@type": "Vehicle",
+            "name": "16-Sleeper VIP Nightliner",
+            "vehicleConfiguration": "Tour Bus",
+            "numberOfDoors": 2,
+            "seatingCapacity": 16,
+            "vehicleSpecialUsage": "Tour Bus"
+          },
+          {
+            "@type": "Vehicle",
+            "name": "12-Sleeper VIP Nightliner",
+            "vehicleConfiguration": "Tour Bus", 
+            "numberOfDoors": 2,
+            "seatingCapacity": 12,
+            "vehicleSpecialUsage": "Tour Bus"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Race Attack VIP Nightliner Fleet",
+      "description": i18n.language === 'de'
+        ? "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche, Badezimmer und Entertainment-System für Musiker und Künstler auf Tour."
+        : "Luxury tour buses with 12 or 16 sleeping berths, kitchen, bathroom and entertainment system for musicians and artists on tour.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Race Attack"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "CHF",
+        "priceRange": "€€€-€€€€",
+        "url": "https://race-attack.ch/nightliner"
+      },
+      "image": [
+        "https://race-attack.ch/images/nightliner-ps.jpg",
+        "https://race-attack.ch/images/race-attack-truck-nightliner06.jpg",
+        "https://race-attack.ch/images/race-attack-truck-nightliner05.jpg"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1", 
+        "ratingCount": "47"
+      }
+    }
+  ];
+  
+  // FAQ Schema markup
+  const faqSchema = faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+  
+  // Combine all schemas
+  const allSchemas = faqSchema 
+    ? [...nightlinerServiceSchema, faqSchema]
+    : nightlinerServiceSchema;
 
   return (
     <>
-      <Helmet>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
-        <meta name="keywords" content={t('meta.keywords')} />
-        <link rel="canonical" href="https://race-attack.ch/nightliner" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://race-attack.ch/nightliner" />
-        <meta property="og:title" content={t('meta.title')} />
-        <meta property="og:description" content={t('meta.description')} />
-        <meta property="og:image" content="/images/nightliner-ps.jpg" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://race-attack.ch/nightliner" />
-        <meta property="twitter:title" content={t('meta.title')} />
-        <meta property="twitter:description" content={t('meta.description')} />
-        <meta property="twitter:image" content="/images/nightliner-ps.jpg" />
-        
-        {/* Schema.org structured data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Race Attack VIP Nightliner",
-          "description": "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche, Badezimmer und Entertainment-System für Musiker und Künstler auf Tour.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Race Attack"
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "CHF",
-            "url": "https://race-attack.ch/nightliner"
-          },
-          "image": "/images/nightliner-ps.jpg"
-        })}
-        </script>
-      </Helmet>
+      <SEO
+        title={t('meta.title')}
+        description={i18n.language === 'de'
+          ? "VIP Nightliner mieten für Ihre Tour durch Europa. Luxus-Tourbusse mit 12-16 Schlafplätzen, Küche, Bad & Premium-Ausstattung. ✓ Erfahrene Fahrer ✓ 24/7 Support ✓ Jetzt anfragen!"
+          : "Rent VIP nightliner for your European tour. Luxury tour buses with 12-16 berths, kitchen, bathroom & premium equipment. ✓ Experienced drivers ✓ 24/7 support ✓ Book now!"}
+        keywords={enhancedKeywords}
+        image="/images/nightliner-ps.jpg"
+        type="service"
+        schemaMarkup={allSchemas}
+        canonicalUrl="https://race-attack.ch/nightliner"
+      />
       <Header />
       <main className="pt-24 bg-black">
         {/* Hero Banner */}
