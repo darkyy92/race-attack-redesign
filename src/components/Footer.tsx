@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">{t('footer.description')}</p>
+{/* Social Icons - Hidden
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors">
                 <Facebook size={20} />
@@ -30,6 +31,7 @@ const Footer: React.FC = () => {
                 <Linkedin size={20} />
               </a>
             </div>
+            */}
           </div>
           
           {/* Quick Links */}
