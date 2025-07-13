@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Briefcase, Music, User, ChevronRight, PhoneCall } from 'lucide-react';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 interface CrewMemberProps {
   name: string;
@@ -28,7 +29,7 @@ const CrewMember: React.FC<CrewMemberProps> = ({ name, position, bands, image, r
       data-aos-delay={30 * index}
     >
       <div className="w-full md:w-2/5 h-80 md:h-auto relative overflow-hidden">
-        <img 
+        <OptimizedImage 
           src={image} 
           alt={t('team.imageAlt', { name, position })} 
           className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"

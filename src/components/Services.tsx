@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { OptimizedImage } from './ui/optimized-image';
 
 interface Service {
   title: string;
@@ -95,7 +96,7 @@ const Services: React.FC = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="h-64 overflow-hidden">
-                <img 
+                <OptimizedImage 
                   src={service.image} 
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-200 hover:scale-110"

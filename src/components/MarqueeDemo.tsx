@@ -1,6 +1,7 @@
 import { Marquee } from "@/components/ui/marquee";
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { OptimizedImage } from './ui/optimized-image';
 
 // Partners with logos from the /public/logos/ folder
 const partners = [
@@ -73,7 +74,7 @@ export function MarqueeDemo() {
                   className="hover:opacity-80 transition-opacity"
                   aria-label={partner.name}
                 >
-                  <img 
+                  <OptimizedImage 
                     src={partner.logo} 
                     alt={partner.name} 
                     className="h-full max-h-20 w-auto object-contain" 

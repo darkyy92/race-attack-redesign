@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Marquee } from '@/components/ui/marquee';
 import { ImageGallery, GalleryImage } from '@/components/ui/image-gallery';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const Truck: React.FC = () => {
   useEffect(() => {
@@ -92,7 +93,7 @@ const Truck: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2 }}
               >
-                <img 
+                <OptimizedImage 
                   src="/truck-images/race-attack-truck-nightliner04.jpg" 
                   alt="Race Attack Truck - Premium Fahrzeugtransport und Motorsport Logistik" 
                   className="w-full h-auto rounded-lg shadow-xl"

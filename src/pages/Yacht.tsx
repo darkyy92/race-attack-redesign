@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Marquee } from '@/components/ui/marquee';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const Yacht: React.FC = () => {
   useEffect(() => {
@@ -115,7 +116,7 @@ const Yacht: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2 }}
               >
-                <img 
+                <OptimizedImage 
                   src="/images/yacht/race-attack-photo-yacht-4.jpg" 
                   alt="Segelyacht TOAD - Oyster 70 Luxus Charter" 
                   className="w-full h-auto rounded-lg shadow-xl"

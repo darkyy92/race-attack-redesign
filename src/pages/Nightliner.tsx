@@ -8,6 +8,7 @@ import { ChevronRight, Check, Music, Users, Coffee, Home } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { useTranslation } from 'react-i18next';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const NightlinerPage: React.FC = () => {
   const { t, i18n } = useTranslation('nightliner');
@@ -98,7 +99,7 @@ const NightlinerPage: React.FC = () => {
         {/* Hero Banner */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img src="/images/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
+          <OptimizedImage src="/images/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center">
               <h1 className="heading-xl text-white uppercase mb-4 animate-fade-in" data-aos="fade-in">
@@ -154,7 +155,7 @@ const NightlinerPage: React.FC = () => {
                 </div>
               </div>
               <div className="relative" data-aos="fade-left">
-                <img src="/images/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
+                <OptimizedImage src="/images/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 rounded-lg -z-10"></div>
               </div>
             </div>
@@ -213,7 +214,7 @@ const NightlinerPage: React.FC = () => {
                 
                 {/* Main Feature Image */}
                 <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('16sleeper')}>
-                  <img src={sixteenSleeperImages[0]} alt="16 Sleeper Nightliner - Premium Tourbus mit 16 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={sixteenSleeperImages[0]} alt="16 Sleeper Nightliner - Premium Tourbus mit 16 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <span className="text-white bg-gold px-4 py-2 rounded-md">{t('models.galleryOpen')}</span>
                   </div>
@@ -247,7 +248,7 @@ const NightlinerPage: React.FC = () => {
                           {sixteenSleeperImages.map((img, index) => (
                             <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
-                                <img src={img} alt={`16 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
+                                <OptimizedImage src={img} alt={`16 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
                             </CarouselItem>
                           ))}
@@ -269,7 +270,7 @@ const NightlinerPage: React.FC = () => {
                 
                 {/* Main Feature Image */}
                 <div className="relative w-full h-64 mb-6 cursor-pointer overflow-hidden rounded-lg" onClick={() => toggleGallery('12sleeper')}>
-                  <img src={twelveSleeperImages[0]} alt="12 Sleeper Nightliner - Premium Tourbus mit 12 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
+                  <OptimizedImage src={twelveSleeperImages[0]} alt="12 Sleeper Nightliner - Premium Tourbus mit 12 Schlafplätzen" className="w-full h-full object-cover transition-transform duration-200 hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <span className="text-white bg-gold px-4 py-2 rounded-md">{t('models.galleryOpen')}</span>
                   </div>
@@ -303,7 +304,7 @@ const NightlinerPage: React.FC = () => {
                           {twelveSleeperImages.map((img, index) => (
                             <CarouselItem key={index}>
                               <div className="flex items-center justify-center h-[60vh]">
-                                <img src={img} alt={`12 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
+                                <OptimizedImage src={img} alt={`12 Sleeper Nightliner Bild ${index + 1} - Innenraum und Ausstattung`} className="max-h-full max-w-full object-contain" loading="lazy" />
                               </div>
                             </CarouselItem>
                           ))}

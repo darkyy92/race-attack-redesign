@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MapPin, Phone, Mail, Award, Clock, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const UeberUns: React.FC = () => {
   useEffect(() => {
@@ -91,13 +92,11 @@ const UeberUns: React.FC = () => {
                 </div>
               </div>
               <div className="order-1 md:order-2" data-aos="fade-in">
-                <img 
+                <OptimizedImage 
                   src="/images/about/race-attack-team.jpg"
                   alt="Race Attack - Über Uns"
                   className="rounded-lg shadow-xl w-full h-auto object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "/images/Livio1-1.jpg";
-                  }}
+                  fallbackSrc="/images/Livio1-1.jpg"
                 />
               </div>
             </div>

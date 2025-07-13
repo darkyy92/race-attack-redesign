@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
+import { OptimizedImage } from "./optimized-image";
 
 export interface GalleryImage {
   id: number | string;
@@ -145,7 +146,7 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
               transition={{ duration: 0.15, delay: index * 0.02 }}
               className="relative overflow-hidden rounded-lg shadow-md cursor-pointer group h-full"
             >
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
@@ -179,7 +180,7 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
             )}
             onClick={() => handleImageClick(image, index)}
           >
-            <img
+            <OptimizedImage
               src={image.src}
               alt={image.alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -216,7 +217,7 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
                 transition={{ duration: 0.15 }}
                 className="relative h-full overflow-hidden rounded-lg shadow-md group"
               >
-                <img
+                <OptimizedImage
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -294,7 +295,7 @@ export const ImageGallery = React.forwardRef<HTMLDivElement, ImageGalleryProps>(
             onClick={(e) => e.stopPropagation()}
             style={{ zIndex: 10000 }}
           >
-            <img
+            <OptimizedImage
               src={selectedImage.src}
               alt={selectedImage.alt}
               className="max-w-full max-h-[70vh] object-contain"
