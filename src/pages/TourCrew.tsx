@@ -175,7 +175,7 @@ const TourCrew: React.FC = () => {
             name={t('team.members.rafael.name')} 
             position={t('team.members.rafael.position')} 
             bands={t('team.members.rafael.bands')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg"
+            image="/images/Rafael-Salzmann-768x426.jpg"
             index={1}
           />
           
@@ -183,7 +183,7 @@ const TourCrew: React.FC = () => {
             name={t('team.members.cal.name')} 
             position={t('team.members.cal.position')} 
             bands={t('team.members.cal.bands')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/Cal-South-768x426.jpg"
+            image="/images/Cal-South-768x426.jpg"
             reverse={true}
             index={2}
           />
@@ -192,7 +192,7 @@ const TourCrew: React.FC = () => {
             name={t('team.members.tom.name')} 
             position={t('team.members.tom.position')}
             bands={t('team.members.tom.bands', { defaultValue: undefined })}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/tom1-768x426.jpg"
+            image="/images/tom1-768x426.jpg"
             index={3}
           />
           
@@ -200,7 +200,7 @@ const TourCrew: React.FC = () => {
             name={t('team.members.szymon.name')} 
             position={t('team.members.szymon.position')} 
             bands={t('team.members.szymon.bands')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/Shymon-768x426.jpg"
+            image="/images/Shymon-768x426.jpg"
             reverse={true}
             index={4}
           />
@@ -208,14 +208,14 @@ const TourCrew: React.FC = () => {
           <CrewMember 
             name={t('team.members.sven.name')} 
             position={t('team.members.sven.position')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/sven-768x426.jpg"
+            image="/images/sven-768x426.jpg"
             index={5}
           />
           
           <CrewMember 
             name={t('team.members.daniel.name')} 
             position={t('team.members.daniel.position')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/daniel-768x426.jpg"
+            image="/images/daniel-768x426.jpg"
             reverse={true}
             index={6}
           />
@@ -223,7 +223,7 @@ const TourCrew: React.FC = () => {
           <CrewMember 
             name={t('team.members.chad.name')} 
             position={t('team.members.chad.position')}
-            image="https://race-attack.ch/wp-content/uploads/2018/10/chad-768x426.jpg"
+            image="/images/chad-768x426.jpg"
             index={7}
           />
         </div>

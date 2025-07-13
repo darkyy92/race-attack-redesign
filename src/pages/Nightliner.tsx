@@ -13,8 +13,8 @@ const NightlinerPage: React.FC = () => {
   const { t, i18n } = useTranslation('nightliner');
   const [activeGallery, setActiveGallery] = useState<string | null>(null);
 
-  const sixteenSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner06.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio20-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio25-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio45-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg"];
-  const twelveSleeperImages = ["https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner05.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/lounge-front_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/dsc07852_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/backloungebreit_lbb-1.jpg", "https://race-attack.ch/wp-content/uploads/2018/10/bettbreit_lbb-1.jpg"];
+  const sixteenSleeperImages = ["/images/race-attack-truck-nightliner06.jpg", "/images/Livio1-1.jpg", "/images/Livio20-1.jpg", "/images/Livio25-1.jpg", "/images/Livio45-1.jpg", "/images/Livio49-2.jpg"];
+  const twelveSleeperImages = ["/images/race-attack-truck-nightliner05.jpg", "/images/lounge-front_lbb-1.jpg", "/images/dsc07852_lbb-1.jpg", "/images/backloungebreit_lbb-1.jpg", "/images/bettbreit_lbb-1.jpg"];
   const toggleGallery = (gallery: string) => {
     if (activeGallery === gallery) {
       setActiveGallery(null);
@@ -63,14 +63,14 @@ const NightlinerPage: React.FC = () => {
         <meta property="og:url" content="https://race-attack.ch/nightliner" />
         <meta property="og:title" content={t('meta.title')} />
         <meta property="og:description" content={t('meta.description')} />
-        <meta property="og:image" content="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" />
+        <meta property="og:image" content="/images/nightliner-ps.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://race-attack.ch/nightliner" />
         <meta property="twitter:title" content={t('meta.title')} />
         <meta property="twitter:description" content={t('meta.description')} />
-        <meta property="twitter:image" content="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" />
+        <meta property="twitter:image" content="/images/nightliner-ps.jpg" />
         
         {/* Schema.org structured data */}
         <script type="application/ld+json">
@@ -89,7 +89,7 @@ const NightlinerPage: React.FC = () => {
             "priceCurrency": "CHF",
             "url": "https://race-attack.ch/nightliner"
           },
-          "image": "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg"
+          "image": "/images/nightliner-ps.jpg"
         })}
         </script>
       </Helmet>
@@ -98,7 +98,7 @@ const NightlinerPage: React.FC = () => {
         {/* Hero Banner */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img src="https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
+          <img src="/images/nightliner-ps.jpg" alt="VIP Nightliner - Luxuriöser Tourbus für Musiker und Künstler" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center">
               <h1 className="heading-xl text-white uppercase mb-4 animate-fade-in" data-aos="fade-in">
@@ -154,7 +154,7 @@ const NightlinerPage: React.FC = () => {
                 </div>
               </div>
               <div className="relative" data-aos="fade-left">
-                <img src="https://race-attack.ch/wp-content/uploads/2018/10/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
+                <img src="/images/Livio49-2.jpg" alt="Race Attack Nightliner - Komfortable Innenausstattung" className="rounded-lg shadow-2xl z-10 relative" loading="lazy" />
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold/30 rounded-lg -z-10"></div>
               </div>
             </div>

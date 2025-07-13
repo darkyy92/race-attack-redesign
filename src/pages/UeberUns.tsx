@@ -96,7 +96,7 @@ const UeberUns: React.FC = () => {
                   alt="Race Attack - Über Uns"
                   className="rounded-lg shadow-xl w-full h-auto object-cover"
                   onError={(e) => {
-                    e.currentTarget.src = "https://race-attack.ch/wp-content/uploads/2018/10/Livio1-1.jpg";
+                    e.currentTarget.src = "/images/Livio1-1.jpg";
                   }}
                 />
               </div>

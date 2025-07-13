@@ -46,7 +46,7 @@ const Services: React.FC = () => {
         t('services.nightliner.features.2'),
         t('services.nightliner.features.3')
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2018/10/nightliner-ps.jpg",
+      image: "/images/nightliner-ps.jpg",
       link: "/nightliner"
     },
     {
@@ -58,7 +58,7 @@ const Services: React.FC = () => {
         t('services.tourCrew.features.2'),
         t('services.tourCrew.features.3')
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2018/10/Rafael-Salzmann-768x426.jpg",
+      image: "/images/Rafael-Salzmann-768x426.jpg",
       link: "/tour-crew"
     },
     {
@@ -70,7 +70,7 @@ const Services: React.FC = () => {
         t('services.truck.features.2'),
         t('services.truck.features.3')
       ],
-      image: "https://race-attack.ch/wp-content/uploads/2022/05/race-attack-truck-nightliner04.jpg",
+      image: "/images/race-attack-truck-nightliner04.jpg",
       link: "/truck"
     }
   ];
