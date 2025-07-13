@@ -169,6 +169,16 @@ video.fullscreen-bg {
   object-fit: cover;
 }
 
+/* Override browser autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #000000 inset !important;
+  -webkit-text-fill-color: white !important;
+  border: 1px solid rgba(203, 154, 61, 0.3) !important;
+}
+
 /* Marquee Animation */
 @keyframes marquee {
   from {
