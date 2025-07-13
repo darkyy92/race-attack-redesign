@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieConsent from "./components/CookieConsent";
 import Index from "./pages/Index";
 import Nightliner from "./pages/Nightliner";
 import TourCrew from "./pages/TourCrew";
@@ -44,6 +45,7 @@ const App = () => {
             <Sonner />
             <BrowserRouter>
             <ScrollToTop />
+            <CookieConsent />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/nightliner" element={<Nightliner />} />

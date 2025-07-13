@@ -143,3 +143,13 @@ Currently no testing framework is set up. When implementing tests:
 
 ### Vendor Restrictions
 - Do not use Zen MCP in this project!
+
+## Language Switcher
+
+### How to Unhide the Language Switcher
+The language switcher has been temporarily hidden in `/src/components/Header.tsx`. To restore it:
+
+1. **Desktop Navigation**: Uncomment lines 152-162 (the motion.button block after "Language Switcher - Hidden for now")
+2. **Mobile Navigation**: Uncomment lines 267-280 (the motion.button block after "Language Switcher in Mobile Menu - Hidden for now")
+
+Simply remove the `{/* */}` comment wrappers around both language switcher buttons to restore the functionality.

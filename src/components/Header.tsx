@@ -148,8 +148,8 @@ const Header: React.FC = () => {
               </Link>
             </motion.div>
             
-            {/* Language Switcher */}
-            <motion.button
+            {/* Language Switcher - Hidden for now */}
+            {/* <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.2, delay: (navLinks.length + 1) * 0.02 }}
@@ -159,7 +159,7 @@ const Header: React.FC = () => {
             >
               <Globe size={18} />
               {i18n.language === 'de' ? 'DE' : 'EN'}
-            </motion.button>
+            </motion.button> */}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -263,8 +263,8 @@ const Header: React.FC = () => {
                     </Link>
                   </motion.div>
                   
-                  {/* Language Switcher in Mobile Menu */}
-                  <motion.button
+                  {/* Language Switcher in Mobile Menu - Hidden for now */}
+                  {/* <motion.button
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: (navLinks.length + 1) * 0.02 }}
@@ -277,7 +277,7 @@ const Header: React.FC = () => {
                   >
                     <Globe size={24} />
                     {i18n.language === 'de' ? 'Deutsch' : 'English'}
-                  </motion.button>
+                  </motion.button> */}
                 </nav>
               </div>
             </div>
