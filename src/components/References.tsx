@@ -41,7 +41,9 @@ const References: React.FC = () => {
     { name: "Gotthard", url: "https://www.gotthard.com/news/" },
     { name: "Gotus", url: "https://www.facebook.com/gotusmusic" },
     { name: "Groundation", url: "https://groundation.com/" },
+    { name: "Krokus", url: "https://www.krokusonline.com/" },
     { name: "Kunz", url: "https://www.kunzmusik.ch/" },
+    { name: "L'Impératrice", url: "https://l-imperatrice.cool/" },
     { name: "Lordi", url: "https://www.lordi.fi/" },
     { name: "Massilia sound system", url: "http://www.massilia-soundsystem.com/" },
     { name: "Mercyful-Fate", url: "https://mercyfulfatecoven.com/" },
@@ -49,6 +51,7 @@ const References: React.FC = () => {
     { name: "Seraina Telli", url: "https://serainatelli.com" },
     { name: "Sumpfbrass", url: "https://www.sumpfffbrass.ch/" },
     { name: "The Garden", url: "https://www.thegardenvadavada.com/" },
+    { name: "The Rose", url: "https://www.officialtherose.com/" },
     { name: "Triumph of Death", url: "http://triumphofdeath.com/" }
    ];
 
@@ -75,6 +78,8 @@ const References: React.FC = () => {
     { name: "Richnerstutz AG", url: "https://richnerstutz.ch/" },
     { name: "Solver Productions", url: "https://www.solver-productions.com/" },
     { name: "Stargarage", url: "http://stargarage.ch/" },
+    { name: "Talent Boutique", url: "https://talentboutique.fr/" },
+    { name: "The touring department", url: "https://www.thetouringdept.live/" },
     { name: "The Valley Event AG", url: "https://thevalley.ch" },
     { name: "VW-Audi Cruisers", url: "https://www.facebook.com/vwaudicruisers" },
     { name: "Zemp-Racing", url: "https://zemp-racing.ch/" }
