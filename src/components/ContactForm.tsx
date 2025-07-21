@@ -247,8 +247,8 @@ const ContactForm: React.FC = () => {
                     <h4 className="font-semibold text-white mb-1">{t('contact.info.address')}</h4>
                     <p className="text-gray-300">
                       Race Attack GmbH<br />
-                      Kappel 1<br />
-                      CH-8523 Hagenbuch<br />
+                      Schulstrasse 6b<br />
+                      CH-8542 Wiesendangen<br />
                       {t('contact.info.switzerland')}
                     </p>
                   </div>

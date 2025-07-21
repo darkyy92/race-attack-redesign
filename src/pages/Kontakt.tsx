@@ -159,8 +159,8 @@ const Kontakt: React.FC = () => {
                       <h3 className="text-lg font-semibold mb-2">Adresse</h3>
                       <p className="text-gray-400">
                         Race-Attack GmbH<br />
-                        Kappel 1<br />
-                        CH-8523 Hagenbuch<br />
+                        Schulstrasse 6b<br />
+                        CH-8542 Wiesendangen<br />
                         Schweiz
                       </p>
                     </div>
@@ -342,7 +342,7 @@ const Kontakt: React.FC = () => {
             </h2>
             <div className="rounded-xl overflow-hidden shadow-xl reveal h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.4311796318985!2d8.8175!3d47.4875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a99a5f4011a67%3A0x4bb32f66c46c8104!2sKappel%201%2C%208523%20Hagenbuch!5e0!3m2!1sen!2sch!4v1616000000000!5m2!1sen!2sch"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.4311796318985!2d8.6639!3d47.5033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSchulstrasse%206b%2C%208542%20Wiesendangen!5e0!3m2!1sen!2sch!4v1616000000000!5m2!1sen!2sch"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
