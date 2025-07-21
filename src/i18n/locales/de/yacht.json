@@ -31,7 +31,7 @@
         "specs": {
           "lengthWidth": {
             "label": "Länge / Breite",
-            "value": "knapp 22 m / fast 6 m"
+            "value": "23m Länge / 5.6m Breite"
           },
           "mast": {
             "label": "Mast",
@@ -143,7 +143,7 @@
     "images": [
       {
         "alt": "Segelyacht TOAD - Oyster 70 unter Segeln",
-        "caption": "Die TOAD in voller Fahrt – 260m² Segelfläche am Wind"
+        "caption": "Die TOAD in voller Fahrt – Segeln in den Sonnenuntergang"
       },
       {
         "alt": "Segelyacht TOAD - Luxuriöses Deck",
@@ -183,6 +183,15 @@
     "secondaryButton": "Mehr Bilder ansehen"
   },
   "marquee": {
-    "items": ["Segelyacht", "Oyster 70", "Gran Canaria", "Kanaren", "Charter", "Segeltörn", "Luxus", "TOAD"]
+    "items": [
+      "Segelyacht",
+      "Oyster 70",
+      "Gran Canaria",
+      "Kanaren",
+      "Charter",
+      "Segeltörn",
+      "Luxus",
+      "TOAD"
+    ]
   }
 }
