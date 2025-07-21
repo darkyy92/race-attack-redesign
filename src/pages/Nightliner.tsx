@@ -42,8 +42,6 @@ const NightlinerPage: React.FC = () => {
   const scenariosRaw = t('usageScenarios.scenarios', { returnObjects: true });
   const usageScenarios = Array.isArray(scenariosRaw) ? scenariosRaw : [];
   
-  const faqRaw = t('faq.items', { returnObjects: true });
-  const faqItems = Array.isArray(faqRaw) ? faqRaw : [];
   
   const sixteenRaw = t('models.sixteenSleeper.equipment', { returnObjects: true });
   const sixteenSleeperEquipment = Array.isArray(sixteenRaw) ? sixteenRaw : [];
@@ -174,24 +172,8 @@ const NightlinerPage: React.FC = () => {
     }
   ];
   
-  // FAQ Schema markup
-  const faqSchema = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  } : null;
-  
-  // Combine all schemas
-  const allSchemas = faqSchema 
-    ? [...nightlinerServiceSchema, faqSchema]
-    : nightlinerServiceSchema;
+  // Use nightliner service schema
+  const allSchemas = nightlinerServiceSchema;
 
   return (
     <>
@@ -468,28 +450,6 @@ const NightlinerPage: React.FC = () => {
                 Mit unseren Race Attack Nightlinern bieten wir Künstlern und Bands ein rollendes Zuhause, das Komfort und Funktionalität perfekt verbindet. Erholung zwischen den Auftritten garantiert.
               </p>
               <div className="text-gold font-bold" data-aos="fade-in" data-aos-delay="75">Race Attack Team</div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section for SEO */}
-        <section className="py-16 bg-black">
-          <div className="container max-w-7xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="heading-lg mb-6" data-aos="fade-in">
-                Häufig gestellte <span className="text-gold">Fragen</span>
-              </h2>
-              <div className="gold-line mx-auto mb-8" data-aos="fade-in" data-aos-delay="100"></div>
-            </div>
-            
-            <div className="max-w-3xl mx-auto space-y-8">
-              {faqItems.map((faq, index) => (
-                <div key={index} className="bg-black-light rounded-lg p-6 border border-gold/20" data-aos="fade-up" data-aos-delay={index * 30}>
-                  <h3 className="text-xl font-bold mb-3 text-white">{faq.question}</h3>
-                  <Separator className="bg-gold/20 my-3" />
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
