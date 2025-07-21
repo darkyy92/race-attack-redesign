@@ -70,8 +70,8 @@ const NightlinerPage: React.FC = () => {
       },
       "serviceType": "Luxury Tour Bus Rental",
       "description": i18n.language === 'de'
-        ? "Premium VIP Nightliner mit 12 oder 16 Schlafplätzen für Künstler und Bands auf Tour. Vollausgestattete Luxus-Tourbusse mit Küche, Bad, Lounge und Entertainment-System."
-        : "Premium VIP nightliner with 12 or 16 berths for artists and bands on tour. Fully equipped luxury tour buses with kitchen, bathroom, lounge and entertainment system.",
+        ? "Premium VIP Nightliner mit 12 oder 16 Schlafplätzen für Künstler und Bands auf Tour. Vollausgestattete Luxus-Tourbusse mit Küche, Bad und Lounge."
+        : "Premium VIP nightliner with 12 or 16 berths for artists and bands on tour. Fully equipped luxury tour buses with kitchen, bathroom and lounge.",
       "areaServed": [
         {
           "@type": "Country",
@@ -146,8 +146,8 @@ const NightlinerPage: React.FC = () => {
       "@type": "Product",
       "name": "Race Attack VIP Nightliner Fleet",
       "description": i18n.language === 'de'
-        ? "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche, Badezimmer und Entertainment-System für Musiker und Künstler auf Tour."
-        : "Luxury tour buses with 12 or 16 sleeping berths, kitchen, bathroom and entertainment system for musicians and artists on tour.",
+        ? "Luxuriöse Tourbusse mit 12 oder 16 Schlafplätzen, Küche und Badezimmer für Musiker und Künstler auf Tour."
+        : "Luxury tour buses with 12 or 16 sleeping berths, kitchen and bathroom for musicians and artists on tour.",
       "brand": {
         "@type": "Brand",
         "name": "Race Attack"

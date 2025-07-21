@@ -24,7 +24,6 @@
       "Comfortable sleeping berths",
       "Fully equipped kitchen",
       "Modern bathrooms",
-      "Entertainment system",
       "Air conditioning"
     ]
   },
@@ -43,7 +42,7 @@
       },
       {
         "title": "Luxurious Lounges",
-        "description": "Spacious lounge areas with comfortable leather seats and entertainment systems."
+        "description": "Spacious lounge areas with comfortable leather seats."
       },
       {
         "title": "Optimized for Musicians",
@@ -127,7 +126,7 @@
     "questions": [
       {
         "question": "What is a Nightliner?",
-        "answer": "A Nightliner is a specially equipped tour bus with sleeping accommodations, mainly used by bands, artists and their crews on tours. Our Nightliners offer 12 or 16 comfortable sleeping berths, fully equipped kitchen, bathroom and entertainment systems."
+        "answer": "A Nightliner is a specially equipped tour bus with sleeping accommodations, mainly used by bands, artists and their crews on tours. Our Nightliners offer 12 or 16 comfortable sleeping berths, fully equipped kitchen and bathroom."
       },
       {
         "question": "How many people can sleep in a Nightliner?",

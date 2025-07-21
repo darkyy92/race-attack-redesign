@@ -24,7 +24,6 @@
       "Komfortable Schlafkojen",
       "Voll ausgestattete Küche",
       "Moderne Badezimmer",
-      "Entertainment-System",
       "Klimaanlage"
     ]
   },
@@ -43,7 +42,7 @@
       },
       {
         "title": "Luxuriöse Lounges",
-        "description": "Großzügige Aufenthaltsbereiche mit komfortablen Ledersitzen und Entertainment-Systemen."
+        "description": "Großzügige Aufenthaltsbereiche mit komfortablen Ledersitzen."
       },
       {
         "title": "Für Musiker optimiert",
@@ -127,7 +126,7 @@
     "questions": [
       {
         "question": "Was ist ein Nightliner?",
-        "answer": "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche, Badezimmer und Entertainment-Systeme."
+        "answer": "Ein Nightliner ist ein speziell ausgestatteter Tourbus mit Schlafplätzen, der hauptsächlich von Bands, Künstlern und deren Crews auf Tourneen genutzt wird. Unsere Nightliner bieten 12 oder 16 komfortable Schlafkojen, voll ausgestattete Küche und Badezimmer."
       },
       {
         "question": "Wie viele Personen können in einem Nightliner übernachten?",
