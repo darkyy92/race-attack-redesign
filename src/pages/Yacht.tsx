@@ -59,7 +59,7 @@ const Yacht: React.FC = () => {
       id: 3,
       src: "/images/yacht/race-attack-photo-yacht-4.jpg",
       alt: "Segelyacht TOAD - Oyster 70 im Hafen",
-      caption: "Die elegante TOAD – 22 Meter pure Segelkunst",
+      caption: "Die elegante TOAD – 23 Meter pure Bootsbaukunst",
     },
     {
       id: 4,
