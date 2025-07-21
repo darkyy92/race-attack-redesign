@@ -65,7 +65,7 @@ const Yacht: React.FC = () => {
       id: 4,
       src: "/images/yacht/race-attack-photo-yacht-5.jpeg",
       alt: "Segelyacht TOAD - Kabine",
-      caption: "5 Doppelkabinen mit eigenem WC/Dusche",
+      caption: "Mystische Momente an den Steilküsten Gran Canarias",
     },
     {
       id: 5,
