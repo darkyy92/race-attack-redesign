@@ -118,8 +118,8 @@ const UeberUns: React.FC = () => {
                   <h3 className="text-xl font-semibold mb-4">Adresse</h3>
                   <p className="text-gray-400">
                     Race-Attack GmbH<br />
-                    Kappel 1<br />
-                    CH-8523 Hagenbuch
+                    Schulstrasse 6b<br />
+                    CH-8542 Wiesendangen
                   </p>
                 </div>
                 <div className="text-center" data-aos="fade-in" data-aos-delay="75">

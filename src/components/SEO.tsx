@@ -86,9 +86,9 @@ export default function SEO({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Kappel 1",
-      "addressLocality": "Hagenbuch",
-      "postalCode": "8523",
+      "streetAddress": "Schulstrasse 6b",
+      "addressLocality": "Wiesendangen",
+      "postalCode": "8542",
       "addressCountry": "CH"
     },
     "vatID": "CHE-162.556.838",
@@ -108,9 +108,9 @@ export default function SEO({
     "priceRange": "€€€",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Kappel 1",
-      "addressLocality": "Hagenbuch",
-      "postalCode": "8523",
+      "streetAddress": "Schulstrasse 6b",
+      "addressLocality": "Wiesendangen",
+      "postalCode": "8542",
       "addressCountry": "CH"
     },
     "geo": {
@@ -212,7 +212,7 @@ export default function SEO({
       
       {/* Geo Tags */}
       <meta name="geo.region" content="CH-ZH" />
-      <meta name="geo.placename" content="Hagenbuch" />
+      <meta name="geo.placename" content="Wiesendangen" />
       <meta name="geo.position" content="47.463;8.8667" />
       <meta name="ICBM" content="47.463, 8.8667" />
       
